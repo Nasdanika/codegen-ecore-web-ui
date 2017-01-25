@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.nasdanika.codegen.ecore.editor.generation_target">
+      <generation_target
+            class="org.nasdanika.codegen.ecore.web.ui.WebUIGenerationTarget"
+            id="web-ui"
+            name="Web UI">
+      </generation_target>
+   </extension>
+
+</plugin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.codegen:Workspace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.codegen="urn:org.nasdanika.codegen">
+  <elements xsi:type="org.nasdanika.codegen:Project" name="{{project-name}}">
+    <resources xsi:type="org.nasdanika.codegen:TextFile" name="plugin.xml" reconcileAction="Overwrite">
+      <generators xsi:type="org.nasdanika.codegen:Interpolator">
+        <namedGenerators name="route-entries">
+          <generator xsi:type="org.nasdanika.codegen:Interpolator" controller="org.nasdanika.codegen.ecore.web.ui.PluginXmlRouteEntriesInterpolatorController">
+            <generator xsi:type="org.nasdanika.codegen:StaticText" content="      &lt;eobject-route&#xD;&#xA;            class=&quot;{{base-package}}.{{epackage-name}}.{{eclass-name}}Route&quot;&#xD;&#xA;            description=&quot;doc/{{epackage-name}}/{{eclass-name}}Route.md&quot;&#xD;&#xA;            method=&quot;*&quot;&#xD;&#xA;            path=&quot;/&quot;&#xD;&#xA;            target=&quot;{{eclass-name}}&quot;&#xD;&#xA;            target-namespace-uri=&quot;{{epackage-namespace-uri}}&quot;>&#xD;&#xA;      &lt;/eobject-route>&#xD;&#xA;&#xD;&#xA;"/>
+          </generator>
+        </namedGenerators>
+        <generator xsi:type="org.nasdanika.codegen:StaticText" content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;?eclipse version=&quot;3.4&quot;?>&#xD;&#xA;&lt;plugin>&#xD;&#xA;   &lt;extension point=&quot;org.nasdanika.web.route&quot;>&#xD;&#xA;{{route-entries}}&#xD;&#xA;   &lt;/extension>   &#xD;&#xA;&lt;/plugin>&#xD;&#xA;"/>
+      </generators>
+    </resources>
+  </elements>
+</org.nasdanika.codegen:Workspace>

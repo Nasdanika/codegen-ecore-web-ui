@@ -2,10 +2,7 @@ package org.nasdanika.codegen.ecore.web.ui;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Map;
 
-import org.eclipse.core.runtime.SubMonitor;
-import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
@@ -21,11 +18,6 @@ import org.nasdanika.config.MutableContext;
  *
  */
 public class PluginXmlRouteEntriesInterpolatorController implements GeneratorController<String, Interpolator> {
-
-	@Override
-	public boolean validate(Interpolator generator, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
 
 	@Override
 	public Collection<Context> iterate(Context context, Interpolator generator) throws Exception {
@@ -46,12 +38,6 @@ public class PluginXmlRouteEntriesInterpolatorController implements GeneratorCon
 		}
 		
 		return ret;
-	}
-
-	@Override
-	public String configure(Interpolator generator, Context context, String result, SubMonitor monitor)	throws Exception {
-		monitor.worked(1);
-		return result;
 	}
 
 }

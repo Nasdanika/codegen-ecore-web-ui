@@ -17,6 +17,7 @@ import org.nasdanika.codegen.ecore.EcoreFactory;
 import org.nasdanika.codegen.ecore.ModelElement;
 import org.nasdanika.codegen.ecore.presentation.GenerationTarget;
 import org.nasdanika.config.Context;
+import org.nasdanika.config.JavaExpressionTokenSource;
 import org.nasdanika.config.MutableContext;
 
 public class WebUIGenerationTarget implements GenerationTarget {
@@ -63,6 +64,7 @@ public class WebUIGenerationTarget implements GenerationTarget {
 				projectWorkContext.set("project-name", ecoreCodeGeneratorConfiguration.getTargetProject());
 				projectWorkContext.set("source-folder", ecoreCodeGeneratorConfiguration.getSourceFolder());
 				projectWorkContext.set("base-package", ecoreCodeGeneratorConfiguration.getBasePackage());
+				projectWorkContext.set("java", new JavaExpressionTokenSource());
 				return projectWork.execute(projectWorkContext, monitor);
 			}
 			

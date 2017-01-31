@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<org.nasdanika.codegen:Workspace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.codegen="urn:org.nasdanika.codegen">
+<org.nasdanika.codegen:Workspace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.codegen="urn:org.nasdanika.codegen" xmlns:org.nasdanika.codegen.java="urn:org.nasdanika.codegen.java">
   <elements xsi:type="org.nasdanika.codegen:Project" name="{{project-name}}">
+    <natures xsi:type="org.nasdanika.codegen.java:JavaNature">
+      <packagefragmentroots name="{{source-folder}}">
+        <packagefragments controller="org.nasdanika.codegen.ecore.web.ui.RoutesPackageController" name="{{base-package}}.{{epackage-name}}">
+          <compilationunits controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceCompilationUnitController" name="{{eclass-name}}Renderer">
+            <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceController" name="{{eclass-name}}Renderer"/>
+          </compilationunits>
+          <compilationunits controller="org.nasdanika.codegen.ecore.web.ui.RouteClassCompilationUnitController" name="{{eclass-name}}Route">
+            <generators xsi:type="org.nasdanika.codegen.java:Class" controller="org.nasdanika.codegen.ecore.web.ui.RouteClassController" name="{{eclass-name}}Route">
+              <modifiers>public</modifiers>
+              <superTypes>{{route-super-type}}</superTypes>
+              <superTypes>{{eclass-name}}Renderer</superTypes>
+            </generators>
+          </compilationunits>
+          <compilationunits description="Base interface for renderers defined in the package." name="RendererBase">
+            <generators xsi:type="org.nasdanika.codegen:StaticText" content="import org.eclipse.emf.ecore.EObject;&#xD;&#xA;&#xD;&#xA;/**&#xD;&#xA; * Base interface for renderers defined in the package.&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;interface RendererBase&lt;T extends EObject> {&#xD;&#xA;&#x9;// TODO&#xD;&#xA;}"/>
+          </compilationunits>
+          <compilationunits description="Base class for routes defined in the package." name="RouteBase">
+            <generators xsi:type="org.nasdanika.codegen:StaticText" content="import org.eclipse.emf.ecore.EObject;&#xD;&#xA;&#xD;&#xA;/**&#xD;&#xA; * Base class for routes defined in the package.&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;interface RouteBase&lt;T extends EObject> {&#xD;&#xA;&#x9;// TODO&#xD;&#xA;}"/>
+          </compilationunits>
+          <resources xsi:type="org.nasdanika.codegen:TextFile" description="Messages resource file." name="RendererBase.properties">
+            <generators xsi:type="org.nasdanika.codegen:StaticText" content="# Default messages."/>
+          </resources>
+          <resources xsi:type="org.nasdanika.codegen:TextFile" description="Русифицированные сообщения." name="RendererBase_ru.properties">
+            <generators xsi:type="org.nasdanika.codegen:StaticText" content="# Русифицированные сообщения"/>
+          </resources>
+        </packagefragments>
+      </packagefragmentroots>
+    </natures>
     <resources xsi:type="org.nasdanika.codegen:TextFile" name="plugin.xml" reconcileAction="Overwrite">
       <generators xsi:type="org.nasdanika.codegen:Interpolator">
         <namedGenerators name="route-entries">

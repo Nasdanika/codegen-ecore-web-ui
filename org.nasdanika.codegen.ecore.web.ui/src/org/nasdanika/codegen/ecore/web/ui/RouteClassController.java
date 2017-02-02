@@ -24,7 +24,6 @@ public class RouteClassController implements GeneratorController<String, Class> 
 		// TODO - proper inheritance?
 		EClass eClass = mc.get(EClass.class);
 		String instanceTypeName = eClass.getInstanceTypeName();
-		System.out.println(instanceTypeName);
 		if (instanceTypeName == null) {
 			instanceTypeName = EObject.class.getName();
 		}

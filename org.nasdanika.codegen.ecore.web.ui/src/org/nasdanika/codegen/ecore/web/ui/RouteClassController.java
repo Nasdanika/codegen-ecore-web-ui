@@ -21,14 +21,14 @@ public class RouteClassController implements GeneratorController<String, Class> 
 	@Override
 	public Collection<Context> iterate(Context context, Class generator) throws Exception {
 		MutableContext mc = context.createSubContext();
-		// TODO - proper inheritance?
 		EClass eClass = mc.get(EClass.class);
 		String instanceTypeName = eClass.getInstanceTypeName();
 		if (instanceTypeName == null) {
 			instanceTypeName = EObject.class.getName();
 		}
-		String eClassShortName = mc.get(ImportManager.class).addImport(instanceTypeName);
-		mc.set("route-super-type", "RouteBase<"+eClassShortName+">");
+		String eClassImportedName = mc.get(ImportManager.class).addImport(instanceTypeName);
+		mc.set("route-super-type", "RouteBase<"+eClassImportedName+">");
+		mc.set("eclass-name-imported", eClassImportedName);
 		
 		return Collections.singleton(mc);
 	}

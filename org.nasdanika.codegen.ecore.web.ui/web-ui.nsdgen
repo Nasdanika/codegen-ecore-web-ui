@@ -5,7 +5,14 @@
       <packagefragmentroots name="{{source-folder}}">
         <packagefragments controller="org.nasdanika.codegen.ecore.web.ui.RoutesPackageController" name="{{base-package}}.{{epackage-name}}">
           <compilationunits controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceCompilationUnitController" name="{{eclass-name}}Renderer">
-            <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceController" name="{{eclass-name}}Renderer"/>
+            <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceController" name="{{eclass-name}}Renderer">
+              <modifiers>public</modifiers>
+              <bodyGenerators xsi:type="org.nasdanika.codegen:Interpolator">
+                <generator xsi:type="org.nasdanika.codegen:StaticText" content="/**&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;{{eclass-name}}Renderer&lt;{{eclass-name-imported}}> INSTANCE = new {{eclass-name}}Renderer&lt;{{eclass-name-imported}}>() {};"/>
+              </bodyGenerators>
+              <typeParameters>T extends {{eclass-name-imported}}</typeParameters>
+              <superTypes>{{super-types}}</superTypes>
+            </generators>
           </compilationunits>
           <compilationunits controller="org.nasdanika.codegen.ecore.web.ui.RouteClassCompilationUnitController" name="{{eclass-name}}Route">
             <generators xsi:type="org.nasdanika.codegen.java:Class" controller="org.nasdanika.codegen.ecore.web.ui.RouteClassController" name="{{eclass-name}}Route">
@@ -16,7 +23,7 @@
                 <thrownExceptions>{{import:java.lang.Exception}}</thrownExceptions>
               </bodyGenerators>
               <superTypes>{{route-super-type}}</superTypes>
-              <superTypes>{{eclass-name}}Renderer</superTypes>
+              <superTypes>{{eclass-name}}Renderer&lt;{{eclass-name-imported}}></superTypes>
             </generators>
           </compilationunits>
           <compilationunits description="Base interface for renderers defined in the package." name="RendererBase">

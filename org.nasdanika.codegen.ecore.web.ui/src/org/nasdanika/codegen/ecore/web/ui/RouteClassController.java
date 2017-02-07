@@ -26,7 +26,8 @@ public class RouteClassController implements GeneratorController<String, Class> 
 		if (instanceTypeName == null) {
 			instanceTypeName = EObject.class.getName();
 		}
-		String eClassImportedName = mc.get(ImportManager.class).addImport(instanceTypeName);
+		ImportManager importManager = mc.get(ImportManager.class);
+		String eClassImportedName = importManager.addImport(instanceTypeName);		
 		mc.set("route-super-type", "RouteBase<"+eClassImportedName+">");
 		mc.set("eclass-name-imported", eClassImportedName);
 		

@@ -54,7 +54,7 @@
 	
 		<module>org.nasdanika.codegen.ecore.web.ui.repository</module>
 	
-		<module>org.nasdanika.codegen.ecore.web.ui.</module>
+		<module>org.nasdanika.codegen.ecore.web.ui</module>
 	
 	</modules>
 </project>

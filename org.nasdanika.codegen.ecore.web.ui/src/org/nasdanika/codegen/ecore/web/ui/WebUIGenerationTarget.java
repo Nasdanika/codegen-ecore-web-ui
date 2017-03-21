@@ -2,7 +2,10 @@ package org.nasdanika.codegen.ecore.web.ui;
 
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -69,6 +72,12 @@ public class WebUIGenerationTarget implements GenerationTarget {
 			}
 			
 		};
+	}
+
+	@Override
+	public boolean isSupported(EModelElement modelElement) {
+		// EPackage, EClass, EStructuralFeature.
+		return modelElement instanceof EPackage || modelElement instanceof EClass;
 	}
 
 }

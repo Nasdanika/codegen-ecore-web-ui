@@ -14,7 +14,7 @@
             <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceController" name="{{eclass-name}}Renderer">
               <modifiers>public</modifiers>
               <bodyGenerators xsi:type="org.nasdanika.codegen:Interpolator">
-                <generator xsi:type="org.nasdanika.codegen:StaticText" content="/**&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;{{eclass-name}}Renderer&lt;{{eclass-name-imported}}> INSTANCE = new {{eclass-name}}Renderer&lt;{{eclass-name-imported}}>() {};"/>
+                <generator xsi:type="org.nasdanika.codegen:StaticText" content="/**&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;{{eclass-name}}Renderer&lt;{{eclass-name-imported}}> INSTANCE = new {{eclass-name}}Renderer&lt;{{eclass-name-imported}}>() {};&#xD;&#xA;&#xD;&#xA;/**&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;@Override&#xD;&#xA;default Renderer&lt;{{context-imported}}, {{eclass-name-imported}}> chain(ResourceProvider&lt;{{context-imported}}> masterResourceProvider) throws {{import:java.lang.Exception}} {&#xD;&#xA;&#xD;&#xA;    return new {{eclass-name}}Renderer() {&#xD;&#xA;&#xD;&#xA;              @Override&#xD;&#xA;              public ResourceProvider&lt;{{context-imported}}> getMasterResourceProvider({{context-imported}} context) throws {{import:java.lang.Exception}} {&#xD;&#xA;                    return masterResourceProvider;&#xD;&#xA;              }&#xD;&#xA;&#xD;&#xA;       };&#xD;&#xA;}     &#xD;&#xA;&#xD;&#xA;/**&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;@Override&#xD;&#xA;default {{import:java.util.LinkedList}}&lt;{{import:java.lang.Class}}&lt;?>> getResourceBundleClasses({{context-imported}} context) throws {{import:java.lang.Exception}} {&#xD;&#xA;&#x9;{{import:java.util.LinkedList}}&lt;{{import:java.lang.Class}}&lt;?>> ret = new {{import:java.util.LinkedList}}&lt;>();&#xD;&#xA;&#x9;ret.add({{eclass-name}}Renderer.class);&#xD;&#xA;&#x9;{{add-super-resource-bundle-classes}}  &#xD;&#xA;&#x9;return ret;&#xD;&#xA;}&#xD;&#xA;"/>
               </bodyGenerators>
               <typeParameters>T extends {{eclass-name-imported}}</typeParameters>
               <superTypes>{{super-types}}</superTypes>
@@ -35,9 +35,6 @@
           <resources xsi:type="org.nasdanika.codegen:TextFile" description="Messages resource file." name="RendererBase.properties" reconcileAction="Overwrite" encoding="ISO-8859-1">
             <generators xsi:type="org.nasdanika.codegen:TextContentReference" ref="bundle://org.nasdanika.codegen.ecore.web.ui/RendererBase.properties"/>
           </resources>
-          <resources xsi:type="org.nasdanika.codegen:TextFile" description="Русифицированные сообщения." name="RendererBase_ru.properties" reconcileAction="Overwrite" encoding="ISO-8859-1">
-            <generators xsi:type="org.nasdanika.codegen:TextContentReference" ref="bundle://org.nasdanika.codegen.ecore.web.ui/RendererBase_ru.properties"/>
-          </resources>
           <resources xsi:type="org.nasdanika.codegen:BinaryFile" controller="org.nasdanika.codegen.ecore.web.ui.RendererResourceBundlePropertiesFileController" name="{{eclass-name}}Renderer.properties" reconcileAction="Overwrite">
             <generators xsi:type="org.nasdanika.codegen:JavaStreamGenerator" className="org.nasdanika.codegen.ecore.web.ui.RendererResourceBundlesPropertiesFileGenerator"/>
           </resources>
@@ -51,7 +48,12 @@
             <generator xsi:type="org.nasdanika.codegen:StaticText" content="      &lt;eobject-route&#xD;&#xA;            class=&quot;{{base-package}}.{{epackage-name}}.{{eclass-name}}Route&quot;&#xD;&#xA;            description=&quot;doc/{{epackage-name}}/{{eclass-name}}Route.md&quot;&#xD;&#xA;            method=&quot;*&quot;&#xD;&#xA;            path=&quot;/&quot;&#xD;&#xA;            target=&quot;{{eclass-name}}&quot;&#xD;&#xA;            target-namespace-uri=&quot;{{epackage-namespace-uri}}&quot;>&#xD;&#xA;      &lt;/eobject-route>&#xD;&#xA;&#xD;&#xA;"/>
           </generator>
         </namedGenerators>
-        <generator xsi:type="org.nasdanika.codegen:StaticText" content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;?eclipse version=&quot;3.4&quot;?>&#xD;&#xA;&lt;plugin>&#xD;&#xA;   &lt;extension point=&quot;org.nasdanika.web.route&quot;>&#xD;&#xA;{{route-entries}}&#xD;&#xA;   &lt;/extension>   &#xD;&#xA;&lt;/plugin>&#xD;&#xA;"/>
+        <namedGenerators name="renderer-entries">
+          <generator xsi:type="org.nasdanika.codegen:Interpolator" controller="org.nasdanika.codegen.ecore.web.ui.PluginXmlRouteEntriesInterpolatorController">
+            <generator xsi:type="org.nasdanika.codegen:StaticText" content="      &lt;renderer&#xD;&#xA;            eclass-name=&quot;{{eclass-name}}&quot;&#xD;&#xA;            namespace-uri=&quot;{{epackage-namespace-uri}}&quot;&#xD;&#xA;            renderer=&quot;{{base-package}}.{{epackage-name}}.{{eclass-name}}Renderer&quot;>&#xD;&#xA;      &lt;/renderer>&#xD;&#xA;&#xD;&#xA;"/>
+          </generator>
+        </namedGenerators>
+        <generator xsi:type="org.nasdanika.codegen:StaticText" content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;?eclipse version=&quot;3.4&quot;?>&#xD;&#xA;&lt;plugin>&#xD;&#xA;   &lt;extension point=&quot;org.nasdanika.web.route&quot;>&#xD;&#xA;{{route-entries}}&#xD;&#xA;   &lt;/extension>   &#xD;&#xA;&#xD;&#xA;   &lt;extension point=&quot;org.nasdanika.cdo.web.renderer&quot;>&#xD;&#xA;{{renderer-entries}}&#xD;&#xA;   &lt;/extension>   &#xD;&#xA;&lt;/plugin>&#xD;&#xA;"/>
       </generators>
     </resources>
   </elements>

@@ -31,8 +31,6 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 		EcoreCodeGenerator ecoreCodeGenerator = context.get(EcoreCodeGenerator.class);
 		EClass eClass = context.get(EClass.class);
 		Properties properties = new Properties();
-		String className = eClass.getName();
-		properties.put("class.label", nameToLabel(className));
 		
 		List<EStructuralFeature> selectedFeatures = new ArrayList<>();
 		List<EOperation> selectedOperations= new ArrayList<>();
@@ -50,14 +48,17 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 		}
 		// Features and operations from not selected supertypes
 		collectFeaturesAndOperations(ecoreCodeGenerator, eClass, new HashSet<>(), selectedFeatures, selectedOperations);
-		
-		for (EStructuralFeature sf: selectedFeatures) {
-			properties.put("feature."+sf.getName()+".label", nameToLabel(sf.getName()));			
-		}
-		
-		for (EOperation op: selectedOperations) {
-			properties.put("operation."+op.getName()+".label", nameToLabel(op.getName()));			
-		}
+
+// TODO - Generate resource entries from configurations.		
+//		String className = eClass.getName();
+//		properties.put("class.label", nameToLabel(className));
+//		for (EStructuralFeature sf: selectedFeatures) {
+//			properties.put("feature."+sf.getName()+".label", nameToLabel(sf.getName()));			
+//		}
+//		
+//		for (EOperation op: selectedOperations) {
+//			properties.put("operation."+op.getName()+".label", nameToLabel(op.getName()));			
+//		}
 		
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		properties.store(baos, null);

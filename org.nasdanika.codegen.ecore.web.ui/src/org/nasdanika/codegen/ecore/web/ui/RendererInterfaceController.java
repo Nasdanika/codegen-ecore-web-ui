@@ -36,18 +36,32 @@ public class RendererInterfaceController implements GeneratorController<String, 
 		
 		if (supertypes.isEmpty()) {
 			mc.set("super-types", "RendererBase<T>");
+			mc.set("add-super-resource-bundle-classes", "");  
 		} else {
 			String basePackage = (String) context.get("base-package");
 			StringBuilder sb = new StringBuilder();
+			StringBuilder addSuperResourceBundleClassesBuilder = new StringBuilder();
 			for (EClass st: supertypes) {
 				if (sb.length() > 0) {
 					sb.append(", ");
 				}
 				String rendererFQN = basePackage + "." + st.getEPackage().getName() + "." + st.getName() + "Renderer";
-				sb.append(importManager.addImport(rendererFQN)+"<T>");
+				String rendererImported = importManager.addImport(rendererFQN);
+				sb.append(rendererImported+"<T>");
+				
+				if (addSuperResourceBundleClassesBuilder.length() > 0) {
+					addSuperResourceBundleClassesBuilder.append(System.lineSeparator());
+				}
+				addSuperResourceBundleClassesBuilder.append("ret.addAll(").append(rendererImported+".super.getResourceBundleClasses(context));");
 			}
 			mc.set("super-types", sb.toString());
+			mc.set("add-super-resource-bundle-classes", addSuperResourceBundleClassesBuilder.toString());  
 		}
+		
+		// Context
+		String contextImport = importManager.addImport("org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext");
+		String credentialsImport = importManager.addImport("org.nasdanika.cdo.security.LoginPasswordCredentials");
+		mc.set("context-imported", contextImport+"<"+credentialsImport+">");
 		
 		return Collections.singleton(mc);
 	}

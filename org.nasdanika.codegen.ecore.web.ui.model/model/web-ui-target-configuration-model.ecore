@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="urn:org.nasdanika.codegen.ecore.web.ui.model"
+    nsPrefix="org.nasdanika.codegen.ecore.web.ui.model">
+  <eClassifiers xsi:type="ecore:EClass" name="EModelElementConfiguration" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ENamedElementConfiguration" abstract="true"
+      eSuperTypes="#//EModelElementConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EClassConfiguration" eSuperTypes="#//ENamedElementConfiguration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EStructuralFeatureConfiguration" abstract="true"
+      eSuperTypes="#//ENamedElementConfiguration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EAttributeConfiguration" eSuperTypes="#//EStructuralFeatureConfiguration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EReferenceConfiguration" eSuperTypes="#//EStructuralFeatureConfiguration"/>
+</ecore:EPackage>

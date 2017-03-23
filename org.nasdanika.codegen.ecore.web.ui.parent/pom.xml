@@ -154,7 +154,11 @@
 	
 		<module>../org.nasdanika.codegen.ecore.web.ui.repository</module>
 	
-		<module>../org.nasdanika.codegen.ecoreweb.ui.</module>
-	
+		<module>../org.nasdanika.codegen.ecoreweb.ui</module>
+
+		<module>../org.nasdanika.codegen.ecoreweb.ui.model</module>	
+
+		<module>../org.nasdanika.codegen.ecoreweb.ui.model.edit</module>	
+
 	</modules>
 </project>

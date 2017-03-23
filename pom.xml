@@ -56,5 +56,9 @@
 	
 		<module>org.nasdanika.codegen.ecore.web.ui</module>
 	
+		<module>org.nasdanika.codegen.ecore.web.ui.model</module>
+	
+		<module>org.nasdanika.codegen.ecore.web.ui.model.edit</module>
+	
 	</modules>
 </project>

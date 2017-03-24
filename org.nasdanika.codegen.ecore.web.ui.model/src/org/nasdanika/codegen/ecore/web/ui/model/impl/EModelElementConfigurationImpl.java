@@ -18,6 +18,7 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EModelElementConfigurationImpl#getIcon <em>Icon</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EModelElementConfigurationImpl#isGenerateResourceStrings <em>Generate Resource Strings</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +69,24 @@ public abstract class EModelElementConfigurationImpl extends CDOObjectImpl imple
 	 */
 	public void setIcon(String newIcon) {
 		eSet(ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION__ICON, newIcon);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isGenerateResourceStrings() {
+		return (Boolean)eGet(ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateResourceStrings(boolean newGenerateResourceStrings) {
+		eSet(ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS, newGenerateResourceStrings);
 	}
 
 } //EModelElementConfigurationImpl

@@ -11,15 +11,42 @@
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Model" basePackage="org.nasdanika.codegen.ecore.web.ui" disposableProviderFactory="true"
       ecorePackage="web-ui-target-configuration-model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//FeatureLocation">
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureLocation/Default"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureLocation/ItemContainer"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureLocation/LeftPanel"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureLocation/View"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//ReferenceView">
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/Default"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/List"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/Table"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EModelElementConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/icon"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/generateResourceStrings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//ENamedElementConfiguration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//ENamedElementConfiguration/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//ENamedElementConfiguration/modelElementLabel"/>
     </genClasses>
-    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EClassConfiguration"/>
-    <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration"/>
+    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EClassConfiguration">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/dispatchFeatures"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/viewItem"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/editable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/disabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/format"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/Location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/category"/>
+    </genClasses>
     <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EAttributeConfiguration"/>
-    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EReferenceConfiguration"/>
+    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EReferenceConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/choicesSelector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/view"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/viewFeatures"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

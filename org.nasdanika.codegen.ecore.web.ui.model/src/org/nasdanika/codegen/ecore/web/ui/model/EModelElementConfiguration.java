@@ -14,6 +14,7 @@ import org.eclipse.emf.cdo.CDOObject;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration#getIcon <em>Icon</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration#isGenerateResourceStrings <em>Generate Resource Strings</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEModelElementConfiguration()
@@ -30,6 +31,10 @@ public interface EModelElementConfiguration extends CDOObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Icon for a model element such as EClass or EStructuralFeature.
+	 * If icon contains ``/`` it is treated as URL, otherwise it is treated as css class, e.g. Bootstrap's ``glyphicon glyphicon-close``.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Icon</em>' attribute.
 	 * @see #setIcon(String)
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEModelElementConfiguration_Icon()
@@ -47,5 +52,35 @@ public interface EModelElementConfiguration extends CDOObject {
 	 * @generated
 	 */
 	void setIcon(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Generate Resource Strings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * If set to true, the generator generates resource strings in resource bundles 
+	 * properties files. Resource strings are generated from model annotations and
+	 * using default values if annotations are not present. 
+	 * 
+	 * Generation of resource strings simplifies localization. It does not alter the application
+	 * behavior for default locale.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Generate Resource Strings</em>' attribute.
+	 * @see #setGenerateResourceStrings(boolean)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEModelElementConfiguration_GenerateResourceStrings()
+	 * @model
+	 * @generated
+	 */
+	boolean isGenerateResourceStrings();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration#isGenerateResourceStrings <em>Generate Resource Strings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Resource Strings</em>' attribute.
+	 * @see #isGenerateResourceStrings()
+	 * @generated
+	 */
+	void setGenerateResourceStrings(boolean value);
 
 } // EModelElementConfiguration

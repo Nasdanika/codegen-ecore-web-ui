@@ -9,9 +9,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration;
+import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration} object.
@@ -41,8 +45,146 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addVisiblePropertyDescriptor(object);
+			addEditablePropertyDescriptor(object);
+			addDisabledPropertyDescriptor(object);
+			addFormatPropertyDescriptor(object);
+			addLocationPropertyDescriptor(object);
+			addCategoryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Visible feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVisiblePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_visible_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_visible_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Editable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEditablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_editable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_editable_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Disabled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDisabledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_disabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_disabled_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Format feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormatPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_format_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_format_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORMAT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Location feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_Location_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_Location_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Category feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCategoryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_category_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_category_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -70,6 +212,17 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(EStructuralFeatureConfiguration.class)) {
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__FORMAT:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

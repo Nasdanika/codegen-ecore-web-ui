@@ -62,6 +62,7 @@ public class EModelElementConfigurationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIconPropertyDescriptor(object);
+			addGenerateResourceStringsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,6 +85,28 @@ public class EModelElementConfigurationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Generate Resource Strings feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateResourceStringsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EModelElementConfiguration_generateResourceStrings_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EModelElementConfiguration_generateResourceStrings_feature", "_UI_EModelElementConfiguration_type"),
+				 ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -116,6 +139,7 @@ public class EModelElementConfigurationItemProvider
 
 		switch (notification.getFeatureID(EModelElementConfiguration.class)) {
 			case ModelPackage.EMODEL_ELEMENT_CONFIGURATION__ICON:
+			case ModelPackage.EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

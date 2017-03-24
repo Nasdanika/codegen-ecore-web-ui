@@ -12,7 +12,7 @@ package org.nasdanika.codegen.ecore.web.ui.model;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration#getModelElementLabel <em>Model Element Label</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getENamedElementConfiguration()
@@ -21,29 +21,28 @@ package org.nasdanika.codegen.ecore.web.ui.model;
  */
 public interface ENamedElementConfiguration extends EModelElementConfiguration {
 	/**
-	 * Returns the value of the '<em><b>Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Model Element Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Label</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Label</em>' attribute.
-	 * @see #setLabel(String)
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getENamedElementConfiguration_Label()
+	 * <!-- begin-model-doc -->
+	 * EClass or EStructuralFeature label.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Model Element Label</em>' attribute.
+	 * @see #setModelElementLabel(String)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getENamedElementConfiguration_ModelElementLabel()
 	 * @model
 	 * @generated
 	 */
-	String getLabel();
+	String getModelElementLabel();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration#getLabel <em>Label</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration#getModelElementLabel <em>Model Element Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Label</em>' attribute.
-	 * @see #getLabel()
+	 * @param value the new value of the '<em>Model Element Label</em>' attribute.
+	 * @see #getModelElementLabel()
 	 * @generated
 	 */
-	void setLabel(String value);
+	void setModelElementLabel(String value);
 
 } // ENamedElementConfiguration

@@ -9,9 +9,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
+import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
 /**
  * This is the item provider adapter for a {@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration} object.
@@ -41,8 +45,77 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDispatchFeaturesPropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
+			addViewItemPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Dispatch Features feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDispatchFeaturesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_dispatchFeatures_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_dispatchFeatures_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__DISPATCH_FEATURES,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_label_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the View Item feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addViewItemPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_viewItem_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_viewItem_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__VIEW_ITEM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -81,6 +154,14 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(EClassConfiguration.class)) {
+			case ModelPackage.ECLASS_CONFIGURATION__DISPATCH_FEATURES:
+			case ModelPackage.ECLASS_CONFIGURATION__LABEL:
+			case ModelPackage.ECLASS_CONFIGURATION__VIEW_ITEM:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

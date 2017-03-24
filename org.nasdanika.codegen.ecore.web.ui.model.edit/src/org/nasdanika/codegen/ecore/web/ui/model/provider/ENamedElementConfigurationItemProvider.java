@@ -45,25 +45,25 @@ public class ENamedElementConfigurationItemProvider extends EModelElementConfigu
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addLabelPropertyDescriptor(object);
+			addModelElementLabelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Label feature.
+	 * This adds a property descriptor for the Model Element Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLabelPropertyDescriptor(Object object) {
+	protected void addModelElementLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ENamedElementConfiguration_label_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ENamedElementConfiguration_label_feature", "_UI_ENamedElementConfiguration_type"),
-				 ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__LABEL,
+				 getString("_UI_ENamedElementConfiguration_modelElementLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ENamedElementConfiguration_modelElementLabel_feature", "_UI_ENamedElementConfiguration_type"),
+				 ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class ENamedElementConfigurationItemProvider extends EModelElementConfigu
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ENamedElementConfiguration.class)) {
-			case ModelPackage.ENAMED_ELEMENT_CONFIGURATION__LABEL:
+			case ModelPackage.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

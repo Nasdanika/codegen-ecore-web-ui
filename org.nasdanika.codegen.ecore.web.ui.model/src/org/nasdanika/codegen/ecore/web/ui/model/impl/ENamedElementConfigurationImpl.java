@@ -15,7 +15,7 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl#getModelElementLabel <em>Model Element Label</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,8 +45,8 @@ public abstract class ENamedElementConfigurationImpl extends EModelElementConfig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLabel() {
-		return (String)eGet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__LABEL, true);
+	public String getModelElementLabel() {
+		return (String)eGet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL, true);
 	}
 
 	/**
@@ -54,8 +54,8 @@ public abstract class ENamedElementConfigurationImpl extends EModelElementConfig
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLabel(String newLabel) {
-		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__LABEL, newLabel);
+	public void setModelElementLabel(String newModelElementLabel) {
+		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL, newModelElementLabel);
 	}
 
 } //ENamedElementConfigurationImpl

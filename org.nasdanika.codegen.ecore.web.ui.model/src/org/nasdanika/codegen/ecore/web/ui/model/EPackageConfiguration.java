@@ -13,8 +13,9 @@ import org.eclipse.emf.cdo.CDOObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRendererBaseExtends <em>Renderer Base Extends</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRenderAnnotationSource <em>Render Annotation Source</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRouteBaseExtends <em>Route Base Extends</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRendererBaseExtends <em>Renderer Base Extends</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEPackageConfiguration()
@@ -23,6 +24,33 @@ import org.eclipse.emf.cdo.CDOObject;
  * @generated
  */
 public interface EPackageConfiguration extends CDOObject {
+	/**
+	 * Returns the value of the '<em><b>Render Annotation Source</b></em>' attribute.
+	 * The default value is <code>"org.nasdanika.cdo.web.render"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Render Annotation Source</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Render Annotation Source</em>' attribute.
+	 * @see #setRenderAnnotationSource(String)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEPackageConfiguration_RenderAnnotationSource()
+	 * @model default="org.nasdanika.cdo.web.render"
+	 * @generated
+	 */
+	String getRenderAnnotationSource();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRenderAnnotationSource <em>Render Annotation Source</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Render Annotation Source</em>' attribute.
+	 * @see #getRenderAnnotationSource()
+	 * @generated
+	 */
+	void setRenderAnnotationSource(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Renderer Base Extends</b></em>' attribute.
 	 * The default value is <code>"org.nasdanika.cdo.web.routes.app.Renderer"</code>.

@@ -61,10 +61,33 @@ public class EPackageConfigurationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRendererBaseExtendsPropertyDescriptor(object);
+			addRenderAnnotationSourcePropertyDescriptor(object);
 			addRouteBaseExtendsPropertyDescriptor(object);
+			addRendererBaseExtendsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Render Annotation Source feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRenderAnnotationSourcePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EPackageConfiguration_renderAnnotationSource_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EPackageConfiguration_renderAnnotationSource_feature", "_UI_EPackageConfiguration_type"),
+				 ModelPackage.Literals.EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -130,7 +153,7 @@ public class EPackageConfigurationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EPackageConfiguration)object).getRendererBaseExtends();
+		String label = ((EPackageConfiguration)object).getRenderAnnotationSource();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EPackageConfiguration_type") :
 			getString("_UI_EPackageConfiguration_type") + " " + label;
@@ -149,8 +172,9 @@ public class EPackageConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EPackageConfiguration.class)) {
-			case ModelPackage.EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS:
+			case ModelPackage.EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE:
 			case ModelPackage.EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS:
+			case ModelPackage.EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -27,6 +27,7 @@ public class RoutesPackageController implements GeneratorController<IPackageFrag
 
 	static final String ROUTE_BASE_EXTENDS = "route-base-extends";
 	static final String RENDERER_BASE_EXTENDS = "renderer-base-extends";
+	static final String RENDER_ANNOTATION_SOURCE = "renderer-annotation-source";
 
 	@Override
 	public Collection<Context> iterate(Context context, PackageFragment generator) throws Exception {
@@ -44,12 +45,14 @@ public class RoutesPackageController implements GeneratorController<IPackageFrag
 				
 				mc.set(RENDERER_BASE_EXTENDS, "org.nasdanika.cdo.web.routes.app.Renderer");
 				mc.set(ROUTE_BASE_EXTENDS, "org.nasdanika.cdo.web.routes.app.Route");
+				mc.set(RENDER_ANNOTATION_SOURCE, "org.nasdanika.cdo.web.render");
 				ModelElement me = eCoreCodeGenerator.find(ep, false);
 				if (me != null) {
 					EObject cfg = me.getConfiguration(WebUIGenerationTarget.CONFIG_ID);
 					if (cfg instanceof EPackageConfiguration) {
 						mc.set(RENDERER_BASE_EXTENDS, ((EPackageConfiguration) cfg).getRendererBaseExtends());
 						mc.set(ROUTE_BASE_EXTENDS, ((EPackageConfiguration) cfg).getRouteBaseExtends());
+						mc.set(RENDER_ANNOTATION_SOURCE, ((EPackageConfiguration) cfg).getRenderAnnotationSource());
 					}
 				}
 

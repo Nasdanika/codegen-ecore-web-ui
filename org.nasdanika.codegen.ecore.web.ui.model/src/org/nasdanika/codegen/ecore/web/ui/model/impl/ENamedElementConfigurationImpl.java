@@ -2,8 +2,10 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.util.Properties;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
@@ -95,5 +97,20 @@ public abstract class ENamedElementConfigurationImpl extends EModelElementConfig
 	public void setSort(String newSort) {
 		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__SORT, newSort);
 	}
+	
+	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
+		super.toProperties(modelElement, renderAnnotationSource, properties);
+		
+		// generateResourceStrings - TODO
+
+		// model element label
+		
+		// constraints
+		
+		// sort
+		
+		
+	}
+	
 
 } //ENamedElementConfigurationImpl

@@ -526,8 +526,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEPackageConfiguration_RendererBaseExtends() {
+	public EAttribute getEPackageConfiguration_RenderAnnotationSource() {
 		return (EAttribute)ePackageConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEPackageConfiguration_RendererBaseExtends() {
+		return (EAttribute)ePackageConfigurationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -664,8 +673,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(eReferenceConfigurationEClass, EREFERENCE_CONFIGURATION__TYPE_COLUMN);
 
 		ePackageConfigurationEClass = createEClass(EPACKAGE_CONFIGURATION);
-		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS);
+		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE);
 		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS);
+		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS);
 
 		// Create enums
 		featureLocationEEnum = createEEnum(FEATURE_LOCATION);
@@ -722,7 +732,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		EOperation op = initEOperation(getEModelElementConfiguration__ToProperties__EModelElement_String_Properties(), null, "toProperties", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEModelElement(), "modelElement", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "prefix", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "renderAnnotationSource", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getProperties(), "properties", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eNamedElementConfigurationEClass, ENamedElementConfiguration.class, "ENamedElementConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -742,7 +752,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEStructuralFeatureConfiguration_Visible(), ecorePackage.getEString(), "visible", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStructuralFeatureConfiguration_Editable(), ecorePackage.getEString(), "editable", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStructuralFeatureConfiguration_Disabled(), ecorePackage.getEString(), "disabled", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Location(), this.getFeatureLocation(), "Location", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEStructuralFeatureConfiguration_Location(), this.getFeatureLocation(), "location", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStructuralFeatureConfiguration_Category(), ecorePackage.getEString(), "category", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStructuralFeatureConfiguration_Control(), this.getControlType(), "control", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStructuralFeatureConfiguration_ControlConfiguration(), ecorePackage.getEString(), "controlConfiguration", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -763,8 +773,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEReferenceConfiguration_TypeColumn(), ecorePackage.getEString(), "typeColumn", null, 0, 1, EReferenceConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ePackageConfigurationEClass, EPackageConfiguration.class, "EPackageConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEPackageConfiguration_RendererBaseExtends(), ecorePackage.getEString(), "rendererBaseExtends", "org.nasdanika.cdo.web.routes.app.Renderer", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageConfiguration_RenderAnnotationSource(), ecorePackage.getEString(), "renderAnnotationSource", "org.nasdanika.cdo.web.render", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageConfiguration_RouteBaseExtends(), ecorePackage.getEString(), "routeBaseExtends", "org.nasdanika.cdo.web.routes.app.Route", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageConfiguration_RendererBaseExtends(), ecorePackage.getEString(), "rendererBaseExtends", "org.nasdanika.cdo.web.routes.app.Renderer", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(featureLocationEEnum, FeatureLocation.class, "FeatureLocation");

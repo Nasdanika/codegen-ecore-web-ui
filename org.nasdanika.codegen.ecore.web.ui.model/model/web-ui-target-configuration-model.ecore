@@ -4,8 +4,8 @@
     nsPrefix="org.nasdanika.codegen.ecore.web.ui.model">
   <eClassifiers xsi:type="ecore:EClass" name="EModelElementConfiguration" abstract="true">
     <eOperations name="toProperties">
-      <eParameters name="modelElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EModelElement"/>
-      <eParameters name="prefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="modelElement" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EModelElement"/>
+      <eParameters name="renderAnnotationSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eParameters name="properties" eType="#//Properties"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
@@ -90,7 +90,7 @@
         <details key="documentation" value="Defines whether an editable feature is disabled, i.e. it shall be displayed in the edit form, but the edit control shall be disabled.&#xD;&#xA;&#xD;&#xA;* ``false`` boolean literal or empty string - the feature is enabled (default).* ``true`` boolean literal - the feature is disabled.&#xD;&#xA;* [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is disabled.&#xD;&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Location" eType="#//FeatureLocation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="#//FeatureLocation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Format is used for rendering and parsing date and number feature values. &#xD;&#xA;SimpleDateFormat for dates, DecimalFormat for numbers."/>
       </eAnnotations>
@@ -216,10 +216,12 @@
     <eLiterals name="Tabs" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EPackageConfiguration">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rendererBaseExtends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="org.nasdanika.cdo.web.routes.app.Renderer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="renderAnnotationSource"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="org.nasdanika.cdo.web.render"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeBaseExtends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="org.nasdanika.cdo.web.routes.app.Route"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rendererBaseExtends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="org.nasdanika.cdo.web.routes.app.Renderer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="Properties" instanceClassName="java.util.Properties"/>
 </ecore:EPackage>

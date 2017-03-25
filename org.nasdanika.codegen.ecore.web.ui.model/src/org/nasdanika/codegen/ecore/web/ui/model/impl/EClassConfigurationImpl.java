@@ -2,8 +2,10 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.util.Properties;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.FeatureItemsContainer;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
@@ -152,6 +154,22 @@ public class EClassConfigurationImpl extends ENamedElementConfigurationImpl impl
 	 */
 	public void setFeatureItemsContainerConfiguration(String newFeatureItemsContainerConfiguration) {
 		eSet(ModelPackage.Literals.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION, newFeatureItemsContainerConfiguration);
+	}
+	
+	@Override
+	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
+		super.toProperties(modelElement, renderAnnotationSource, properties);
+		
+		// generateResourceStrings - TODO
+		
+		// label
+		
+		// viewItem
+		
+		// horizontalForm
+		
+		// featureItemsContainer & featureItemsContainerConfiguration 
+
 	}
 
 } //EClassConfigurationImpl

@@ -2,8 +2,10 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.util.Properties;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.nasdanika.codegen.ecore.web.ui.model.EAttributeConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
@@ -94,6 +96,18 @@ public class EAttributeConfigurationImpl extends EStructuralFeatureConfiguration
 	 */
 	public void setHtml(boolean newHtml) {
 		eSet(ModelPackage.Literals.EATTRIBUTE_CONFIGURATION__HTML, newHtml);
+	}
+	
+	@Override
+	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
+		super.toProperties(modelElement, renderAnnotationSource, properties);
+		
+		// generateResourceStrings - TODO
+		// choices
+		
+		// format
+		
+		// html
 	}
 
 } //EAttributeConfigurationImpl

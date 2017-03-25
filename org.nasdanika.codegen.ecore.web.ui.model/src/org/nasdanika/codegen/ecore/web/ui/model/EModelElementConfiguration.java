@@ -91,6 +91,6 @@ public interface EModelElementConfiguration extends CDOObject {
 	 * @model propertiesDataType="org.nasdanika.codegen.ecore.web.ui.model.Properties"
 	 * @generated
 	 */
-	void toProperties(EModelElement modelElement, String prefix, Properties properties);
+	void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties);
 
 } // EModelElementConfiguration

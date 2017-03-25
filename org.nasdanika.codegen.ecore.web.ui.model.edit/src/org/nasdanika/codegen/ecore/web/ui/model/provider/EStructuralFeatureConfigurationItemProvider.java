@@ -135,8 +135,8 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_EStructuralFeatureConfiguration_Location_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_Location_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 getString("_UI_EStructuralFeatureConfiguration_location_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_location_feature", "_UI_EStructuralFeatureConfiguration_type"),
 				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION,
 				 true,
 				 false,

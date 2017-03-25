@@ -5,6 +5,7 @@ package org.nasdanika.codegen.ecore.web.ui.model.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 
 /**
  * This is the central singleton for the configuration-model-for-the-web-ui-generation-target edit plugin.
@@ -38,6 +39,7 @@ public final class configurationmodelforthewebuigenerationtargetEditPlugin exten
 	public configurationmodelforthewebuigenerationtargetEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     EcoreEditPlugin.INSTANCE,
 		   });
 	}
 

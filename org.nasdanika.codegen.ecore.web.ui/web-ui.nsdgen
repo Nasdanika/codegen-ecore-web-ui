@@ -51,7 +51,8 @@
           <resources xsi:type="org.nasdanika.codegen:TextFile" description="Messages resource file." name="RendererBase.properties" reconcileAction="Overwrite" encoding="ISO-8859-1">
             <generators xsi:type="org.nasdanika.codegen:TextContentReference" ref="bundle://org.nasdanika.codegen.ecore.web.ui/RendererBase.properties"/>
           </resources>
-          <resources xsi:type="org.nasdanika.codegen:BinaryFile" controller="org.nasdanika.codegen.ecore.web.ui.RendererResourceBundlePropertiesFileController" name="{{eclass-name}}Renderer.properties" reconcileAction="Overwrite">
+          <resources xsi:type="org.nasdanika.codegen:BinaryFile" controller="org.nasdanika.codegen.ecore.web.ui.RendererResourceBundlePropertiesFileController" name="{{eclass-name}}Renderer.properties" reconcileAction="Merge">
+            <merger valueType="org.nasdanika.codegen.ecore.web.ui.ResourcePropertyFileMerger" serviceType=""/>
             <generators xsi:type="org.nasdanika.codegen:JavaStreamGenerator" className="org.nasdanika.codegen.ecore.web.ui.RendererResourceBundlesPropertiesFileGenerator"/>
           </resources>
         </packagefragments>

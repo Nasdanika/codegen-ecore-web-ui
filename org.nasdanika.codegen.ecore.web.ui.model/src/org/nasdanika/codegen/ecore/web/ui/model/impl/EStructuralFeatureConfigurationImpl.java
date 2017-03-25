@@ -2,7 +2,10 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
+import java.util.Properties;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.nasdanika.codegen.ecore.web.ui.model.ControlType;
 import org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation;
@@ -229,6 +232,32 @@ public abstract class EStructuralFeatureConfigurationImpl extends ENamedElementC
 	 */
 	public void setPlaceholder(String newPlaceholder) {
 		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER, newPlaceholder);
+	}
+	
+	@Override
+	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
+		super.toProperties(modelElement, renderAnnotationSource, properties);
+		
+		// generateResourceStrings - TODO
+		// visible
+		
+		// editable
+		
+		// disabled
+		
+		// location
+		
+		// category
+		
+		// control
+		
+		// control configuration
+		
+		// input type
+		
+		// form input group
+		
+		// placeholder
 	}
 
 } //EStructuralFeatureConfigurationImpl

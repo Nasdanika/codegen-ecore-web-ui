@@ -931,13 +931,13 @@ public interface ModelPackage extends EPackage {
 	int EPACKAGE_CONFIGURATION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Renderer Base Extends</b></em>' attribute.
+	 * The feature id for the '<em><b>Render Annotation Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS = 0;
+	int EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Route Base Extends</b></em>' attribute.
@@ -949,13 +949,22 @@ public interface ModelPackage extends EPackage {
 	int EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Renderer Base Extends</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS = 2;
+
+	/**
 	 * The number of structural features of the '<em>EPackage Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EPACKAGE_CONFIGURATION_FEATURE_COUNT = 2;
+	int EPACKAGE_CONFIGURATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>EPackage Configuration</em>' class.
@@ -1431,6 +1440,17 @@ public interface ModelPackage extends EPackage {
 	EClass getEPackageConfiguration();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRenderAnnotationSource <em>Render Annotation Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Render Annotation Source</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRenderAnnotationSource()
+	 * @see #getEPackageConfiguration()
+	 * @generated
+	 */
+	EAttribute getEPackageConfiguration_RenderAnnotationSource();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRendererBaseExtends <em>Renderer Base Extends</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1845,6 +1865,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EPACKAGE_CONFIGURATION = eINSTANCE.getEPackageConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Render Annotation Source</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE = eINSTANCE.getEPackageConfiguration_RenderAnnotationSource();
 
 		/**
 		 * The meta object literal for the '<em><b>Renderer Base Extends</b></em>' attribute feature.

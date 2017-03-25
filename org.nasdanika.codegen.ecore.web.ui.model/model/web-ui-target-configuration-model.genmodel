@@ -65,7 +65,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/generateResourceStrings"/>
       <genOperations ecoreOperation="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties">
         <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/modelElement"/>
-        <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/prefix"/>
+        <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/renderAnnotationSource"/>
         <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/properties"/>
       </genOperations>
     </genClasses>
@@ -86,7 +86,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/visible"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/editable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/disabled"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/Location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/location"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/category"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/control"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/controlConfiguration"/>
@@ -107,8 +107,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/typeColumn"/>
     </genClasses>
     <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EPackageConfiguration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EPackageConfiguration/rendererBaseExtends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EPackageConfiguration/renderAnnotationSource"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EPackageConfiguration/routeBaseExtends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EPackageConfiguration/rendererBaseExtends"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

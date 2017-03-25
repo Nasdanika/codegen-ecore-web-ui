@@ -17,8 +17,9 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl#getRendererBaseExtends <em>Renderer Base Extends</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl#getRenderAnnotationSource <em>Render Annotation Source</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl#getRouteBaseExtends <em>Route Base Extends</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl#getRendererBaseExtends <em>Renderer Base Extends</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,6 +52,24 @@ public class EPackageConfigurationImpl extends CDOObjectImpl implements EPackage
 	@Override
 	protected int eStaticFeatureCount() {
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRenderAnnotationSource() {
+		return (String)eGet(ModelPackage.Literals.EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRenderAnnotationSource(String newRenderAnnotationSource) {
+		eSet(ModelPackage.Literals.EPACKAGE_CONFIGURATION__RENDER_ANNOTATION_SOURCE, newRenderAnnotationSource);
 	}
 
 	/**

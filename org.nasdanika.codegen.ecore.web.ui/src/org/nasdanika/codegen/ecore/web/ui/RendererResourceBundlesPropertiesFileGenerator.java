@@ -5,18 +5,22 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.nasdanika.codegen.Work;
 import org.nasdanika.codegen.ecore.EcoreCodeGenerator;
+import org.nasdanika.codegen.ecore.ModelElement;
+import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
 import org.nasdanika.config.Context;
 
 public class RendererResourceBundlesPropertiesFileGenerator implements Work<InputStream> {
@@ -32,13 +36,28 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 		EClass eClass = context.get(EClass.class);
 		Properties properties = new Properties();
 		
-		List<EStructuralFeature> selectedFeatures = new ArrayList<>();
+		// Class properties
+		ModelElement cme = ecoreCodeGenerator.find(eClass, false);
+		if (cme != null) {
+			EObject config = cme.getConfiguration(WebUIGenerationTarget.CONFIG_ID);
+			if (config instanceof EClassConfiguration) {
+				((EClassConfiguration) config).toProperties(eClass, (String) context.get(RoutesPackageController.RENDER_ANNOTATION_SOURCE), properties);
+			}
+		}
+		
+		List<EAttribute> selectedAttributes = new ArrayList<>();
+		List<EReference> selectedReferences = new ArrayList<>();
 		List<EOperation> selectedOperations= new ArrayList<>();
 		
 		// Own features and operations
-		for (EStructuralFeature esf: eClass.getEStructuralFeatures()) {
-			if (ecoreCodeGenerator.isSelected(esf)) {
-				selectedFeatures.add(esf);
+		for (EAttribute attr: eClass.getEAttributes()) {
+			if (ecoreCodeGenerator.isSelected(attr)) {
+				selectedAttributes.add(attr);
+			}
+		}
+		for (EReference ref: eClass.getEReferences()) {
+			if (ecoreCodeGenerator.isSelected(ref)) {
+				selectedReferences.add(ref);
 			}
 		}
 		for (EOperation op: eClass.getEOperations()) {
@@ -47,8 +66,9 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 			}
 		}
 		// Features and operations from not selected supertypes
-		collectFeaturesAndOperations(ecoreCodeGenerator, eClass, new HashSet<>(), selectedFeatures, selectedOperations);
+//		collectFeaturesAndOperations(ecoreCodeGenerator, eClass, new HashSet<>(), selectedFeatures, selectedOperations);
 
+// TODO - visible features - all 		
 // TODO - Generate resource entries from configurations.		
 //		String className = eClass.getName();
 //		properties.put("class.label", nameToLabel(className));
@@ -79,6 +99,20 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 			}
 		}
 	}
+	
+	private void collectSelectedFeatures(EcoreCodeGenerator ecoreCodeGenerator, EClass eClass, Set<EClass> traversed, Collection<EStructuralFeature> featureCollector) {
+		if (traversed.add(eClass)) {
+			for (EClass st: eClass.getESuperTypes()) {
+				collectSelectedFeatures(ecoreCodeGenerator, st, traversed, featureCollector);
+			}
+			for (EStructuralFeature esf: eClass.getEStructuralFeatures()) {
+				// All features from not-selected classes and selected features from selected classes.
+				if (!ecoreCodeGenerator.isSelected(eClass) || ecoreCodeGenerator.isSelected(esf)) {
+					featureCollector.add(esf);
+				}
+			}
+		}
+	}	
 
 	private String nameToLabel(String name) {
 		String[] cca = StringUtils.splitByCharacterTypeCamelCase(name);

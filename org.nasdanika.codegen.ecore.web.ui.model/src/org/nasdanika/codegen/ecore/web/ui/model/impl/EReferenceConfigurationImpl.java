@@ -2,8 +2,10 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.util.Properties;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 import org.nasdanika.codegen.ecore.web.ui.model.ReferenceView;
@@ -133,6 +135,22 @@ public class EReferenceConfigurationImpl extends EStructuralFeatureConfiguration
 	 */
 	public void setTypeColumn(String newTypeColumn) {
 		eSet(ModelPackage.Literals.EREFERENCE_CONFIGURATION__TYPE_COLUMN, newTypeColumn);
+	}
+	
+	@Override
+	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {		
+		super.toProperties(modelElement, renderAnnotationSource, properties);
+		
+		// generateResourceStrings - TODO
+		// choices selector
+		
+		// view
+		
+		// view features
+		
+		// element types
+		
+		// type column
 	}
 
 } //EReferenceConfigurationImpl

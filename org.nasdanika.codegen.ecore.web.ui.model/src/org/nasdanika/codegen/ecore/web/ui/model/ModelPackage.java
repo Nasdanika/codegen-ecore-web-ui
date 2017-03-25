@@ -4,7 +4,9 @@ package org.nasdanika.codegen.ecore.web.ui.model;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 /**
@@ -94,13 +96,22 @@ public interface ModelPackage extends EPackage {
 	int EMODEL_ELEMENT_CONFIGURATION_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMODEL_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = 0;
+
+	/**
 	 * The number of operations of the '<em>EModel Element Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMODEL_ELEMENT_CONFIGURATION_OPERATION_COUNT = 0;
+	int EMODEL_ELEMENT_CONFIGURATION_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl <em>ENamed Element Configuration</em>}' class.
@@ -165,6 +176,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT = EMODEL_ELEMENT_CONFIGURATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENAMED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = EMODEL_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
 
 	/**
 	 * The number of operations of the '<em>ENamed Element Configuration</em>' class.
@@ -292,6 +312,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ECLASS_CONFIGURATION_FEATURE_COUNT = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECLASS_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ENAMED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
 
 	/**
 	 * The number of operations of the '<em>EClass Configuration</em>' class.
@@ -455,6 +484,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESTRUCTURAL_FEATURE_CONFIGURATION_FEATURE_COUNT = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ENAMED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
 
 	/**
 	 * The number of operations of the '<em>EStructural Feature Configuration</em>' class.
@@ -645,6 +683,15 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EATTRIBUTE_CONFIGURATION_FEATURE_COUNT = ESTRUCTURAL_FEATURE_CONFIGURATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EATTRIBUTE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ESTRUCTURAL_FEATURE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
 
 	/**
 	 * The number of operations of the '<em>EAttribute Configuration</em>' class.
@@ -855,6 +902,15 @@ public interface ModelPackage extends EPackage {
 	int EREFERENCE_CONFIGURATION_FEATURE_COUNT = ESTRUCTURAL_FEATURE_CONFIGURATION_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EREFERENCE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ESTRUCTURAL_FEATURE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
+
+	/**
 	 * The number of operations of the '<em>EReference Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -965,6 +1021,17 @@ public interface ModelPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>Properties</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.Properties
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getProperties()
+	 * @generated
+	 */
+	int PROPERTIES = 12;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration <em>EModel Element Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -995,6 +1062,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEModelElementConfiguration_GenerateResourceStrings();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration#toProperties(org.eclipse.emf.ecore.EModelElement, java.lang.String, java.util.Properties) <em>To Properties</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To Properties</em>' operation.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration#toProperties(org.eclipse.emf.ecore.EModelElement, java.lang.String, java.util.Properties)
+	 * @generated
+	 */
+	EOperation getEModelElementConfiguration__ToProperties__EModelElement_String_Properties();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration <em>ENamed Element Configuration</em>}'.
@@ -1426,6 +1503,17 @@ public interface ModelPackage extends EPackage {
 	EEnum getFeatureItemsContainer();
 
 	/**
+	 * Returns the meta object for data type '{@link java.util.Properties <em>Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Properties</em>'.
+	 * @see java.util.Properties
+	 * @model instanceClass="java.util.Properties"
+	 * @generated
+	 */
+	EDataType getProperties();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1473,6 +1561,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS = eINSTANCE.getEModelElementConfiguration_GenerateResourceStrings();
+
+		/**
+		 * The meta object literal for the '<em><b>To Properties</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EMODEL_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = eINSTANCE.getEModelElementConfiguration__ToProperties__EModelElement_String_Properties();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl <em>ENamed Element Configuration</em>}' class.
@@ -1815,6 +1911,16 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum FEATURE_ITEMS_CONTAINER = eINSTANCE.getFeatureItemsContainer();
+
+		/**
+		 * The meta object literal for the '<em>Properties</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.Properties
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getProperties()
+		 * @generated
+		 */
+		EDataType PROPERTIES = eINSTANCE.getProperties();
 
 	}
 

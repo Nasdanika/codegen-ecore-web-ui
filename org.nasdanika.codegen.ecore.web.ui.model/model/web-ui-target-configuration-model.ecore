@@ -3,6 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="urn:org.nasdanika.codegen.ecore.web.ui.model"
     nsPrefix="org.nasdanika.codegen.ecore.web.ui.model">
   <eClassifiers xsi:type="ecore:EClass" name="EModelElementConfiguration" abstract="true">
+    <eOperations name="toProperties">
+      <eParameters name="modelElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EModelElement"/>
+      <eParameters name="prefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="properties" eType="#//Properties"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Icon for a model element such as EClass or EStructuralFeature.&#xD;&#xA;If icon contains ``/`` it is treated as URL, otherwise it is treated as css class, e.g. Bootstrap's ``glyphicon glyphicon-close``."/>
@@ -216,4 +221,5 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeBaseExtends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="org.nasdanika.cdo.web.routes.app.Route"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Properties" instanceClassName="java.util.Properties"/>
 </ecore:EPackage>

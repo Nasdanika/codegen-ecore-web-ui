@@ -2,10 +2,14 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
+import java.util.Properties;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.nasdanika.codegen.ecore.web.ui.model.ControlType;
 import org.nasdanika.codegen.ecore.web.ui.model.EAttributeConfiguration;
@@ -114,6 +118,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	private EEnum featureItemsContainerEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType propertiesEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -159,6 +170,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theModelPackage.createPackageContents();
 
@@ -199,6 +213,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	public EAttribute getEModelElementConfiguration_GenerateResourceStrings() {
 		return (EAttribute)eModelElementConfigurationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEModelElementConfiguration__ToProperties__EModelElement_String_Properties() {
+		return eModelElementConfigurationEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -566,6 +589,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getProperties() {
+		return propertiesEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModelFactory getModelFactory() {
 		return (ModelFactory)getEFactoryInstance();
 	}
@@ -592,6 +624,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		eModelElementConfigurationEClass = createEClass(EMODEL_ELEMENT_CONFIGURATION);
 		createEAttribute(eModelElementConfigurationEClass, EMODEL_ELEMENT_CONFIGURATION__ICON);
 		createEAttribute(eModelElementConfigurationEClass, EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS);
+		createEOperation(eModelElementConfigurationEClass, EMODEL_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES);
 
 		eNamedElementConfigurationEClass = createEClass(ENAMED_ELEMENT_CONFIGURATION);
 		createEAttribute(eNamedElementConfigurationEClass, ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL);
@@ -640,6 +673,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		controlTypeEEnum = createEEnum(CONTROL_TYPE);
 		inputTypeEEnum = createEEnum(INPUT_TYPE);
 		featureItemsContainerEEnum = createEEnum(FEATURE_ITEMS_CONTAINER);
+
+		// Create data types
+		propertiesEDataType = createEDataType(PROPERTIES);
 	}
 
 	/**
@@ -665,6 +701,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -680,6 +719,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(eModelElementConfigurationEClass, EModelElementConfiguration.class, "EModelElementConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEModelElementConfiguration_Icon(), ecorePackage.getEString(), "icon", null, 0, 1, EModelElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEModelElementConfiguration_GenerateResourceStrings(), ecorePackage.getEBoolean(), "generateResourceStrings", null, 0, 1, EModelElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getEModelElementConfiguration__ToProperties__EModelElement_String_Properties(), null, "toProperties", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEModelElement(), "modelElement", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "prefix", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getProperties(), "properties", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eNamedElementConfigurationEClass, ENamedElementConfiguration.class, "ENamedElementConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getENamedElementConfiguration_ModelElementLabel(), ecorePackage.getEString(), "modelElementLabel", null, 0, 1, ENamedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -770,6 +814,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		addEEnumLiteral(featureItemsContainerEEnum, FeatureItemsContainer.ACCORDION);
 		addEEnumLiteral(featureItemsContainerEEnum, FeatureItemsContainer.PILLS);
 		addEEnumLiteral(featureItemsContainerEEnum, FeatureItemsContainer.TABS);
+
+		// Initialize data types
+		initEDataType(propertiesEDataType, Properties.class, "Properties", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

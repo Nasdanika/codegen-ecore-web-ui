@@ -2,6 +2,7 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
+import java.util.Properties;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -84,6 +85,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 				return createInputTypeFromString(eDataType, initialValue);
 			case ModelPackage.FEATURE_ITEMS_CONTAINER:
 				return createFeatureItemsContainerFromString(eDataType, initialValue);
+			case ModelPackage.PROPERTIES:
+				return createPropertiesFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -107,6 +110,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 				return convertInputTypeToString(eDataType, instanceValue);
 			case ModelPackage.FEATURE_ITEMS_CONTAINER:
 				return convertFeatureItemsContainerToString(eDataType, instanceValue);
+			case ModelPackage.PROPERTIES:
+				return convertPropertiesToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -250,6 +255,24 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 */
 	public String convertFeatureItemsContainerToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Properties createPropertiesFromString(EDataType eDataType, String initialValue) {
+		return (Properties)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPropertiesToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

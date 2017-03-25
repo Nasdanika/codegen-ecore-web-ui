@@ -2,7 +2,9 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model;
 
+import java.util.Properties;
 import org.eclipse.emf.cdo.CDOObject;
+import org.eclipse.emf.ecore.EModelElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,5 +84,13 @@ public interface EModelElementConfiguration extends CDOObject {
 	 * @generated
 	 */
 	void setGenerateResourceStrings(boolean value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model propertiesDataType="org.nasdanika.codegen.ecore.web.ui.model.Properties"
+	 * @generated
+	 */
+	void toProperties(EModelElement modelElement, String prefix, Properties properties);
 
 } // EModelElementConfiguration

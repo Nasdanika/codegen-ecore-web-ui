@@ -2,8 +2,12 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.Properties;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration;
@@ -87,6 +91,32 @@ public abstract class EModelElementConfigurationImpl extends CDOObjectImpl imple
 	 */
 	public void setGenerateResourceStrings(boolean newGenerateResourceStrings) {
 		eSet(ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS, newGenerateResourceStrings);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void toProperties(EModelElement modelElement, String prefix, Properties properties) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ModelPackage.EMODEL_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES:
+				toProperties((EModelElement)arguments.get(0), (String)arguments.get(1), (Properties)arguments.get(2));
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //EModelElementConfigurationImpl

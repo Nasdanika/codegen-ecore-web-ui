@@ -5,8 +5,8 @@
     rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
     complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
-    providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter" operationReflection="true"
-    importOrganizing="true">
+    providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>web-ui-target-configuration-model.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Model" basePackage="org.nasdanika.codegen.ecore.web.ui" disposableProviderFactory="true"
@@ -59,9 +59,15 @@
       <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureItemsContainer/Pills"/>
       <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureItemsContainer/Tabs"/>
     </genEnums>
+    <genDataTypes ecoreDataType="web-ui-target-configuration-model.ecore#//Properties"/>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EModelElementConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/icon"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/generateResourceStrings"/>
+      <genOperations ecoreOperation="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties">
+        <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/modelElement"/>
+        <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/prefix"/>
+        <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/properties"/>
+      </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//ENamedElementConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//ENamedElementConfiguration/modelElementLabel"/>

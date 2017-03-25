@@ -60,6 +60,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			case ModelPackage.ECLASS_CONFIGURATION: return (EObject)createEClassConfiguration();
 			case ModelPackage.EATTRIBUTE_CONFIGURATION: return (EObject)createEAttributeConfiguration();
 			case ModelPackage.EREFERENCE_CONFIGURATION: return (EObject)createEReferenceConfiguration();
+			case ModelPackage.EPACKAGE_CONFIGURATION: return (EObject)createEPackageConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -139,6 +140,16 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public EReferenceConfiguration createEReferenceConfiguration() {
 		EReferenceConfigurationImpl eReferenceConfiguration = new EReferenceConfigurationImpl();
 		return eReferenceConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EPackageConfiguration createEPackageConfiguration() {
+		EPackageConfigurationImpl ePackageConfiguration = new EPackageConfigurationImpl();
+		return ePackageConfiguration;
 	}
 
 	/**

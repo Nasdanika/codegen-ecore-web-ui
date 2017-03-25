@@ -49,6 +49,15 @@ public interface ModelFactory extends EFactory {
 	EReferenceConfiguration createEReferenceConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>EPackage Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EPackage Configuration</em>'.
+	 * @generated
+	 */
+	EPackageConfiguration createEPackageConfiguration();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

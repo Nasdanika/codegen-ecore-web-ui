@@ -141,6 +141,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EPackageConfigurationItemProvider ePackageConfigurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEPackageConfigurationAdapter() {
+		if (ePackageConfigurationItemProvider == null) {
+			ePackageConfigurationItemProvider = new EPackageConfigurationItemProvider(this);
+		}
+
+		return ePackageConfigurationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +265,7 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 		if (eClassConfigurationItemProvider != null) eClassConfigurationItemProvider.dispose();
 		if (eAttributeConfigurationItemProvider != null) eAttributeConfigurationItemProvider.dispose();
 		if (eReferenceConfigurationItemProvider != null) eReferenceConfigurationItemProvider.dispose();
+		if (ePackageConfigurationItemProvider != null) ePackageConfigurationItemProvider.dispose();
 	}
 
 }

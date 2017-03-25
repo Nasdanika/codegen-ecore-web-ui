@@ -5,10 +5,26 @@
       <packagefragmentroots name="{{source-folder}}">
         <packagefragments controller="org.nasdanika.codegen.ecore.web.ui.RoutesPackageController" name="{{base-package}}.{{epackage-name}}">
           <compilationunits description="Base interface for renderers defined in the package." name="RendererBase">
-            <generators xsi:type="org.nasdanika.codegen:StaticText" content="import org.eclipse.emf.ecore.EObject;&#xD;&#xA;import org.nasdanika.cdo.security.LoginPasswordCredentials;&#xD;&#xA;import org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext;&#xD;&#xA;import org.nasdanika.cdo.web.routes.app.Renderer;&#xD;&#xA;&#xD;&#xA;/**&#xD;&#xA; * Base interface for renderers defined in the package.&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;interface RendererBase&lt;T extends EObject> extends Renderer&lt;CDOTransactionHttpServletRequestContext&lt;LoginPasswordCredentials>, T> {&#xD;&#xA;&#x9;// Override inherited methods as needed.&#xD;&#xA;}"/>
+            <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererBaseController" name="RendererBase" comment="Base interface for renderers defined in the package.">
+              <modifiers>public</modifiers>
+              <typeParameters>T extends {{import:org.eclipse.emf.ecore.EObject}}</typeParameters>
+              <superTypes>{{renderer-base-extends-imported}}&lt;{{import:org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext}}&lt;{{import:org.nasdanika.cdo.security.LoginPasswordCredentials}}>, T></superTypes>
+            </generators>
           </compilationunits>
           <compilationunits description="Base class for routes defined in the package." name="RouteBase">
-            <generators xsi:type="org.nasdanika.codegen:StaticText" content="import org.eclipse.emf.ecore.EObject;&#xD;&#xA;import org.nasdanika.web.DispatchingRoute;&#xD;&#xA;import org.osgi.framework.FrameworkUtil;&#xD;&#xA;import org.nasdanika.cdo.web.routes.app.Route;&#xD;&#xA;import org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext;&#xD;&#xA;import org.nasdanika.cdo.security.LoginPasswordCredentials;&#xD;&#xA;&#xD;&#xA;/**&#xD;&#xA; * Base class for routes defined in the package.&#xD;&#xA; * @generated&#xD;&#xA; */&#xD;&#xA;public class RouteBase&lt;T extends EObject> extends Route&lt;CDOTransactionHttpServletRequestContext&lt;LoginPasswordCredentials>,T> implements RendererBase&lt;T> {&#xD;&#xA;&#xD;&#xA;&#x9;/**&#xD;&#xA;&#x9; * @generated&#xD;&#xA;&#x9; */&#xD;&#xA;&#x9;protected RouteBase() throws Exception {&#xD;&#xA;&#x9;&#x9;super(FrameworkUtil.getBundle(org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext.class).getBundleContext());&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;}"/>
+            <generators xsi:type="org.nasdanika.codegen.java:Class" controller="org.nasdanika.codegen.ecore.web.ui.RouteBaseController" name="RouteBase" comment="Base class for routes defined in the package.">
+              <modifiers>public</modifiers>
+              <bodyGenerators xsi:type="org.nasdanika.codegen.java:Constructor">
+                <modifiers>protected</modifiers>
+                <bodyGenerators xsi:type="org.nasdanika.codegen:Interpolator">
+                  <generator xsi:type="org.nasdanika.codegen:StaticText" content="super({{import:org.osgi.framework.FrameworkUtil}}.getBundle({{import:org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext}}.class).getBundleContext());&#xD;&#xA;"/>
+                </bodyGenerators>
+                <thrownExceptions>{{import:java.lang.Exception}}</thrownExceptions>
+              </bodyGenerators>
+              <typeParameters>T extends {{import:org.eclipse.emf.ecore.EObject}}</typeParameters>
+              <superTypes>{{route-base-extends-imported}}&lt;{{import:org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext}}&lt;{{import:org.nasdanika.cdo.security.LoginPasswordCredentials}}>, T></superTypes>
+              <superTypes>RendererBase&lt;T></superTypes>
+            </generators>
           </compilationunits>
           <compilationunits controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceCompilationUnitController" name="{{eclass-name}}Renderer">
             <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererInterfaceController" name="{{eclass-name}}Renderer">

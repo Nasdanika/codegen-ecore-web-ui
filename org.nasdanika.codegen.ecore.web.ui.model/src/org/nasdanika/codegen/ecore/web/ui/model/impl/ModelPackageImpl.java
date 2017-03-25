@@ -12,6 +12,7 @@ import org.nasdanika.codegen.ecore.web.ui.model.EAttributeConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration;
+import org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.FeatureItemsContainer;
@@ -69,6 +70,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass eReferenceConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ePackageConfigurationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -486,6 +494,33 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEPackageConfiguration() {
+		return ePackageConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEPackageConfiguration_RendererBaseExtends() {
+		return (EAttribute)ePackageConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEPackageConfiguration_RouteBaseExtends() {
+		return (EAttribute)ePackageConfigurationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getFeatureLocation() {
 		return featureLocationEEnum;
 	}
@@ -595,6 +630,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(eReferenceConfigurationEClass, EREFERENCE_CONFIGURATION__ELEMENT_TYPES);
 		createEAttribute(eReferenceConfigurationEClass, EREFERENCE_CONFIGURATION__TYPE_COLUMN);
 
+		ePackageConfigurationEClass = createEClass(EPACKAGE_CONFIGURATION);
+		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS);
+		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS);
+
 		// Create enums
 		featureLocationEEnum = createEEnum(FEATURE_LOCATION);
 		referenceViewEEnum = createEEnum(REFERENCE_VIEW);
@@ -678,6 +717,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEReferenceConfiguration_ViewFeatures(), ecorePackage.getEString(), "viewFeatures", null, 0, 1, EReferenceConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEReferenceConfiguration_ElementTypes(), ecorePackage.getEString(), "elementTypes", null, 0, 1, EReferenceConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEReferenceConfiguration_TypeColumn(), ecorePackage.getEString(), "typeColumn", null, 0, 1, EReferenceConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ePackageConfigurationEClass, EPackageConfiguration.class, "EPackageConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEPackageConfiguration_RendererBaseExtends(), ecorePackage.getEString(), "rendererBaseExtends", "org.nasdanika.cdo.web.routes.app.Renderer", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageConfiguration_RouteBaseExtends(), ecorePackage.getEString(), "routeBaseExtends", "org.nasdanika.cdo.web.routes.app.Route", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(featureLocationEEnum, FeatureLocation.class, "FeatureLocation");

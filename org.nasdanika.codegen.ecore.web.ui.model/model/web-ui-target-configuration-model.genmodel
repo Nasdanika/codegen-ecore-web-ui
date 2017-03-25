@@ -100,5 +100,9 @@
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/elementTypes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/typeColumn"/>
     </genClasses>
+    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EPackageConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EPackageConfiguration/rendererBaseExtends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EPackageConfiguration/routeBaseExtends"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

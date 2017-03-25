@@ -210,4 +210,10 @@
     <eLiterals name="Pills" value="1"/>
     <eLiterals name="Tabs" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EPackageConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rendererBaseExtends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="org.nasdanika.cdo.web.routes.app.Renderer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeBaseExtends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="org.nasdanika.cdo.web.routes.app.Route"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -865,6 +865,52 @@ public interface ModelPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl <em>EPackage Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEPackageConfiguration()
+	 * @generated
+	 */
+	int EPACKAGE_CONFIGURATION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Renderer Base Extends</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Route Base Extends</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS = 1;
+
+	/**
+	 * The number of structural features of the '<em>EPackage Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPACKAGE_CONFIGURATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>EPackage Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPACKAGE_CONFIGURATION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation <em>Feature Location</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -872,7 +918,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getFeatureLocation()
 	 * @generated
 	 */
-	int FEATURE_LOCATION = 6;
+	int FEATURE_LOCATION = 7;
 
 
 	/**
@@ -883,7 +929,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getReferenceView()
 	 * @generated
 	 */
-	int REFERENCE_VIEW = 7;
+	int REFERENCE_VIEW = 8;
 
 
 	/**
@@ -894,7 +940,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getControlType()
 	 * @generated
 	 */
-	int CONTROL_TYPE = 8;
+	int CONTROL_TYPE = 9;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.InputType <em>Input Type</em>}' enum.
@@ -904,7 +950,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getInputType()
 	 * @generated
 	 */
-	int INPUT_TYPE = 9;
+	int INPUT_TYPE = 10;
 
 
 	/**
@@ -915,7 +961,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getFeatureItemsContainer()
 	 * @generated
 	 */
-	int FEATURE_ITEMS_CONTAINER = 10;
+	int FEATURE_ITEMS_CONTAINER = 11;
 
 
 	/**
@@ -1298,6 +1344,38 @@ public interface ModelPackage extends EPackage {
 	EAttribute getEReferenceConfiguration_TypeColumn();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration <em>EPackage Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EPackage Configuration</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration
+	 * @generated
+	 */
+	EClass getEPackageConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRendererBaseExtends <em>Renderer Base Extends</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Renderer Base Extends</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRendererBaseExtends()
+	 * @see #getEPackageConfiguration()
+	 * @generated
+	 */
+	EAttribute getEPackageConfiguration_RendererBaseExtends();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRouteBaseExtends <em>Route Base Extends</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Route Base Extends</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRouteBaseExtends()
+	 * @see #getEPackageConfiguration()
+	 * @generated
+	 */
+	EAttribute getEPackageConfiguration_RouteBaseExtends();
+
+	/**
 	 * Returns the meta object for enum '{@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation <em>Feature Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1661,6 +1739,32 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EREFERENCE_CONFIGURATION__TYPE_COLUMN = eINSTANCE.getEReferenceConfiguration_TypeColumn();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl <em>EPackage Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.EPackageConfigurationImpl
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEPackageConfiguration()
+		 * @generated
+		 */
+		EClass EPACKAGE_CONFIGURATION = eINSTANCE.getEPackageConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Renderer Base Extends</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS = eINSTANCE.getEPackageConfiguration_RendererBaseExtends();
+
+		/**
+		 * The meta object literal for the '<em><b>Route Base Extends</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS = eINSTANCE.getEPackageConfiguration_RouteBaseExtends();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation <em>Feature Location</em>}' enum.

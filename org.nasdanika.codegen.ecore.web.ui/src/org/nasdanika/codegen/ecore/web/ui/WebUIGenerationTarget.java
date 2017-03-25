@@ -25,7 +25,7 @@ import org.nasdanika.codegen.ecore.Reference;
 import org.nasdanika.codegen.ecore.presentation.GenerationTarget;
 import org.nasdanika.codegen.ecore.web.ui.model.EAttributeConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
-import org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration;
+import org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelFactory;
 import org.nasdanika.config.Context;
@@ -34,7 +34,7 @@ import org.nasdanika.config.MutableContext;
 
 public class WebUIGenerationTarget implements GenerationTarget {
 	
-	private static final String CONFIG_ID = "org.nasdanika.codegen.ecore.web.ui";
+	static final String CONFIG_ID = "org.nasdanika.codegen.ecore.web.ui";
 
 	@Override
 	public void updateConfiguration(ModelElement modelElement) {
@@ -63,10 +63,14 @@ public class WebUIGenerationTarget implements GenerationTarget {
 			EReferenceConfiguration configuration = ModelFactory.eINSTANCE.createEReferenceConfiguration();
 			// TODO - pre-load from the model? 
 			updateConfiguration(modelElement, configuration);
+		} else if (modelElement instanceof org.nasdanika.codegen.ecore.Package) {
+			EPackageConfiguration configuration = ModelFactory.eINSTANCE.createEPackageConfiguration();
+			// TODO - pre-load from the model? 
+			updateConfiguration(modelElement, configuration);
 		}		
 	}
 
-	private void updateConfiguration(ModelElement modelElement, EModelElementConfiguration configuration) {
+	private void updateConfiguration(ModelElement modelElement, EObject configuration) {
 		for (ConfigurationEntry ce: modelElement.getConfiguration()) {
 			if (CONFIG_ID.equals(ce.getId())) {
 				return;

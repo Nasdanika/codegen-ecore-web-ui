@@ -3,9 +3,10 @@
 package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
+import org.nasdanika.codegen.ecore.web.ui.model.ControlType;
 import org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation;
+import org.nasdanika.codegen.ecore.web.ui.model.InputType;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
 /**
@@ -19,9 +20,13 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getVisible <em>Visible</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getEditable <em>Editable</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getDisabled <em>Disabled</em>}</li>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getFormat <em>Format</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getControl <em>Control</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getControlConfiguration <em>Control Configuration</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getInputType <em>Input Type</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#isFormInputGroup <em>Form Input Group</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl#getPlaceholder <em>Placeholder</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,24 +110,6 @@ public abstract class EStructuralFeatureConfigurationImpl extends ENamedElementC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFormat() {
-		return (String)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORMAT, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFormat(String newFormat) {
-		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORMAT, newFormat);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public FeatureLocation getLocation() {
 		return (FeatureLocation)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION, true);
 	}
@@ -152,6 +139,96 @@ public abstract class EStructuralFeatureConfigurationImpl extends ENamedElementC
 	 */
 	public void setCategory(String newCategory) {
 		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY, newCategory);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ControlType getControl() {
+		return (ControlType)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setControl(ControlType newControl) {
+		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL, newControl);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getControlConfiguration() {
+		return (String)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setControlConfiguration(String newControlConfiguration) {
+		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION, newControlConfiguration);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputType getInputType() {
+		return (InputType)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputType(InputType newInputType) {
+		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE, newInputType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isFormInputGroup() {
+		return (Boolean)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormInputGroup(boolean newFormInputGroup) {
+		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP, newFormInputGroup);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPlaceholder() {
+		return (String)eGet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlaceholder(String newPlaceholder) {
+		eSet(ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER, newPlaceholder);
 	}
 
 } //EStructuralFeatureConfigurationImpl

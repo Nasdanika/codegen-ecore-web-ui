@@ -2,7 +2,6 @@
  */
 package org.nasdanika.codegen.ecore.web.ui.model;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>EStructural Feature Configuration</b></em>'.
@@ -15,9 +14,13 @@ package org.nasdanika.codegen.ecore.web.ui.model;
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getVisible <em>Visible</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getEditable <em>Editable</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getDisabled <em>Disabled</em>}</li>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getFormat <em>Format</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getLocation <em>Location</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getCategory <em>Category</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControl <em>Control</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControlConfiguration <em>Control Configuration</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getInputType <em>Input Type</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#isFormInputGroup <em>Form Input Group</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getPlaceholder <em>Placeholder</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration()
@@ -119,32 +122,6 @@ public interface EStructuralFeatureConfiguration extends ENamedElementConfigurat
 	void setDisabled(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Format</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Format is used for rendering and parsing date and number feature values. 
-	 * SimpleDateFormat for dates, DecimalFormat for numbers.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Format</em>' attribute.
-	 * @see #setFormat(String)
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration_Format()
-	 * @model
-	 * @generated
-	 */
-	String getFormat();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getFormat <em>Format</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Format</em>' attribute.
-	 * @see #getFormat()
-	 * @generated
-	 */
-	void setFormat(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Location</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation}.
 	 * <!-- begin-user-doc -->
@@ -197,4 +174,142 @@ public interface EStructuralFeatureConfiguration extends ENamedElementConfigurat
 	 * @generated
 	 */
 	void setCategory(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Control</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.nasdanika.codegen.ecore.web.ui.model.ControlType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Control</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Control</em>' attribute.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ControlType
+	 * @see #setControl(ControlType)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration_Control()
+	 * @model
+	 * @generated
+	 */
+	ControlType getControl();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControl <em>Control</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Control</em>' attribute.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ControlType
+	 * @see #getControl()
+	 * @generated
+	 */
+	void setControl(ControlType value);
+
+	/**
+	 * Returns the value of the '<em><b>Control Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * YAML map with keys corresponding to control attribute names, and values being JXPath expressions evaluating to attribute values. 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Control Configuration</em>' attribute.
+	 * @see #setControlConfiguration(String)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration_ControlConfiguration()
+	 * @model
+	 * @generated
+	 */
+	String getControlConfiguration();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControlConfiguration <em>Control Configuration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Control Configuration</em>' attribute.
+	 * @see #getControlConfiguration()
+	 * @generated
+	 */
+	void setControlConfiguration(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Input Type</b></em>' attribute.
+	 * The default value is <code>"Default"</code>.
+	 * The literals are from the enumeration {@link org.nasdanika.codegen.ecore.web.ui.model.InputType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Input type if control is "Input".
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Input Type</em>' attribute.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.InputType
+	 * @see #setInputType(InputType)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration_InputType()
+	 * @model default="Default"
+	 * @generated
+	 */
+	InputType getInputType();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getInputType <em>Input Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Input Type</em>' attribute.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.InputType
+	 * @see #getInputType()
+	 * @generated
+	 */
+	void setInputType(InputType value);
+
+	/**
+	 * Returns the value of the '<em><b>Form Input Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Set it to true to force rendering of the form control in a {@link FormInputGroup} instead of {@link FormGroup} or
+	 * to false to force the opposite. If this annotation is not present then inputs with either icon (rendered on the left) or help icon (rendered on the right) 
+	 * are rendered as form input groups.  
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Form Input Group</em>' attribute.
+	 * @see #setFormInputGroup(boolean)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration_FormInputGroup()
+	 * @model
+	 * @generated
+	 */
+	boolean isFormInputGroup();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#isFormInputGroup <em>Form Input Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Form Input Group</em>' attribute.
+	 * @see #isFormInputGroup()
+	 * @generated
+	 */
+	void setFormInputGroup(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * XPath expression evaluating to the placeholder value for features. Placeholder value is an implicit application-specific value, different from the 
+	 * default value. For example, in hierarchical structures children may implicitly inherit parent feature value, unless it is explicitly set (overridden) in the child.
+	 * 
+	 * In the absence of feature value (null or blank string for strings) placeholder values are displayed in the view in a small {@link Well}.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Placeholder</em>' attribute.
+	 * @see #setPlaceholder(String)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEStructuralFeatureConfiguration_Placeholder()
+	 * @model
+	 * @generated
+	 */
+	String getPlaceholder();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getPlaceholder <em>Placeholder</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Placeholder</em>' attribute.
+	 * @see #getPlaceholder()
+	 * @generated
+	 */
+	void setPlaceholder(String value);
 } // EStructuralFeatureConfiguration

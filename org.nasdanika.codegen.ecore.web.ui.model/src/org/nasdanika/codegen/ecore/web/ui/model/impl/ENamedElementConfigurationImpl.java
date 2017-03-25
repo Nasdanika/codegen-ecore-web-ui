@@ -16,6 +16,8 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl#getModelElementLabel <em>Model Element Label</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl#getConstraints <em>Constraints</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ENamedElementConfigurationImpl#getSort <em>Sort</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +58,42 @@ public abstract class ENamedElementConfigurationImpl extends EModelElementConfig
 	 */
 	public void setModelElementLabel(String newModelElementLabel) {
 		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL, newModelElementLabel);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getConstraints() {
+		return (String)eGet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__CONSTRAINTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstraints(String newConstraints) {
+		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__CONSTRAINTS, newConstraints);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSort() {
+		return (String)eGet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__SORT, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSort(String newSort) {
+		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__SORT, newSort);
 	}
 
 } //ENamedElementConfigurationImpl

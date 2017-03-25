@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
@@ -48,9 +47,13 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 			addVisiblePropertyDescriptor(object);
 			addEditablePropertyDescriptor(object);
 			addDisabledPropertyDescriptor(object);
-			addFormatPropertyDescriptor(object);
 			addLocationPropertyDescriptor(object);
 			addCategoryPropertyDescriptor(object);
+			addControlPropertyDescriptor(object);
+			addControlConfigurationPropertyDescriptor(object);
+			addInputTypePropertyDescriptor(object);
+			addFormInputGroupPropertyDescriptor(object);
+			addPlaceholderPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -122,28 +125,6 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 	}
 
 	/**
-	 * This adds a property descriptor for the Format feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFormatPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EStructuralFeatureConfiguration_format_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_format_feature", "_UI_EStructuralFeatureConfiguration_type"),
-				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORMAT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Location feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -188,6 +169,116 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 	}
 
 	/**
+	 * This adds a property descriptor for the Control feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addControlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_control_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_control_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Control Configuration feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addControlConfigurationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_controlConfiguration_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_controlConfiguration_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_inputType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_inputType_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Form Input Group feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormInputGroupPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_formInputGroup_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_formInputGroup_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Placeholder feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlaceholderPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EStructuralFeatureConfiguration_placeholder_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EStructuralFeatureConfiguration_placeholder_feature", "_UI_EStructuralFeatureConfiguration_type"),
+				 ModelPackage.Literals.ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -217,9 +308,13 @@ public class EStructuralFeatureConfigurationItemProvider extends ENamedElementCo
 			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE:
 			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE:
 			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED:
-			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__FORMAT:
 			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION:
 			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP:
+			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

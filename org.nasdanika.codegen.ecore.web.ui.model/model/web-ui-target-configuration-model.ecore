@@ -22,6 +22,16 @@
         <details key="documentation" value="EClass or EStructuralFeature label."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Constraint shall be a YML text which defines a single constraint or a list of constraints. Constraint can be a string or a map containing:&#xD;&#xA;&#xD;&#xA;* ``condition`` - XPath expression boolean expression.&#xD;&#xA;* ``errorMessageKey`` - Optional error message key. If it is present, error message is retrieved as resource string.&#xD;&#xA;* ``errorMessage`` - Error message to display if the expression evaluates to false. It is used if ``errorMessageKey`` is not defined or if there is no resource string for the key. &#xD;&#xA;&#xD;&#xA;If the constraint is a String, then it is treated as ``condition`` XPath expression and error message is constructed as ``Constraint violation: &lt;condition>``. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="XPath expression to use for sorting of items in tables and lists."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EClassConfiguration" eSuperTypes="#//ENamedElementConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dispatchFeatures" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -37,6 +47,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewItem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Set this to ``true`` to have the class view rendered in the item container. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="horizontalForm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=" By default EClass edit forms are rendered as horizontal forms. Set this to ``false`` to change the default rendering."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureItemsContainer"
+        eType="#//FeatureItemsContainer" defaultValueLiteral="Tabs">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Feature items container."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureItemsContainerConfiguration"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Feature items container configuration.&#xD;&#xA;&#xD;&#xA;For accordion:&#xD;&#xA;&#xD;&#xA;* style: Bootstrap style, e.g. PRIMARY&#xD;&#xA;&#xD;&#xA;For pills:&#xD;&#xA;&#xD;&#xA;* stacked: true or false&#xD;&#xA;* justified: true or false&#xD;&#xA;* width: 1 - 11&#xD;&#xA;&#xD;&#xA;For tabs:&#xD;&#xA;&#xD;&#xA;* justified: true or false&#xD;&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -57,11 +85,6 @@
         <details key="documentation" value="Defines whether an editable feature is disabled, i.e. it shall be displayed in the edit form, but the edit control shall be disabled.&#xD;&#xA;&#xD;&#xA;* ``false`` boolean literal or empty string - the feature is enabled (default).* ``true`` boolean literal - the feature is disabled.&#xD;&#xA;* [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is disabled.&#xD;&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Format is used for rendering and parsing date and number feature values. &#xD;&#xA;SimpleDateFormat for dates, DecimalFormat for numbers."/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Location" eType="#//FeatureLocation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Format is used for rendering and parsing date and number feature values. &#xD;&#xA;SimpleDateFormat for dates, DecimalFormat for numbers."/>
@@ -72,8 +95,46 @@
         <details key="documentation" value="Feature category. Categories are displayed as panels in the view and the left panel, and field sets in edit forms."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="control" eType="#//ControlType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlConfiguration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="YAML map with keys corresponding to control attribute names, and values being JXPath expressions evaluating to attribute values. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputType" eType="#//InputType"
+        defaultValueLiteral="Default">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Input type if control is &quot;Input&quot;."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formInputGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Set it to true to force rendering of the form control in a {@link FormInputGroup} instead of {@link FormGroup} or&#xD;&#xA;to false to force the opposite. If this annotation is not present then inputs with either icon (rendered on the left) or help icon (rendered on the right) &#xD;&#xA;are rendered as form input groups.  "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="placeholder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="XPath expression evaluating to the placeholder value for features. Placeholder value is an implicit application-specific value, different from the &#xD;&#xA;default value. For example, in hierarchical structures children may implicitly inherit parent feature value, unless it is explicitly set (overridden) in the child.&#xD;&#xA;&#xD;&#xA;In the absence of feature value (null or blank string for strings) placeholder values are displayed in the view in a small {@link Well}."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EAttributeConfiguration" eSuperTypes="#//EStructuralFeatureConfiguration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EAttributeConfiguration" eSuperTypes="#//EStructuralFeatureConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Format is used for rendering and parsing date and number feature values. &#xD;&#xA;SimpleDateFormat for dates, DecimalFormat for numbers."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="choices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="YAML map of values to labels or list if values and labels are the same. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="html" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If control is ``textarea`` and ``html`` is set to ``true`` then the textarea is initialized with [TinyMCE](https://www.tinymce.com) editor. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EReferenceConfiguration" eSuperTypes="#//EStructuralFeatureConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="choicesSelector" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -90,6 +151,16 @@
         <details key="documentation" value="One of the following&#xD;&#xA;&#xD;&#xA;* A space-separated list of feature names.&#xD;&#xA;* A YAML document list of feature names or mappings of feature name to feature configuration definition, which may include:&#xD;&#xA;     * ``visible`` - [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is included in the list.&#xD;&#xA;    * ``align`` - left, center, or right. Defaults to right for numbers, center for dates and booleans and left for other types.&#xD;&#xA;    * ``width`` - if this key maps to a number, then the number is used for all device sizes. Otherwise is shall map to a map of device-size to number mappings.&#xD;&#xA;&#xD;&#xA;Example:&#xD;&#xA;```yaml&#xD;&#xA;- name:&#xD;&#xA;     align: right&#xD;&#xA;     width: 5&#xD;&#xA;- age:&#xD;&#xA;    aligh: left&#xD;&#xA;    width:&#xD;&#xA;         xs: 3        &#xD;&#xA; - ssn&#xD;&#xA;```&#xD;&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementTypes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Specifies EClass-es of elements which can be instantiated and set/added to the reference.  &#xD;&#xA;The list of element types shall be space-separated. Elements shall be in&#xD;&#xA;the following format: ``&lt;eclass name>[@&lt;epackage ns uri>]``. EPackage namespace URI part can be omitted if the class is in the same package with the &#xD;&#xA;feature's declaring EClass."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeColumn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If not blank, indicates that the table listing reference elements shall display elements type in a type column. &#xD;&#xA;The value of this attribute is a pattern which is interpolated with the following tokens:&#xD;&#xA;&#xD;&#xA;* ``icon`` - Element icon.&#xD;&#xA;* ``eclass-icon`` - Element type icon.&#xD;&#xA;* ``eclass-label`` - Element type label.&#xD;&#xA;* ``documentation-icon`` - Documentation icon or blank string if there is no documentation.&#xD;&#xA;&#xD;&#xA;This attribute is useful for references containing elements of different types."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FeatureLocation">
     <eLiterals name="Default"/>
@@ -101,5 +172,42 @@
     <eLiterals name="Default"/>
     <eLiterals name="List" value="1"/>
     <eLiterals name="Table" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ControlType">
+    <eLiterals name="Default"/>
+    <eLiterals name="input" value="1" literal="Input"/>
+    <eLiterals name="select" value="2" literal="Select"/>
+    <eLiterals name="textarea" value="3" literal="Text area"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="InputType">
+    <eLiterals name="Default"/>
+    <eLiterals name="button" value="1" literal="Button"/>
+    <eLiterals name="checkbox" value="2" literal="Checkbox"/>
+    <eLiterals name="color" value="3" literal="Color"/>
+    <eLiterals name="date" value="4" literal="Date"/>
+    <eLiterals name="datetime" value="5" literal="DateTime"/>
+    <eLiterals name="datetime_local" value="6" literal="DateTime Local"/>
+    <eLiterals name="email" value="7" literal="E-Mail"/>
+    <eLiterals name="file" value="8" literal="File"/>
+    <eLiterals name="hidden" value="9" literal="Hidden"/>
+    <eLiterals name="image" value="10" literal="Image"/>
+    <eLiterals name="month" value="11" literal="Month"/>
+    <eLiterals name="number" value="12" literal="Number"/>
+    <eLiterals name="password" value="13" literal="Password"/>
+    <eLiterals name="radio" value="14" literal="Radio"/>
+    <eLiterals name="range" value="15" literal="Range"/>
+    <eLiterals name="reset" value="16" literal="Reset"/>
+    <eLiterals name="search" value="17" literal="Search"/>
+    <eLiterals name="submit" value="18" literal="Submit"/>
+    <eLiterals name="tel" value="19" literal="Telephone"/>
+    <eLiterals name="text" value="20" literal="Text"/>
+    <eLiterals name="time" value="21" literal="Time"/>
+    <eLiterals name="url" value="22" literal="URL"/>
+    <eLiterals name="week" value="23" literal="Week"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FeatureItemsContainer">
+    <eLiterals name="Accordion"/>
+    <eLiterals name="Pills" value="1"/>
+    <eLiterals name="Tabs" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

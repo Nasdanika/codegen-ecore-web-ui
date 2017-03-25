@@ -48,6 +48,9 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 			addDispatchFeaturesPropertyDescriptor(object);
 			addLabelPropertyDescriptor(object);
 			addViewItemPropertyDescriptor(object);
+			addHorizontalFormPropertyDescriptor(object);
+			addFeatureItemsContainerPropertyDescriptor(object);
+			addFeatureItemsContainerConfigurationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -119,6 +122,72 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 	}
 
 	/**
+	 * This adds a property descriptor for the Horizontal Form feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHorizontalFormPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_horizontalForm_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_horizontalForm_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__HORIZONTAL_FORM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Feature Items Container feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFeatureItemsContainerPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_featureItemsContainer_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_featureItemsContainer_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Feature Items Container Configuration feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFeatureItemsContainerConfigurationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_featureItemsContainerConfiguration_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_featureItemsContainerConfiguration_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns EClassConfiguration.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,6 +228,9 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 			case ModelPackage.ECLASS_CONFIGURATION__DISPATCH_FEATURES:
 			case ModelPackage.ECLASS_CONFIGURATION__LABEL:
 			case ModelPackage.ECLASS_CONFIGURATION__VIEW_ITEM:
+			case ModelPackage.ECLASS_CONFIGURATION__HORIZONTAL_FORM:
+			case ModelPackage.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER:
+			case ModelPackage.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

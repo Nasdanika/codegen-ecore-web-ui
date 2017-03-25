@@ -46,6 +46,8 @@ public class ENamedElementConfigurationItemProvider extends EModelElementConfigu
 			super.getPropertyDescriptors(object);
 
 			addModelElementLabelPropertyDescriptor(object);
+			addConstraintsPropertyDescriptor(object);
+			addSortPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -64,6 +66,50 @@ public class ENamedElementConfigurationItemProvider extends EModelElementConfigu
 				 getString("_UI_ENamedElementConfiguration_modelElementLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ENamedElementConfiguration_modelElementLabel_feature", "_UI_ENamedElementConfiguration_type"),
 				 ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Constraints feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConstraintsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ENamedElementConfiguration_constraints_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ENamedElementConfiguration_constraints_feature", "_UI_ENamedElementConfiguration_type"),
+				 ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__CONSTRAINTS,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Sort feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSortPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ENamedElementConfiguration_sort_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ENamedElementConfiguration_sort_feature", "_UI_ENamedElementConfiguration_type"),
+				 ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__SORT,
 				 true,
 				 false,
 				 false,
@@ -100,6 +146,8 @@ public class ENamedElementConfigurationItemProvider extends EModelElementConfigu
 
 		switch (notification.getFeatureID(ENamedElementConfiguration.class)) {
 			case ModelPackage.ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL:
+			case ModelPackage.ENAMED_ELEMENT_CONFIGURATION__CONSTRAINTS:
+			case ModelPackage.ENAMED_ELEMENT_CONFIGURATION__SORT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

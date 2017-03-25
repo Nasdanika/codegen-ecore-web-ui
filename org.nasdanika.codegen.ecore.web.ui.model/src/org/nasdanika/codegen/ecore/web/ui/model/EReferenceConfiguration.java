@@ -15,6 +15,8 @@ package org.nasdanika.codegen.ecore.web.ui.model;
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getChoicesSelector <em>Choices Selector</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getView <em>View</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getViewFeatures <em>View Features</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getElementTypes <em>Element Types</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getTypeColumn <em>Type Column</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEReferenceConfiguration()
@@ -120,4 +122,65 @@ public interface EReferenceConfiguration extends EStructuralFeatureConfiguration
 	 * @generated
 	 */
 	void setViewFeatures(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Element Types</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specifies EClass-es of elements which can be instantiated and set/added to the reference.  
+	 * The list of element types shall be space-separated. Elements shall be in
+	 * the following format: ``<eclass name>[@<epackage ns uri>]``. EPackage namespace URI part can be omitted if the class is in the same package with the 
+	 * feature's declaring EClass.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Element Types</em>' attribute.
+	 * @see #setElementTypes(String)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEReferenceConfiguration_ElementTypes()
+	 * @model
+	 * @generated
+	 */
+	String getElementTypes();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getElementTypes <em>Element Types</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Element Types</em>' attribute.
+	 * @see #getElementTypes()
+	 * @generated
+	 */
+	void setElementTypes(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Type Column</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * If not blank, indicates that the table listing reference elements shall display elements type in a type column. 
+	 * The value of this attribute is a pattern which is interpolated with the following tokens:
+	 * 
+	 * * ``icon`` - Element icon.
+	 * * ``eclass-icon`` - Element type icon.
+	 * * ``eclass-label`` - Element type label.
+	 * * ``documentation-icon`` - Documentation icon or blank string if there is no documentation.
+	 * 
+	 * This attribute is useful for references containing elements of different types.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Type Column</em>' attribute.
+	 * @see #setTypeColumn(String)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEReferenceConfiguration_TypeColumn()
+	 * @model
+	 * @generated
+	 */
+	String getTypeColumn();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration#getTypeColumn <em>Type Column</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type Column</em>' attribute.
+	 * @see #getTypeColumn()
+	 * @generated
+	 */
+	void setTypeColumn(String value);
 } // EReferenceConfiguration

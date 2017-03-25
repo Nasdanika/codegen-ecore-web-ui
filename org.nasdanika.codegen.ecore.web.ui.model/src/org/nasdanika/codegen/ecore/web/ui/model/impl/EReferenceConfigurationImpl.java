@@ -19,6 +19,8 @@ import org.nasdanika.codegen.ecore.web.ui.model.ReferenceView;
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EReferenceConfigurationImpl#getChoicesSelector <em>Choices Selector</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EReferenceConfigurationImpl#getView <em>View</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EReferenceConfigurationImpl#getViewFeatures <em>View Features</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EReferenceConfigurationImpl#getElementTypes <em>Element Types</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EReferenceConfigurationImpl#getTypeColumn <em>Type Column</em>}</li>
  * </ul>
  *
  * @generated
@@ -95,6 +97,42 @@ public class EReferenceConfigurationImpl extends EStructuralFeatureConfiguration
 	 */
 	public void setViewFeatures(String newViewFeatures) {
 		eSet(ModelPackage.Literals.EREFERENCE_CONFIGURATION__VIEW_FEATURES, newViewFeatures);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getElementTypes() {
+		return (String)eGet(ModelPackage.Literals.EREFERENCE_CONFIGURATION__ELEMENT_TYPES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElementTypes(String newElementTypes) {
+		eSet(ModelPackage.Literals.EREFERENCE_CONFIGURATION__ELEMENT_TYPES, newElementTypes);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTypeColumn() {
+		return (String)eGet(ModelPackage.Literals.EREFERENCE_CONFIGURATION__TYPE_COLUMN, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypeColumn(String newTypeColumn) {
+		eSet(ModelPackage.Literals.EREFERENCE_CONFIGURATION__TYPE_COLUMN, newTypeColumn);
 	}
 
 } //EReferenceConfigurationImpl

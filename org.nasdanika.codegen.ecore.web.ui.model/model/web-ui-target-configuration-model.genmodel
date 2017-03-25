@@ -22,31 +22,83 @@
       <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/List"/>
       <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/Table"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//ControlType">
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ControlType/Default"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ControlType/input"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ControlType/select"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ControlType/textarea"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//InputType">
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/Default"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/button"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/checkbox"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/color"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/date"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/datetime"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/datetime_local"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/email"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/file"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/hidden"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/image"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/month"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/number"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/password"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/radio"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/range"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/reset"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/search"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/submit"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/tel"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/text"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/time"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/url"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//InputType/week"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//FeatureItemsContainer">
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureItemsContainer/Accordion"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureItemsContainer/Pills"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//FeatureItemsContainer/Tabs"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EModelElementConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/icon"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/generateResourceStrings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//ENamedElementConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//ENamedElementConfiguration/modelElementLabel"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//ENamedElementConfiguration/constraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//ENamedElementConfiguration/sort"/>
     </genClasses>
     <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EClassConfiguration">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/dispatchFeatures"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/viewItem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/horizontalForm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/featureItemsContainer"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/featureItemsContainerConfiguration"/>
     </genClasses>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/visible"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/editable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/disabled"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/format"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/Location"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/control"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/controlConfiguration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/inputType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/formInputGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EStructuralFeatureConfiguration/placeholder"/>
     </genClasses>
-    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EAttributeConfiguration"/>
+    <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EAttributeConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EAttributeConfiguration/format"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EAttributeConfiguration/choices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EAttributeConfiguration/html"/>
+    </genClasses>
     <genClasses ecoreClass="web-ui-target-configuration-model.ecore#//EReferenceConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/choicesSelector"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/view"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/viewFeatures"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/elementTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EReferenceConfiguration/typeColumn"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

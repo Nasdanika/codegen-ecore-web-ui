@@ -48,6 +48,8 @@ public class EReferenceConfigurationItemProvider extends EStructuralFeatureConfi
 			addChoicesSelectorPropertyDescriptor(object);
 			addViewPropertyDescriptor(object);
 			addViewFeaturesPropertyDescriptor(object);
+			addElementTypesPropertyDescriptor(object);
+			addTypeColumnPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -119,6 +121,50 @@ public class EReferenceConfigurationItemProvider extends EStructuralFeatureConfi
 	}
 
 	/**
+	 * This adds a property descriptor for the Element Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addElementTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EReferenceConfiguration_elementTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EReferenceConfiguration_elementTypes_feature", "_UI_EReferenceConfiguration_type"),
+				 ModelPackage.Literals.EREFERENCE_CONFIGURATION__ELEMENT_TYPES,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type Column feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypeColumnPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EReferenceConfiguration_typeColumn_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EReferenceConfiguration_typeColumn_feature", "_UI_EReferenceConfiguration_type"),
+				 ModelPackage.Literals.EREFERENCE_CONFIGURATION__TYPE_COLUMN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns EReferenceConfiguration.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,6 +205,8 @@ public class EReferenceConfigurationItemProvider extends EStructuralFeatureConfi
 			case ModelPackage.EREFERENCE_CONFIGURATION__CHOICES_SELECTOR:
 			case ModelPackage.EREFERENCE_CONFIGURATION__VIEW:
 			case ModelPackage.EREFERENCE_CONFIGURATION__VIEW_FEATURES:
+			case ModelPackage.EREFERENCE_CONFIGURATION__ELEMENT_TYPES:
+			case ModelPackage.EREFERENCE_CONFIGURATION__TYPE_COLUMN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

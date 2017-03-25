@@ -77,6 +77,12 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 				return createFeatureLocationFromString(eDataType, initialValue);
 			case ModelPackage.REFERENCE_VIEW:
 				return createReferenceViewFromString(eDataType, initialValue);
+			case ModelPackage.CONTROL_TYPE:
+				return createControlTypeFromString(eDataType, initialValue);
+			case ModelPackage.INPUT_TYPE:
+				return createInputTypeFromString(eDataType, initialValue);
+			case ModelPackage.FEATURE_ITEMS_CONTAINER:
+				return createFeatureItemsContainerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -94,6 +100,12 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 				return convertFeatureLocationToString(eDataType, instanceValue);
 			case ModelPackage.REFERENCE_VIEW:
 				return convertReferenceViewToString(eDataType, instanceValue);
+			case ModelPackage.CONTROL_TYPE:
+				return convertControlTypeToString(eDataType, instanceValue);
+			case ModelPackage.INPUT_TYPE:
+				return convertInputTypeToString(eDataType, instanceValue);
+			case ModelPackage.FEATURE_ITEMS_CONTAINER:
+				return convertFeatureItemsContainerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +178,66 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	public String convertReferenceViewToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ControlType createControlTypeFromString(EDataType eDataType, String initialValue) {
+		ControlType result = ControlType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertControlTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputType createInputTypeFromString(EDataType eDataType, String initialValue) {
+		InputType result = InputType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertInputTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeatureItemsContainer createFeatureItemsContainerFromString(EDataType eDataType, String initialValue) {
+		FeatureItemsContainer result = FeatureItemsContainer.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFeatureItemsContainerToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

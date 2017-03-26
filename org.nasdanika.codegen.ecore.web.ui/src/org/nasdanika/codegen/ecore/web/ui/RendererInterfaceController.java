@@ -36,7 +36,7 @@ public class RendererInterfaceController implements GeneratorController<String, 
 		
 		if (supertypes.isEmpty()) {
 			mc.set("super-types", "RendererBase<T>");
-			mc.set("add-super-resource-bundle-classes", "");  
+			mc.set("add-super-resource-bundle-classes", "ret.addAll(RendererBase.super.getResourceBundleClasses(context));");  
 		} else {
 			String basePackage = (String) context.get("base-package");
 			StringBuilder sb = new StringBuilder();

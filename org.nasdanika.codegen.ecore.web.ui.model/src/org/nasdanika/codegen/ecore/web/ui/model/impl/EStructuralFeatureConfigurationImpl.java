@@ -247,7 +247,9 @@ public abstract class EStructuralFeatureConfigurationImpl extends ENamedElementC
 		
 		// location
 		
-		// category
+		// category - TODO handle auto-category and model element name if generateResourceStrings is true
+		
+		
 		
 		// control
 		

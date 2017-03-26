@@ -7,6 +7,14 @@
           <compilationunits description="Base interface for renderers defined in the package." name="RendererBase">
             <generators xsi:type="org.nasdanika.codegen.java:Interface" controller="org.nasdanika.codegen.ecore.web.ui.RendererBaseController" name="RendererBase" comment="Base interface for renderers defined in the package.">
               <modifiers>public</modifiers>
+              <bodyGenerators xsi:type="org.nasdanika.codegen.java:Method" name="getResourceBundleClasses" returnType="{{import:java.util.LinkedList}}&lt;{{import:java.lang.Class}}&lt;?>>">
+                <modifiers>default</modifiers>
+                <bodyGenerators xsi:type="org.nasdanika.codegen:Interpolator">
+                  <generator xsi:type="org.nasdanika.codegen:StaticText" content="{{import:java.util.LinkedList}}&lt;{{import:java.lang.Class}}&lt;?>> ret = new {{import:java.util.LinkedList}}&lt;>();&#xD;&#xA;ret.add(RendererBase.class);&#xD;&#xA;ret.addAll({{import:org.nasdanika.cdo.web.routes.app.Renderer}}.super.getResourceBundleClasses(context));&#xD;&#xA;return ret;&#xD;&#xA;"/>
+                </bodyGenerators>
+                <parameters>{{import:org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext}}&lt;{{import:org.nasdanika.cdo.security.LoginPasswordCredentials}}> context</parameters>
+                <thrownExceptions>{{import:java.lang.Exception}}</thrownExceptions>
+              </bodyGenerators>
               <typeParameters>T extends {{import:org.eclipse.emf.ecore.EObject}}</typeParameters>
               <superTypes>{{renderer-base-extends-imported}}&lt;{{import:org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext}}&lt;{{import:org.nasdanika.cdo.security.LoginPasswordCredentials}}>, T></superTypes>
             </generators>

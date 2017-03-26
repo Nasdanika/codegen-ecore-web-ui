@@ -4,6 +4,7 @@ package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
 import java.util.Properties;
 
+import org.apache.commons.lang3.StringUtils;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EModelElement;
 import org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration;
@@ -25,6 +26,7 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  * @generated
  */
 public abstract class ENamedElementConfigurationImpl extends EModelElementConfigurationImpl implements ENamedElementConfiguration {
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,17 +100,35 @@ public abstract class ENamedElementConfigurationImpl extends EModelElementConfig
 		eSet(ModelPackage.Literals.ENAMED_ELEMENT_CONFIGURATION__SORT, newSort);
 	}
 	
+	/**
+	 * Derives label (display name) from a name. This implementation splits by camel case,
+	 * lowercases 1+ segments and capitalizes the 0 segment. E.g. myCoolName becomes My cool name.
+	 * @param name
+	 * @return
+	 */
+	static String nameToLabel(String name) {
+		String[] cca = StringUtils.splitByCharacterTypeCamelCase(name);
+		cca[0] = StringUtils.capitalize(cca[0]);
+		for (int i=1; i<cca.length; ++i) {
+			cca[i] = cca[i].toLowerCase();
+		}
+		return StringUtils.join(cca, " ");
+	}
+	
+	
 	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
 		super.toProperties(modelElement, renderAnnotationSource, properties);
 		
 		// generateResourceStrings - TODO
 
 		// model element label
+		setProperty(modelElement, renderAnnotationSource, properties, "model-element-label", getModelElementLabel());
 		
 		// constraints
+		setProperty(modelElement, renderAnnotationSource, properties, "constraint", getConstraints());
 		
 		// sort
-		
+		setProperty(modelElement, renderAnnotationSource, properties, "sort", getSort());
 		
 	}
 	

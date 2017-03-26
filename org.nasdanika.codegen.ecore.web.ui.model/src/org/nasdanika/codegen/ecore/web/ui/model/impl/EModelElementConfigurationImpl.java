@@ -9,11 +9,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.ENamedElement;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
@@ -32,7 +30,6 @@ import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
  * @generated
  */
 public abstract class EModelElementConfigurationImpl extends CDOObjectImpl implements EModelElementConfiguration {
-	private static final String ICON_KEY = "icon";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,17 +115,28 @@ public abstract class EModelElementConfigurationImpl extends CDOObjectImpl imple
 	 */
 	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
 		// icon
-		String icon = getIcon();
-		if (isBlank(getIcon()) &&isGenerateResourceStrings()) {
+		setProperty(modelElement, renderAnnotationSource, properties, "icon", getIcon());
+	}
+	
+	/**
+	 * If value is null, attempts to read value from the render annotation.
+	 * @param modelElement
+	 * @param renderAnnotationSource
+	 * @param properties
+	 * @param key
+	 * @param value
+	 */
+	protected void setProperty(EModelElement modelElement, String renderAnnotationSource, Properties properties, String key, String value) {
+		if (isBlank(value) && isGenerateResourceStrings()) {
 			EAnnotation renderAnnotation = modelElement.getEAnnotation(renderAnnotationSource);
 			if (renderAnnotation != null) {
-				icon = renderAnnotation.getDetails().get(ICON_KEY);
+				value = renderAnnotation.getDetails().get(key);
 			}
 		}				
 				
-		if (!isBlank(icon)) {
-			properties.setProperty(getPrefix(modelElement)+ICON_KEY, getIcon());
-		}
+		if (!isBlank(value)) {
+			properties.setProperty(getPrefix(modelElement)+key, value);
+		}		
 	}
 
 	/**

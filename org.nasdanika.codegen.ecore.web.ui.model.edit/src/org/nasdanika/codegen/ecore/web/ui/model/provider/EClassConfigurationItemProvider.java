@@ -49,6 +49,7 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 			addLabelPropertyDescriptor(object);
 			addViewItemPropertyDescriptor(object);
 			addHorizontalFormPropertyDescriptor(object);
+			addNovalidatePropertyDescriptor(object);
 			addFeatureItemsContainerPropertyDescriptor(object);
 			addFeatureItemsContainerConfigurationPropertyDescriptor(object);
 		}
@@ -116,7 +117,7 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -135,6 +136,28 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 				 getString("_UI_EClassConfiguration_horizontalForm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_horizontalForm_feature", "_UI_EClassConfiguration_type"),
 				 ModelPackage.Literals.ECLASS_CONFIGURATION__HORIZONTAL_FORM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Novalidate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNovalidatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EClassConfiguration_novalidate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EClassConfiguration_novalidate_feature", "_UI_EClassConfiguration_type"),
+				 ModelPackage.Literals.ECLASS_CONFIGURATION__NOVALIDATE,
 				 true,
 				 false,
 				 false,
@@ -229,6 +252,7 @@ public class EClassConfigurationItemProvider extends ENamedElementConfigurationI
 			case ModelPackage.ECLASS_CONFIGURATION__LABEL:
 			case ModelPackage.ECLASS_CONFIGURATION__VIEW_ITEM:
 			case ModelPackage.ECLASS_CONFIGURATION__HORIZONTAL_FORM:
+			case ModelPackage.ECLASS_CONFIGURATION__NOVALIDATE:
 			case ModelPackage.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER:
 			case ModelPackage.ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

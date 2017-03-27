@@ -310,7 +310,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEClassConfiguration_FeatureItemsContainer() {
+	public EAttribute getEClassConfiguration_Novalidate() {
 		return (EAttribute)eClassConfigurationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -319,8 +319,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEClassConfiguration_FeatureItemsContainerConfiguration() {
+	public EAttribute getEClassConfiguration_FeatureItemsContainer() {
 		return (EAttribute)eClassConfigurationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEClassConfiguration_FeatureItemsContainerConfiguration() {
+		return (EAttribute)eClassConfigurationEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -645,6 +654,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__LABEL);
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__VIEW_ITEM);
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__HORIZONTAL_FORM);
+		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__NOVALIDATE);
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER);
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION);
 
@@ -743,10 +753,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(eClassConfigurationEClass, EClassConfiguration.class, "EClassConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEClassConfiguration_DispatchFeatures(), ecorePackage.getEBoolean(), "dispatchFeatures", null, 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEClassConfiguration_Label(), ecorePackage.getEString(), "label", null, 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEClassConfiguration_ViewItem(), ecorePackage.getEString(), "viewItem", null, 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEClassConfiguration_ViewItem(), theEcorePackage.getEBoolean(), "viewItem", null, 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEClassConfiguration_HorizontalForm(), ecorePackage.getEBoolean(), "horizontalForm", "true", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEClassConfiguration_Novalidate(), ecorePackage.getEBoolean(), "novalidate", "false", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEClassConfiguration_FeatureItemsContainer(), this.getFeatureItemsContainer(), "featureItemsContainer", "Tabs", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEClassConfiguration_FeatureItemsContainerConfiguration(), ecorePackage.getEString(), "featureItemsContainerConfiguration", "true", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEClassConfiguration_FeatureItemsContainerConfiguration(), ecorePackage.getEString(), "featureItemsContainerConfiguration", "", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eStructuralFeatureConfigurationEClass, EStructuralFeatureConfiguration.class, "EStructuralFeatureConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEStructuralFeatureConfiguration_Visible(), ecorePackage.getEString(), "visible", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -898,6 +909,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		   source, 
 		   new String[] {
 			 "documentation", " By default EClass edit forms are rendered as horizontal forms. Set this to ``false`` to change the default rendering."
+		   });	
+		addAnnotation
+		  (getEClassConfiguration_Novalidate(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Set to true to disable HTML 5 form validation, e.g. if you have a required\r\ntext area with TinyMCE editor in Chrome."
 		   });	
 		addAnnotation
 		  (getEClassConfiguration_FeatureItemsContainer(), 

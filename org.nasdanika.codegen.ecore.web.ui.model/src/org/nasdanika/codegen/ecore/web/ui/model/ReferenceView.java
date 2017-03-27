@@ -36,7 +36,7 @@ public enum ReferenceView implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LIST(1, "List", "List"),
+	LIST(1, "list", "List"),
 
 	/**
 	 * The '<em><b>Table</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum ReferenceView implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TABLE(2, "Table", "Table");
+	TABLE(2, "table", "Table");
 
 	/**
 	 * The '<em><b>Default</b></em>' literal value.
@@ -72,7 +72,7 @@ public enum ReferenceView implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LIST
-	 * @model name="List"
+	 * @model name="list" literal="List"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum ReferenceView implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #TABLE
-	 * @model name="Table"
+	 * @model name="table" literal="Table"
 	 * @generated
 	 * @ordered
 	 */

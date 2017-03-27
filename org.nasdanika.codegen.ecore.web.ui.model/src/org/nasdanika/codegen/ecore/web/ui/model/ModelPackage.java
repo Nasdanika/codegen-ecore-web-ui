@@ -287,13 +287,22 @@ public interface ModelPackage extends EPackage {
 	int ECLASS_CONFIGURATION__HORIZONTAL_FORM = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Novalidate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECLASS_CONFIGURATION__NOVALIDATE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Feature Items Container</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 4;
+	int ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Feature Items Container Configuration</b></em>' attribute.
@@ -302,7 +311,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 5;
+	int ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>EClass Configuration</em>' class.
@@ -311,7 +320,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECLASS_CONFIGURATION_FEATURE_COUNT = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 6;
+	int ECLASS_CONFIGURATION_FEATURE_COUNT = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>To Properties</em>' operation.
@@ -1158,11 +1167,11 @@ public interface ModelPackage extends EPackage {
 	EAttribute getEClassConfiguration_Label();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getViewItem <em>View Item</em>}'.
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isViewItem <em>View Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>View Item</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getViewItem()
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isViewItem()
 	 * @see #getEClassConfiguration()
 	 * @generated
 	 */
@@ -1178,6 +1187,17 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEClassConfiguration_HorizontalForm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isNovalidate <em>Novalidate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Novalidate</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isNovalidate()
+	 * @see #getEClassConfiguration()
+	 * @generated
+	 */
+	EAttribute getEClassConfiguration_Novalidate();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getFeatureItemsContainer <em>Feature Items Container</em>}'.
@@ -1665,6 +1685,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ECLASS_CONFIGURATION__HORIZONTAL_FORM = eINSTANCE.getEClassConfiguration_HorizontalForm();
+
+		/**
+		 * The meta object literal for the '<em><b>Novalidate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECLASS_CONFIGURATION__NOVALIDATE = eINSTANCE.getEClassConfiguration_Novalidate();
 
 		/**
 		 * The meta object literal for the '<em><b>Feature Items Container</b></em>' attribute feature.

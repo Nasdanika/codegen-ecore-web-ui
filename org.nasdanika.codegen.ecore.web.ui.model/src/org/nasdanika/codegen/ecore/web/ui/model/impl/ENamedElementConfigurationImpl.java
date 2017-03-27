@@ -7,6 +7,7 @@ import java.util.Properties;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EModelElement;
+import org.eclipse.emf.ecore.ENamedElement;
 import org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 
@@ -118,11 +119,13 @@ public abstract class ENamedElementConfigurationImpl extends EModelElementConfig
 	
 	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
 		super.toProperties(modelElement, renderAnnotationSource, properties);
-		
-		// generateResourceStrings - TODO
 
 		// model element label
-		setProperty(modelElement, renderAnnotationSource, properties, "model-element-label", getModelElementLabel());
+		String modelElementLabel = getModelElementLabel();
+		if (isBlank(modelElementLabel) && isGenerateResourceStrings()) {
+			modelElementLabel = nameToLabel(((ENamedElement) modelElement).getName());
+		}
+		setProperty(modelElement, renderAnnotationSource, properties, "model-element-label", modelElementLabel);
 		
 		// constraints
 		setProperty(modelElement, renderAnnotationSource, properties, "constraint", getConstraints());

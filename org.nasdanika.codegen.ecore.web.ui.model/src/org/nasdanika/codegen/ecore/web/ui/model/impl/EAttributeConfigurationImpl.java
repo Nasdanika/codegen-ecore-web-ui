@@ -102,12 +102,14 @@ public class EAttributeConfigurationImpl extends EStructuralFeatureConfiguration
 	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
 		super.toProperties(modelElement, renderAnnotationSource, properties);
 		
-		// generateResourceStrings - TODO
 		// choices
+		setProperty(modelElement, renderAnnotationSource, properties, "choices", getChoices());				
 		
 		// format
+		setProperty(modelElement, renderAnnotationSource, properties, "format", getFormat());				
 		
 		// html
+		setProperty(modelElement, renderAnnotationSource, properties, "content-type", isHtml() ? "text/html" : "");							
 	}
 
 } //EAttributeConfigurationImpl

@@ -14,8 +14,9 @@ package org.nasdanika.codegen.ecore.web.ui.model;
  * <ul>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isDispatchFeatures <em>Dispatch Features</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getLabel <em>Label</em>}</li>
- *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getViewItem <em>View Item</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isViewItem <em>View Item</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isHorizontalForm <em>Horizontal Form</em>}</li>
+ *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isNovalidate <em>Novalidate</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getFeatureItemsContainer <em>Feature Items Container</em>}</li>
  *   <li>{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getFeatureItemsContainerConfiguration <em>Feature Items Container Configuration</em>}</li>
  * </ul>
@@ -86,22 +87,22 @@ public interface EClassConfiguration extends ENamedElementConfiguration {
 	 * Set this to ``true`` to have the class view rendered in the item container. 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>View Item</em>' attribute.
-	 * @see #setViewItem(String)
+	 * @see #setViewItem(boolean)
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEClassConfiguration_ViewItem()
 	 * @model
 	 * @generated
 	 */
-	String getViewItem();
+	boolean isViewItem();
 
 	/**
-	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#getViewItem <em>View Item</em>}' attribute.
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isViewItem <em>View Item</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>View Item</em>' attribute.
-	 * @see #getViewItem()
+	 * @see #isViewItem()
 	 * @generated
 	 */
-	void setViewItem(String value);
+	void setViewItem(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Horizontal Form</b></em>' attribute.
@@ -128,6 +129,33 @@ public interface EClassConfiguration extends ENamedElementConfiguration {
 	 * @generated
 	 */
 	void setHorizontalForm(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Novalidate</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Set to true to disable HTML 5 form validation, e.g. if you have a required
+	 * text area with TinyMCE editor in Chrome.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Novalidate</em>' attribute.
+	 * @see #setNovalidate(boolean)
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEClassConfiguration_Novalidate()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isNovalidate();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration#isNovalidate <em>Novalidate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Novalidate</em>' attribute.
+	 * @see #isNovalidate()
+	 * @generated
+	 */
+	void setNovalidate(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Feature Items Container</b></em>' attribute.
@@ -160,7 +188,7 @@ public interface EClassConfiguration extends ENamedElementConfiguration {
 
 	/**
 	 * Returns the value of the '<em><b>Feature Items Container Configuration</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -184,7 +212,7 @@ public interface EClassConfiguration extends ENamedElementConfiguration {
 	 * @return the value of the '<em>Feature Items Container Configuration</em>' attribute.
 	 * @see #setFeatureItemsContainerConfiguration(String)
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.ModelPackage#getEClassConfiguration_FeatureItemsContainerConfiguration()
-	 * @model default="true"
+	 * @model default=""
 	 * @generated
 	 */
 	String getFeatureItemsContainerConfiguration();

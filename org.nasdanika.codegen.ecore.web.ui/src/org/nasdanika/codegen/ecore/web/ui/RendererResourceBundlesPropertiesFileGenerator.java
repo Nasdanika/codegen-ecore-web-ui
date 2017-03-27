@@ -5,14 +5,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
-import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EReference;
@@ -20,7 +21,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.nasdanika.codegen.Work;
 import org.nasdanika.codegen.ecore.EcoreCodeGenerator;
 import org.nasdanika.codegen.ecore.ModelElement;
-import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
+import org.nasdanika.codegen.ecore.web.ui.model.EModelElementConfiguration;
 import org.nasdanika.config.Context;
 
 public class RendererResourceBundlesPropertiesFileGenerator implements Work<InputStream> {
@@ -37,13 +38,7 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 		Properties properties = new Properties();
 		
 		// Class properties
-		ModelElement cme = ecoreCodeGenerator.find(eClass, false);
-		if (cme != null) {
-			EObject config = cme.getConfiguration(WebUIGenerationTarget.CONFIG_ID);
-			if (config instanceof EClassConfiguration) {
-				((EClassConfiguration) config).toProperties(eClass, (String) context.get(RoutesPackageController.RENDER_ANNOTATION_SOURCE), properties);
-			}
-		}
+		toProperties(context, ecoreCodeGenerator, eClass, properties);
 		
 		List<EAttribute> selectedAttributes = new ArrayList<>();
 		List<EReference> selectedReferences = new ArrayList<>();
@@ -66,36 +61,62 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 			}
 		}
 		// Features and operations from not selected supertypes
-//		collectFeaturesAndOperations(ecoreCodeGenerator, eClass, new HashSet<>(), selectedFeatures, selectedOperations);
+		collectFeaturesAndOperations(ecoreCodeGenerator, eClass, new HashSet<>(), selectedAttributes, selectedReferences, selectedOperations);
 
-// TODO - visible features - all 		
-// TODO - Generate resource entries from configurations.		
-//		String className = eClass.getName();
-//		properties.put("class.label", nameToLabel(className));
-//		for (EStructuralFeature sf: selectedFeatures) {
-//			properties.put("feature."+sf.getName()+".label", nameToLabel(sf.getName()));			
-//		}
-//		
-//		for (EOperation op: selectedOperations) {
-//			properties.put("operation."+op.getName()+".label", nameToLabel(op.getName()));			
-//		}
+		for (EAttribute sa: selectedAttributes) {
+			toProperties(context, ecoreCodeGenerator, sa, properties);
+		}
+		for (EReference sr: selectedReferences) {
+			toProperties(context, ecoreCodeGenerator, sr, properties);
+		}
+		// TODO - operations once supported.
+		
+		List<EStructuralFeature> visibleFeatures = new ArrayList<>();
+		collectSelectedFeatures(ecoreCodeGenerator, eClass, new HashSet<>(), visibleFeatures);
+		StringBuilder sb = new StringBuilder();
+		for (EStructuralFeature f: visibleFeatures) {
+			if (sb.length()>0) {
+				sb.append(" ");
+			}
+			sb.append(f.getName());
+		}
+		properties.setProperty("class."+eClass.getName()+".render.visible-features", sb.toString());
 		
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		properties.store(baos, null);
 		baos.close();
 		return new ByteArrayInputStream(baos.toByteArray());
 	}
+
+	private void toProperties(Context context, EcoreCodeGenerator ecoreCodeGenerator, EModelElement eClass,	Properties properties) {
+		ModelElement me = ecoreCodeGenerator.find(eClass, false);
+		if (me != null) {
+			EObject config = me.getConfiguration(WebUIGenerationTarget.CONFIG_ID);
+			if (config instanceof EModelElementConfiguration) {
+				((EModelElementConfiguration) config).toProperties(eClass, (String) context.get(RoutesPackageController.RENDER_ANNOTATION_SOURCE), properties);
+			}
+		}
+	}
 	
-	private void collectFeaturesAndOperations(EcoreCodeGenerator ecoreCodeGenerator, EClass eClass, Set<EClass> traversed, Collection<EStructuralFeature> featureCollector, Collection<EOperation> operationCollector) {
+	private void collectFeaturesAndOperations(
+			EcoreCodeGenerator ecoreCodeGenerator, 
+			EClass eClass, 
+			Set<EClass> traversed, 
+			Collection<EAttribute> attributeCollector, 
+			Collection<EReference> referenceCollector, 
+			Collection<EOperation> operationCollector) {
 		if (traversed.add(eClass) && !ecoreCodeGenerator.isSelected(eClass)) {
-			for (EStructuralFeature esf: eClass.getEStructuralFeatures()) {
-				featureCollector.add(esf);
+			for (EAttribute a: eClass.getEAttributes()) {
+				attributeCollector.add(a);
+			}
+			for (EReference r: eClass.getEReferences()) {
+				referenceCollector.add(r);
 			}
 			for (EOperation op: eClass.getEOperations()) {
 				operationCollector.add(op);
 			}
 			for (EClass st: eClass.getESuperTypes()) {
-				collectFeaturesAndOperations(ecoreCodeGenerator, st, traversed, featureCollector, operationCollector);
+				collectFeaturesAndOperations(ecoreCodeGenerator, st, traversed, attributeCollector, referenceCollector, operationCollector);
 			}
 		}
 	}
@@ -113,15 +134,5 @@ public class RendererResourceBundlesPropertiesFileGenerator implements Work<Inpu
 			}
 		}
 	}	
-
-	private String nameToLabel(String name) {
-		String[] cca = StringUtils.splitByCharacterTypeCamelCase(name);
-		cca[0] = StringUtils.capitalize(cca[0]);
-		for (int i=1; i<cca.length; ++i) {
-			cca[i] = cca[i].toLowerCase();
-		}
-		String classLabel = StringUtils.join(cca, " ");
-		return classLabel;
-	}
 
 }

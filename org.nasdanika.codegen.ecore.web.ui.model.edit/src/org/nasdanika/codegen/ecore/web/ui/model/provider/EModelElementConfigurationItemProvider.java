@@ -103,7 +103,7 @@ public class EModelElementConfigurationItemProvider
 				 getString("_UI_EModelElementConfiguration_generateResourceStrings_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EModelElementConfiguration_generateResourceStrings_feature", "_UI_EModelElementConfiguration_type"),
 				 ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,

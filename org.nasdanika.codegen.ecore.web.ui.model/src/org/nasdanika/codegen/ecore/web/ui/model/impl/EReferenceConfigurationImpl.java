@@ -141,16 +141,28 @@ public class EReferenceConfigurationImpl extends EStructuralFeatureConfiguration
 	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {		
 		super.toProperties(modelElement, renderAnnotationSource, properties);
 		
-		// generateResourceStrings - TODO
 		// choices selector
+		setProperty(modelElement, renderAnnotationSource, properties, "choices-selector", getChoicesSelector());				
 		
 		// view
+		switch (getView()) {
+		case LIST:
+		case TABLE:
+			setProperty(modelElement, renderAnnotationSource, properties, "view", getView().getName());				
+			break;
+		case DEFAULT:
+		default:
+			break;
+		}
 		
 		// view features
+		setProperty(modelElement, renderAnnotationSource, properties, "view-features", getViewFeatures());				
 		
 		// element types
+		setProperty(modelElement, renderAnnotationSource, properties, "element-types", getElementTypes());				
 		
 		// type column
+		setProperty(modelElement, renderAnnotationSource, properties, "type-column", getTypeColumn());				
 	}
 
 } //EReferenceConfigurationImpl

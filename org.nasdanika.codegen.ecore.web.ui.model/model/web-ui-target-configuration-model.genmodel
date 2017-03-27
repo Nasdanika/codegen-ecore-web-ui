@@ -19,8 +19,8 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//ReferenceView">
       <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/Default"/>
-      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/List"/>
-      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/Table"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/list"/>
+      <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ReferenceView/table"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="web-ui-target-configuration-model.ecore#//ControlType">
       <genEnumLiterals ecoreEnumLiteral="web-ui-target-configuration-model.ecore#//ControlType/Default"/>
@@ -62,7 +62,7 @@
     <genDataTypes ecoreDataType="web-ui-target-configuration-model.ecore#//Properties"/>
     <genClasses image="false" ecoreClass="web-ui-target-configuration-model.ecore#//EModelElementConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/icon"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/generateResourceStrings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EModelElementConfiguration/generateResourceStrings"/>
       <genOperations ecoreOperation="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties">
         <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/modelElement"/>
         <genParameters ecoreParameter="web-ui-target-configuration-model.ecore#//EModelElementConfiguration/toProperties/renderAnnotationSource"/>
@@ -79,6 +79,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/viewItem"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/horizontalForm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/novalidate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/featureItemsContainer"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute web-ui-target-configuration-model.ecore#//EClassConfiguration/featureItemsContainerConfiguration"/>
     </genClasses>

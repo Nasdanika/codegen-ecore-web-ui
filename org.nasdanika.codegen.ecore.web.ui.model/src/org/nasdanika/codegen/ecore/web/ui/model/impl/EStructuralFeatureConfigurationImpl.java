@@ -238,28 +238,60 @@ public abstract class EStructuralFeatureConfigurationImpl extends ENamedElementC
 	public void toProperties(EModelElement modelElement, String renderAnnotationSource, Properties properties) {
 		super.toProperties(modelElement, renderAnnotationSource, properties);
 		
-		// generateResourceStrings - TODO
 		// visible
+		setProperty(modelElement, renderAnnotationSource, properties, "visible", getVisible());
 		
 		// editable
+		setProperty(modelElement, renderAnnotationSource, properties, "editable", getEditable());
 		
 		// disabled
+		setProperty(modelElement, renderAnnotationSource, properties, "disabled", getDisabled());
 		
 		// location
+		switch (getLocation()) {
+		case ITEM_CONTAINER:
+			setProperty(modelElement, renderAnnotationSource, properties, "feature-location", "item");
+			break;
+		case LEFT_PANEL:
+			setProperty(modelElement, renderAnnotationSource, properties, "feature-location", "leftPanel");
+			break;
+		case VIEW:
+			setProperty(modelElement, renderAnnotationSource, properties, "feature-location", "view");			
+			break;
+		case DEFAULT:
+		default:
+			break;		
+		}
 		
 		// category - TODO handle auto-category and model element name if generateResourceStrings is true
-		
-		
+		setProperty(modelElement, renderAnnotationSource, properties, "category", getCategory());
 		
 		// control
+		switch (getControl()) {
+		case INPUT:
+		case SELECT:
+		case TEXTAREA:
+			setProperty(modelElement, renderAnnotationSource, properties, "control", getControl().getName().toLowerCase());
+			break;
+		case DEFAULT:
+		default:
+			break;		
+		}
 		
 		// control configuration
+		setProperty(modelElement, renderAnnotationSource, properties, "control-configuration", getControlConfiguration());		
 		
 		// input type
+		if (getInputType() != InputType.DEFAULT) {
+			setProperty(modelElement, renderAnnotationSource, properties, "input-type", getInputType().getName());
+		}		
 		
 		// form input group
+		setProperty(modelElement, renderAnnotationSource, properties, "form-input-group", isFormInputGroup() ? "true" : "");				
 		
 		// placeholder
+		setProperty(modelElement, renderAnnotationSource, properties, "placeholder", getPlaceholder());		
+
 	}
 
 } //EStructuralFeatureConfigurationImpl

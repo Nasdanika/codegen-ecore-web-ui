@@ -66,11 +66,12 @@
         </packagefragments>
       </packagefragmentroots>
     </natures>
-    <resources xsi:type="org.nasdanika.codegen:TextFile" name="plugin.xml" reconcileAction="Overwrite">
+    <resources xsi:type="org.nasdanika.codegen:TextFile" name="plugin.xml" reconcileAction="Merge">
+      <merger valueType="org.nasdanika.codegen.ecore.web.ui.PluginMerger"/>
       <generators xsi:type="org.nasdanika.codegen:Interpolator">
         <namedGenerators name="route-entries">
           <generator xsi:type="org.nasdanika.codegen:Interpolator" controller="org.nasdanika.codegen.ecore.web.ui.PluginXmlRouteEntriesInterpolatorController">
-            <generator xsi:type="org.nasdanika.codegen:StaticText" content="      &lt;eobject-route&#xD;&#xA;            class=&quot;{{base-package}}.{{epackage-name}}.{{eclass-name}}Route&quot;&#xD;&#xA;            description=&quot;doc/{{epackage-name}}/{{eclass-name}}Route.md&quot;&#xD;&#xA;            method=&quot;*&quot;&#xD;&#xA;            path=&quot;/&quot;&#xD;&#xA;            target=&quot;{{eclass-name}}&quot;&#xD;&#xA;            target-namespace-uri=&quot;{{epackage-namespace-uri}}&quot;>&#xD;&#xA;      &lt;/eobject-route>&#xD;&#xA;&#xD;&#xA;"/>
+            <generator xsi:type="org.nasdanika.codegen:StaticText" content="      &lt;eobject-route&#xD;&#xA;            class=&quot;{{base-package}}.{{epackage-name}}.{{eclass-name}}Route&quot;&#xD;&#xA;            method=&quot;*&quot;&#xD;&#xA;            path=&quot;/&quot;&#xD;&#xA;            target=&quot;{{eclass-name}}&quot;&#xD;&#xA;            target-namespace-uri=&quot;{{epackage-namespace-uri}}&quot;>&#xD;&#xA;      &lt;/eobject-route>&#xD;&#xA;&#xD;&#xA;"/>
           </generator>
         </namedGenerators>
         <namedGenerators name="renderer-entries">

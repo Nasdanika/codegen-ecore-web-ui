@@ -1,7 +1,8 @@
 package org.nasdanika.codegen.ecore.web.ui;
 
-import java.util.Properties;
-
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -15,7 +16,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.nasdanika.codegen.CodegenPackage;
 import org.nasdanika.codegen.Generator;
-import org.nasdanika.codegen.ResourceModificationTracker;
 import org.nasdanika.codegen.Work;
 import org.nasdanika.codegen.ecore.Attribute;
 import org.nasdanika.codegen.ecore.Class;
@@ -31,7 +31,6 @@ import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelFactory;
-import org.nasdanika.codegen.impl.PropertiesResourceModificationTracker;
 import org.nasdanika.config.Context;
 import org.nasdanika.config.JavaExpressionTokenSource;
 import org.nasdanika.config.MutableContext;
@@ -108,7 +107,23 @@ public class WebUIGenerationTarget implements GenerationTarget {
 				MutableContext projectWorkContext = context.createSubContext();
 				projectWorkContext.setClassLoader(WebUIGenerationTarget.class.getClassLoader());
 				EcoreCodeGeneratorConfiguration ecoreCodeGeneratorConfiguration = (EcoreCodeGeneratorConfiguration) generator.getConfiguration("general");
-				projectWorkContext.set("project-name", ecoreCodeGeneratorConfiguration.getTargetProject());
+				String projectName = ecoreCodeGeneratorConfiguration.getTargetProject();
+				if (projectName == null || projectName.trim().length() == 0) {
+					Resource eResource = ecoreCodeGeneratorConfiguration.eResource();
+					if (eResource != null) {
+						URI resourceURI = eResource.getURI();
+						if (resourceURI != null && resourceURI.isPlatformResource()) {
+							String platformString = resourceURI.toPlatformString(true);
+							IFile modelResource = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(platformString));
+							if (modelResource != null ) {
+								projectName = modelResource.getProject().getName();
+							}
+						}
+					}
+				}
+				if (projectName != null) {
+					projectWorkContext.set("project-name", projectName);
+				}
 				projectWorkContext.set("source-folder", ecoreCodeGeneratorConfiguration.getSourceFolder());
 				projectWorkContext.set("base-package", ecoreCodeGeneratorConfiguration.getBasePackage());
 				projectWorkContext.set("java", new JavaExpressionTokenSource());

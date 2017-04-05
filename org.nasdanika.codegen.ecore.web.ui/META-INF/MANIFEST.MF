@@ -9,4 +9,5 @@ Require-Bundle: org.nasdanika.codegen.ecore.editor;bundle-version="0.1.0",
  org.nasdanika.codegen,
  org.eclipse.jdt.core,
  org.apache.commons.lang3;bundle-version="3.3.2",
- org.nasdanika.codegen.ecore.web.ui.model;bundle-version="0.1.0"
+ org.nasdanika.codegen.ecore.web.ui.model;bundle-version="0.1.0",
+ org.eclipse.help;bundle-version="3.7.0"

@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
@@ -32,11 +33,16 @@ public class RoutesPackageController implements GeneratorController<IPackageFrag
 	@Override
 	public Collection<Context> iterate(Context context, PackageFragment generator) throws Exception {
 		Collection<Context> ret = new ArrayList<>();
-		EcoreCodeGenerator eCoreCodeGenerator = context.get(EcoreCodeGenerator.class);
-		for (EPackage ep: eCoreCodeGenerator.getEPackages()) {
+		EcoreCodeGenerator eCoreCodeGenerator = context.get(EcoreCodeGenerator.class);		
+		EList<EPackage> ePackages = eCoreCodeGenerator.getEPackages();
+		for (EPackage ep: ePackages) {
 			if (eCoreCodeGenerator.isSelected(ep)) {
 				MutableContext mc = context.createSubContext();
-				mc.set("epackage-name", ep.getName());
+				String ePackageName = ep.getName();
+				for (EObject container = ep.eContainer(); ePackages.contains(container); container = container.eContainer()) {
+					ePackageName = ((EPackage) container).getName() + "." + ePackageName;
+				}
+				mc.set("epackage-name", ePackageName);
 				mc.set(EPackage.class, ep);
 				ret.add(mc);
 				Set<String> packageTypes = new HashSet<>();

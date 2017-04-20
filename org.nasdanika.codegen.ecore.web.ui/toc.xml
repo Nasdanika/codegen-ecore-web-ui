@@ -1,4 +1,32 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <toc label="Generation Targets" link_to="../org.nasdanika.codegen.ecore.editor/toc.xml#generation_targets">
-	<topic href="doc/web-ui-generation-target.html" label="Web UI"></topic>
+	<topic href="doc/web-ui-generation-target.html" label="Web UI">
+    <topic label="Configuration">
+       <topic href="doc/configuration/root-configuration.html" label="Root">
+       </topic>
+       <topic href="doc/configuration/epackage-configuration.html" label="EPackage">
+       </topic>
+       <topic href="doc/configuration/eclass-configuration.html" label="EClass">
+       </topic>
+       <topic href="doc/configuration/eattribute-configuration.html" label="EAttribute">
+       </topic>
+       <topic href="doc/configuration/ereference-configuration.html" label="EReference">
+       </topic>
+       <topic href="doc/configuration/eoperation-configuration.html" label="EOperation">
+       </topic>
+    </topic>
+    <topic label="Generated artifacts">
+       <topic href="doc/generated-artifacts/plugin-xml.html" label="plugin.xml">
+       </topic>
+       <topic href="doc/generated-artifacts/renderer-base.html" label="Renderer base">
+       </topic>
+       <topic href="doc/generated-artifacts/route-base.html" label="Route base">
+       </topic>
+       <topic href="doc/generated-artifacts/renderers.html" label="Renderers">
+       </topic>
+       <topic href="doc/generated-artifacts/routes.html" label="Routes">
+       </topic>
+       <topic href="doc/generated-artifacts/resources.html" label="Resources">
+       </topic>
+    </topic></topic>
 </toc>

@@ -1,3 +1,15 @@
 eclipse.preferences.version=1
+encoding//doc/configuration/eattribute-configuration.html=UTF-8
+encoding//doc/configuration/eclass-configuration.html=UTF-8
+encoding//doc/configuration/eoperation-configuration.html=UTF-8
+encoding//doc/configuration/epackage-configuration.html=UTF-8
+encoding//doc/configuration/ereference-configuration.html=UTF-8
+encoding//doc/configuration/root-configuration.html=UTF-8
+encoding//doc/generated-artifacts/plugin-xml.html=UTF-8
+encoding//doc/generated-artifacts/renderer-base.html=UTF-8
+encoding//doc/generated-artifacts/renderers.html=UTF-8
+encoding//doc/generated-artifacts/resources.html=UTF-8
+encoding//doc/generated-artifacts/route-base.html=UTF-8
+encoding//doc/generated-artifacts/routes.html=UTF-8
 encoding//doc/web-ui-generation-target.html=UTF-8
 encoding/toc.xml=utf-8

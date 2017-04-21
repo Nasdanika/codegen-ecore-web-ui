@@ -2,14 +2,7 @@
 
 The Web UI generation target generates artifacts which are used by [Nasdanika CDO Web Application Rendering](https://github.com/Nasdanika/server/blob/master/org.nasdanika.cdo.web/doc/application-rendering.md) framework for rendering web applications backed by CDO repositories.
 
-This target uses data entered by the user into configuration forms to generate the following artifacts:
-
-* ``plugin.xml``.
-* Renderer base class.
-* Route base class.
-* Renderers.
-* Routes.
-* Resource bundles property files.
+![ledger-ui-model.png](ledger-ui-model.png)
 
 ## Configuration
 

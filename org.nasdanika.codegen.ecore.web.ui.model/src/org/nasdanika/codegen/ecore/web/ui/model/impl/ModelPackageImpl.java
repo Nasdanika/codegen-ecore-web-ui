@@ -956,7 +956,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		  (getEStructuralFeatureConfiguration_Category(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Feature category. Categories are displayed as panels in the view and the left panel, and field sets in edit forms."
+			 "documentation", "Feature category. Categories are displayed as panels in the view and the left panel, and field sets in edit forms.\r\n\r\nFeatures with a common prefix are auto-categorized if not explicitly categorized. E.g. features ``databaseUser`` and ``databasePassword`` will be auto-categorized under the category ``Database`` with\r\nlabels ``User`` and ``Password`` respectively."
+		   });	
+		addAnnotation
+		  (getEStructuralFeatureConfiguration_Control(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Edit form control type for the feature. Defaults to input for attributes and multi-value features and select for references."
 		   });	
 		addAnnotation
 		  (getEStructuralFeatureConfiguration_ControlConfiguration(), 

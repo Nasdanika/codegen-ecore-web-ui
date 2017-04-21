@@ -4,7 +4,6 @@ package org.nasdanika.codegen.ecore.web.ui.model.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
-
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAnnotation;
@@ -117,7 +116,7 @@ public abstract class EModelElementConfigurationImpl extends CDOObjectImpl imple
 		// icon
 		setProperty(modelElement, renderAnnotationSource, properties, "icon", getIcon());
 	}
-	
+
 	/**
 	 * If value is null, attempts to read value from the render annotation.
 	 * @param modelElement

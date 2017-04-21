@@ -156,6 +156,9 @@ public interface EStructuralFeatureConfiguration extends ENamedElementConfigurat
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Feature category. Categories are displayed as panels in the view and the left panel, and field sets in edit forms.
+	 * 
+	 * Features with a common prefix are auto-categorized if not explicitly categorized. E.g. features ``databaseUser`` and ``databasePassword`` will be auto-categorized under the category ``Database`` with
+	 * labels ``User`` and ``Password`` respectively.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Category</em>' attribute.
 	 * @see #setCategory(String)
@@ -184,6 +187,9 @@ public interface EStructuralFeatureConfiguration extends ENamedElementConfigurat
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Edit form control type for the feature. Defaults to input for attributes and multi-value features and select for references.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Control</em>' attribute.
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.ControlType
 	 * @see #setControl(ControlType)

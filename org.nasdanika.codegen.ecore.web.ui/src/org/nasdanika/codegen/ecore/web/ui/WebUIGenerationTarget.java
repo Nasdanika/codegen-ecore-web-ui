@@ -1,11 +1,15 @@
 package org.nasdanika.codegen.ecore.web.ui;
 
+import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -31,6 +35,7 @@ import org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelFactory;
+import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 import org.nasdanika.config.Context;
 import org.nasdanika.config.JavaExpressionTokenSource;
 import org.nasdanika.config.MutableContext;
@@ -104,6 +109,12 @@ public class WebUIGenerationTarget implements GenerationTarget {
 
 			@Override
 			public Object execute(Context context, SubMonitor monitor) throws Exception {
+//				for (EClassifier eClassifier: ModelPackage.eINSTANCE.getEClassifiers()) {
+//					if (eClassifier instanceof EClass && ModelPackage.Literals.EMODEL_ELEMENT_CONFIGURATION.isSuperTypeOf(((EClass) eClassifier)) && !((EClass) eClassifier).isAbstract()) {
+//						System.out.println(generateConfigurationClassDocumentation((EClass) eClassifier));
+//					}
+//				}				
+				
 				MutableContext projectWorkContext = context.createSubContext();
 				projectWorkContext.setClassLoader(WebUIGenerationTarget.class.getClassLoader());
 				EcoreCodeGeneratorConfiguration ecoreCodeGeneratorConfiguration = (EcoreCodeGeneratorConfiguration) generator.getConfiguration("general");
@@ -138,5 +149,42 @@ public class WebUIGenerationTarget implements GenerationTarget {
 		// EPackage, EClass, EStructuralFeature.
 		return modelElement instanceof EPackage || modelElement instanceof EClass || modelElement instanceof EStructuralFeature;
 	}
+
+	// --- Documentation generation ---
+	
+	private String nameToLabel(String name) {
+		StringBuilder ret = new StringBuilder();
+		for (String str: StringUtils.splitByCharacterTypeCamelCase(name)) {
+			if (ret.length() > 0) {
+				ret.append(" ");
+			}
+			ret.append(StringUtils.capitalize(str));			
+		}		
+		return ret.toString();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	private String generateConfigurationClassDocumentation(EClass eClass) {
+		StringBuilder ret = new StringBuilder("# ").append(nameToLabel(eClass.getName())).append(System.lineSeparator());
+		
+		for (EAttribute attr: eClass.getEAllAttributes()) {
+			ret.append(System.lineSeparator()).append("## ").append(nameToLabel(attr.getName())).append(System.lineSeparator());
+			
+			EAnnotation docAnn = attr.getEAnnotation("http://www.eclipse.org/emf/2002/GenModel");
+			if (docAnn != null) {
+				String doc = docAnn.getDetails().get("documentation");
+				if (doc != null) {
+					ret.append(doc);
+				}
+			}
+			ret.append(System.lineSeparator());
+		}
+
+		return ret.toString();
+	}
+	
 
 }

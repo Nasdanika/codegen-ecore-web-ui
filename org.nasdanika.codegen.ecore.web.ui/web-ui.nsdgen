@@ -25,7 +25,7 @@
               <bodyGenerators xsi:type="org.nasdanika.codegen.java:Constructor">
                 <modifiers>protected</modifiers>
                 <bodyGenerators xsi:type="org.nasdanika.codegen:Interpolator">
-                  <generator xsi:type="org.nasdanika.codegen:StaticText" content="super({{import:org.osgi.framework.FrameworkUtil}}.getBundle({{import:org.nasdanika.cdo.web.CDOTransactionHttpServletRequestContext}}.class).getBundleContext());&#xD;&#xA;"/>
+                  <generator xsi:type="org.nasdanika.codegen:StaticText" content="super({{import:org.osgi.framework.FrameworkUtil}}.getBundle(RouteBase.class).getBundleContext());&#xD;&#xA;"/>
                 </bodyGenerators>
                 <thrownExceptions>{{import:java.lang.Exception}}</thrownExceptions>
               </bodyGenerators>

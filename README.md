@@ -1,9 +1,10 @@
 # Web UI Generation Target
 
-The Web UI generation target generates artifacts which are used by [Nasdanika CDO Web Application Rendering](https://github.com/Nasdanika/server/blob/master/org.nasdanika.cdo.web/doc/application-rendering.md) framework for rendering web applications backed by CDO repositories.
+The Web UI generation target for the [Nasdanika Ecore Code Generation Editor](https://github.com/Nasdanika/codegen-ecore). 
+It generates artifacts which are used by [Nasdanika CDO Web Application Rendering](https://github.com/Nasdanika/server/blob/master/org.nasdanika.cdo.web/doc/application-rendering.md) framework for rendering web applications backed by CDO repositories.
 
-[Nasdanika Ecore Code Generation Editor](https://github.com/Nasdanika/codegen-ecore) with the Web UI target:
-
+Example - [Nasdanika Ledger](https://github.com/Nasdanika/ledger) Web UI Generation model screenshot:
+ 
 ![ledger-ui-model.png](org.nasdanika.codegen.ecore.web.ui/doc/ledger-ui-model.png)
 
 ## Documentation

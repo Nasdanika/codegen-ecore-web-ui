@@ -16,7 +16,11 @@ test:
     - mvn clean verify javadoc:javadoc    
     - mkdir $CIRCLE_ARTIFACTS/apidocs    
     - mkdir $CIRCLE_ARTIFACTS/apidocs/org.nasdanika.codegen.ecore.web.ui    
+    - mkdir $CIRCLE_ARTIFACTS/apidocs/org.nasdanika.codegen.ecore.web.ui.model    
+    - mkdir $CIRCLE_ARTIFACTS/apidocs/org.nasdanika.codegen.ecore.web.ui.model.edit    
     - mv org.nasdanika.codegen.ecore.web.ui/target/site/apidocs $CIRCLE_ARTIFACTS/apidocs/org.nasdanika.codegen.ecore.web.ui    
+    - mv org.nasdanika.codegen.ecore.web.ui.model/target/site/apidocs $CIRCLE_ARTIFACTS/apidocs/org.nasdanika.codegen.ecore.web.ui.model    
+    - mv org.nasdanika.codegen.ecore.web.ui.model.edit/target/site/apidocs $CIRCLE_ARTIFACTS/apidocs/org.nasdanika.codegen.ecore.web.ui.model.edit    
     
 deployment:
   staging:

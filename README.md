@@ -9,7 +9,11 @@ Example - [Nasdanika Ledger](https://github.com/Nasdanika/ledger) Web UI Generat
 
 ## Documentation
 
-[JavaDoc](http://www.nasdanika.org/products/codegen-ecore-web-ui/apidocs/org.nasdanika.codegen.ecore.web.ui/apidocs)
+### JavaDoc
+
+* [Generators](http://www.nasdanika.org/products/codegen-ecore-web-ui/apidocs/org.nasdanika.codegen.ecore.web.ui/apidocs)
+* [Configuration model](http://www.nasdanika.org/products/codegen-ecore-web-ui/apidocs/org.nasdanika.codegen.ecore.web.ui.model/apidocs)
+* [Configuration model edit support](http://www.nasdanika.org/products/codegen-ecore-web-ui/apidocs/org.nasdanika.codegen.ecore.web.ui.model.edit/apidocs)
 
 ### Configuration
 

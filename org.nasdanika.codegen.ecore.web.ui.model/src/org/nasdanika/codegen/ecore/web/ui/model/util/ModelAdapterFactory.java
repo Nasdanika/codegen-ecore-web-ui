@@ -80,6 +80,10 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createEClassConfigurationAdapter();
 			}
 			@Override
+			public Adapter caseETypedElementConfiguration(ETypedElementConfiguration object) {
+				return createETypedElementConfigurationAdapter();
+			}
+			@Override
 			public Adapter caseEStructuralFeatureConfiguration(EStructuralFeatureConfiguration object) {
 				return createEStructuralFeatureConfigurationAdapter();
 			}
@@ -154,6 +158,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEClassConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration <em>ETyped Element Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration
+	 * @generated
+	 */
+	public Adapter createETypedElementConfigurationAdapter() {
 		return null;
 	}
 

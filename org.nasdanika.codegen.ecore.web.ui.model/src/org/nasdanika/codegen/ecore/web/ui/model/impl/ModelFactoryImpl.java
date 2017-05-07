@@ -75,8 +75,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.FEATURE_LOCATION:
-				return createFeatureLocationFromString(eDataType, initialValue);
+			case ModelPackage.TYPED_ELEMENT_LOCATION:
+				return createTypedElementLocationFromString(eDataType, initialValue);
 			case ModelPackage.REFERENCE_VIEW:
 				return createReferenceViewFromString(eDataType, initialValue);
 			case ModelPackage.CONTROL_TYPE:
@@ -100,8 +100,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.FEATURE_LOCATION:
-				return convertFeatureLocationToString(eDataType, instanceValue);
+			case ModelPackage.TYPED_ELEMENT_LOCATION:
+				return convertTypedElementLocationToString(eDataType, instanceValue);
 			case ModelPackage.REFERENCE_VIEW:
 				return convertReferenceViewToString(eDataType, instanceValue);
 			case ModelPackage.CONTROL_TYPE:
@@ -162,8 +162,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FeatureLocation createFeatureLocationFromString(EDataType eDataType, String initialValue) {
-		FeatureLocation result = FeatureLocation.get(initialValue);
+	public TypedElementLocation createTypedElementLocationFromString(EDataType eDataType, String initialValue) {
+		TypedElementLocation result = TypedElementLocation.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -173,7 +173,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFeatureLocationToString(EDataType eDataType, Object instanceValue) {
+	public String convertTypedElementLocationToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

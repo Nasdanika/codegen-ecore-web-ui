@@ -1,6 +1,5 @@
 package org.nasdanika.codegen.ecore.web.ui;
 
-import java.io.ByteArrayInputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 

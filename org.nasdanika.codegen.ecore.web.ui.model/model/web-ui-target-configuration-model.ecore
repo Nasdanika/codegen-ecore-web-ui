@@ -79,7 +79,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EStructuralFeatureConfiguration" abstract="true"
+  <eClassifiers xsi:type="ecore:EClass" name="ETypedElementConfiguration" abstract="true"
       eSuperTypes="#//ENamedElementConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -96,7 +96,7 @@
         <details key="documentation" value="Defines whether an editable feature is disabled, i.e. it shall be displayed in the edit form, but the edit control shall be disabled.&#xD;&#xA;&#xD;&#xA;* ``false`` boolean literal or empty string - the feature is enabled (default).* ``true`` boolean literal - the feature is disabled.&#xD;&#xA;* [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is disabled.&#xD;&#xA;"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="#//FeatureLocation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="#//TypedElementLocation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Format is used for rendering and parsing date and number feature values. &#xD;&#xA;SimpleDateFormat for dates, DecimalFormat for numbers."/>
       </eAnnotations>
@@ -133,6 +133,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EStructuralFeatureConfiguration" abstract="true"
+      eSuperTypes="#//ETypedElementConfiguration"/>
   <eClassifiers xsi:type="ecore:EClass" name="EAttributeConfiguration" eSuperTypes="#//EStructuralFeatureConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -177,7 +179,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FeatureLocation">
+  <eClassifiers xsi:type="ecore:EEnum" name="TypedElementLocation">
     <eLiterals name="Default"/>
     <eLiterals name="ItemContainer" value="1" literal="Item container"/>
     <eLiterals name="LeftPanel" value="2" literal="Left panel"/>

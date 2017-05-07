@@ -19,12 +19,13 @@ import org.nasdanika.codegen.ecore.web.ui.model.ENamedElementConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EReferenceConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration;
+import org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration;
 import org.nasdanika.codegen.ecore.web.ui.model.FeatureItemsContainer;
-import org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation;
 import org.nasdanika.codegen.ecore.web.ui.model.InputType;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelFactory;
 import org.nasdanika.codegen.ecore.web.ui.model.ModelPackage;
 import org.nasdanika.codegen.ecore.web.ui.model.ReferenceView;
+import org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,6 +60,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass eTypedElementConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass eStructuralFeatureConfigurationEClass = null;
 
 	/**
@@ -87,7 +95,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum featureLocationEEnum = null;
+	private EEnum typedElementLocationEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -337,98 +345,107 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getETypedElementConfiguration() {
+		return eTypedElementConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Visible() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Editable() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Disabled() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Location() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Category() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Control() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_ControlConfiguration() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_InputType() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_FormInputGroup() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getETypedElementConfiguration_Placeholder() {
+		return (EAttribute)eTypedElementConfigurationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEStructuralFeatureConfiguration() {
 		return eStructuralFeatureConfigurationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Visible() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Editable() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Disabled() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Location() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Category() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Control() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_ControlConfiguration() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_InputType() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_FormInputGroup() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEStructuralFeatureConfiguration_Placeholder() {
-		return (EAttribute)eStructuralFeatureConfigurationEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -553,8 +570,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEPackageConfiguration_RouteBaseExtends() {
-		return (EAttribute)ePackageConfigurationEClass.getEStructuralFeatures().get(1);
+	public EEnum getTypedElementLocation() {
+		return typedElementLocationEEnum;
 	}
 
 	/**
@@ -562,8 +579,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getFeatureLocation() {
-		return featureLocationEEnum;
+	public EAttribute getEPackageConfiguration_RouteBaseExtends() {
+		return (EAttribute)ePackageConfigurationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -658,17 +675,19 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER);
 		createEAttribute(eClassConfigurationEClass, ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION);
 
+		eTypedElementConfigurationEClass = createEClass(ETYPED_ELEMENT_CONFIGURATION);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__VISIBLE);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__EDITABLE);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__DISABLED);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__LOCATION);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__CATEGORY);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__CONTROL);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__CONTROL_CONFIGURATION);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__INPUT_TYPE);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__FORM_INPUT_GROUP);
+		createEAttribute(eTypedElementConfigurationEClass, ETYPED_ELEMENT_CONFIGURATION__PLACEHOLDER);
+
 		eStructuralFeatureConfigurationEClass = createEClass(ESTRUCTURAL_FEATURE_CONFIGURATION);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP);
-		createEAttribute(eStructuralFeatureConfigurationEClass, ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER);
 
 		eAttributeConfigurationEClass = createEClass(EATTRIBUTE_CONFIGURATION);
 		createEAttribute(eAttributeConfigurationEClass, EATTRIBUTE_CONFIGURATION__FORMAT);
@@ -688,7 +707,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(ePackageConfigurationEClass, EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS);
 
 		// Create enums
-		featureLocationEEnum = createEEnum(FEATURE_LOCATION);
+		typedElementLocationEEnum = createEEnum(TYPED_ELEMENT_LOCATION);
 		referenceViewEEnum = createEEnum(REFERENCE_VIEW);
 		controlTypeEEnum = createEEnum(CONTROL_TYPE);
 		inputTypeEEnum = createEEnum(INPUT_TYPE);
@@ -731,7 +750,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Add supertypes to classes
 		eNamedElementConfigurationEClass.getESuperTypes().add(this.getEModelElementConfiguration());
 		eClassConfigurationEClass.getESuperTypes().add(this.getENamedElementConfiguration());
-		eStructuralFeatureConfigurationEClass.getESuperTypes().add(this.getENamedElementConfiguration());
+		eTypedElementConfigurationEClass.getESuperTypes().add(this.getENamedElementConfiguration());
+		eStructuralFeatureConfigurationEClass.getESuperTypes().add(this.getETypedElementConfiguration());
 		eAttributeConfigurationEClass.getESuperTypes().add(this.getEStructuralFeatureConfiguration());
 		eReferenceConfigurationEClass.getESuperTypes().add(this.getEStructuralFeatureConfiguration());
 
@@ -759,17 +779,19 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEClassConfiguration_FeatureItemsContainer(), this.getFeatureItemsContainer(), "featureItemsContainer", "Tabs", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEClassConfiguration_FeatureItemsContainerConfiguration(), ecorePackage.getEString(), "featureItemsContainerConfiguration", "", 0, 1, EClassConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(eTypedElementConfigurationEClass, ETypedElementConfiguration.class, "ETypedElementConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getETypedElementConfiguration_Visible(), ecorePackage.getEString(), "visible", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_Editable(), ecorePackage.getEString(), "editable", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_Disabled(), ecorePackage.getEString(), "disabled", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_Location(), this.getTypedElementLocation(), "location", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_Category(), ecorePackage.getEString(), "category", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_Control(), this.getControlType(), "control", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_ControlConfiguration(), ecorePackage.getEString(), "controlConfiguration", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_InputType(), this.getInputType(), "inputType", "Default", 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_FormInputGroup(), ecorePackage.getEBoolean(), "formInputGroup", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getETypedElementConfiguration_Placeholder(), ecorePackage.getEString(), "placeholder", null, 0, 1, ETypedElementConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(eStructuralFeatureConfigurationEClass, EStructuralFeatureConfiguration.class, "EStructuralFeatureConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEStructuralFeatureConfiguration_Visible(), ecorePackage.getEString(), "visible", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Editable(), ecorePackage.getEString(), "editable", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Disabled(), ecorePackage.getEString(), "disabled", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Location(), this.getFeatureLocation(), "location", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Category(), ecorePackage.getEString(), "category", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Control(), this.getControlType(), "control", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_ControlConfiguration(), ecorePackage.getEString(), "controlConfiguration", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_InputType(), this.getInputType(), "inputType", "Default", 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_FormInputGroup(), ecorePackage.getEBoolean(), "formInputGroup", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStructuralFeatureConfiguration_Placeholder(), ecorePackage.getEString(), "placeholder", null, 0, 1, EStructuralFeatureConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eAttributeConfigurationEClass, EAttributeConfiguration.class, "EAttributeConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEAttributeConfiguration_Format(), ecorePackage.getEString(), "format", null, 0, 1, EAttributeConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -789,11 +811,11 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEPackageConfiguration_RendererBaseExtends(), ecorePackage.getEString(), "rendererBaseExtends", "org.nasdanika.cdo.web.routes.app.Renderer", 0, 1, EPackageConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(featureLocationEEnum, FeatureLocation.class, "FeatureLocation");
-		addEEnumLiteral(featureLocationEEnum, FeatureLocation.DEFAULT);
-		addEEnumLiteral(featureLocationEEnum, FeatureLocation.ITEM_CONTAINER);
-		addEEnumLiteral(featureLocationEEnum, FeatureLocation.LEFT_PANEL);
-		addEEnumLiteral(featureLocationEEnum, FeatureLocation.VIEW);
+		initEEnum(typedElementLocationEEnum, TypedElementLocation.class, "TypedElementLocation");
+		addEEnumLiteral(typedElementLocationEEnum, TypedElementLocation.DEFAULT);
+		addEEnumLiteral(typedElementLocationEEnum, TypedElementLocation.ITEM_CONTAINER);
+		addEEnumLiteral(typedElementLocationEEnum, TypedElementLocation.LEFT_PANEL);
+		addEEnumLiteral(typedElementLocationEEnum, TypedElementLocation.VIEW);
 
 		initEEnum(referenceViewEEnum, ReferenceView.class, "ReferenceView");
 		addEEnumLiteral(referenceViewEEnum, ReferenceView.DEFAULT);
@@ -929,61 +951,61 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 			 "documentation", "Feature items container configuration.\r\n\r\nFor accordion:\r\n\r\n* style: Bootstrap style, e.g. PRIMARY\r\n\r\nFor pills:\r\n\r\n* stacked: true or false\r\n* justified: true or false\r\n* width: 1 - 11\r\n\r\nFor tabs:\r\n\r\n* justified: true or false\r\n"
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Visible(), 
+		  (getETypedElementConfiguration_Visible(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Defines whether the feature is visible in the object view.\r\nThe value can be one of the following:\r\n\r\n* Blank string or ``true`` boolean literal - the feature is visible.\r\n* ``false`` boolean literal - the feature is hidden.\r\n* [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is visible.\r\n"
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Editable(), 
+		  (getETypedElementConfiguration_Editable(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Defines whether the feature is editabe if it is already visible.\r\nThe value can be one of the following:\r\n\r\n* Blank string - the feature is editable if it is not an item (``isItem()`` returns false)\r\n* ``true`` boolean literal - the feature is editable\r\n* ``false`` boolean literal - the feature is not editable.\r\n* [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is editable.\r\n"
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Disabled(), 
+		  (getETypedElementConfiguration_Disabled(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Defines whether an editable feature is disabled, i.e. it shall be displayed in the edit form, but the edit control shall be disabled.\r\n\r\n* ``false`` boolean literal or empty string - the feature is enabled (default).* ``true`` boolean literal - the feature is disabled.\r\n* [JXPath](https://commons.apache.org/proper/commons-jxpath/index.html) expression. If this expression evaluates to ``true`` (compared with ``Boolean.TRUE``), then the feature is disabled.\r\n"
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Location(), 
+		  (getETypedElementConfiguration_Location(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Format is used for rendering and parsing date and number feature values. \r\nSimpleDateFormat for dates, DecimalFormat for numbers."
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Category(), 
+		  (getETypedElementConfiguration_Category(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Feature category. Categories are displayed as panels in the view and the left panel, and field sets in edit forms.\r\n\r\nFeatures with a common prefix are auto-categorized if not explicitly categorized. E.g. features ``databaseUser`` and ``databasePassword`` will be auto-categorized under the category ``Database`` with\r\nlabels ``User`` and ``Password`` respectively."
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Control(), 
+		  (getETypedElementConfiguration_Control(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Edit form control type for the feature. Defaults to input for attributes and multi-value features and select for references."
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_ControlConfiguration(), 
+		  (getETypedElementConfiguration_ControlConfiguration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "YAML map with keys corresponding to control attribute names, and values being JXPath expressions evaluating to attribute values. "
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_InputType(), 
+		  (getETypedElementConfiguration_InputType(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Input type if control is \"Input\"."
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_FormInputGroup(), 
+		  (getETypedElementConfiguration_FormInputGroup(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Set it to true to force rendering of the form control in a {@link FormInputGroup} instead of {@link FormGroup} or\r\nto false to force the opposite. If this annotation is not present then inputs with either icon (rendered on the left) or help icon (rendered on the right) \r\nare rendered as form input groups.  "
 		   });	
 		addAnnotation
-		  (getEStructuralFeatureConfiguration_Placeholder(), 
+		  (getETypedElementConfiguration_Placeholder(), 
 		   source, 
 		   new String[] {
 			 "documentation", "XPath expression evaluating to the placeholder value for features. Placeholder value is an implicit application-specific value, different from the \r\ndefault value. For example, in hierarchical structures children may implicitly inherit parent feature value, unless it is explicitly set (overridden) in the child.\r\n\r\nIn the absence of feature value (null or blank string for strings) placeholder values are displayed in the view in a small {@link Well}."

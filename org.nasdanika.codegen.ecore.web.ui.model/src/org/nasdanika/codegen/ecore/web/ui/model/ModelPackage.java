@@ -341,14 +341,14 @@ public interface ModelPackage extends EPackage {
 	int ECLASS_CONFIGURATION_OPERATION_COUNT = ENAMED_ELEMENT_CONFIGURATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl <em>EStructural Feature Configuration</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ETypedElementConfigurationImpl <em>ETyped Element Configuration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEStructuralFeatureConfiguration()
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ETypedElementConfigurationImpl
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getETypedElementConfiguration()
 	 * @generated
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION = 3;
+	int ETYPED_ELEMENT_CONFIGURATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -357,7 +357,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__ICON = ENAMED_ELEMENT_CONFIGURATION__ICON;
+	int ETYPED_ELEMENT_CONFIGURATION__ICON = ENAMED_ELEMENT_CONFIGURATION__ICON;
 
 	/**
 	 * The feature id for the '<em><b>Generate Resource Strings</b></em>' attribute.
@@ -366,7 +366,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__GENERATE_RESOURCE_STRINGS = ENAMED_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS;
+	int ETYPED_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS = ENAMED_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS;
 
 	/**
 	 * The feature id for the '<em><b>Model Element Label</b></em>' attribute.
@@ -375,7 +375,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__MODEL_ELEMENT_LABEL = ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL;
+	int ETYPED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL = ENAMED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
@@ -384,7 +384,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__CONSTRAINTS = ENAMED_ELEMENT_CONFIGURATION__CONSTRAINTS;
+	int ETYPED_ELEMENT_CONFIGURATION__CONSTRAINTS = ENAMED_ELEMENT_CONFIGURATION__CONSTRAINTS;
 
 	/**
 	 * The feature id for the '<em><b>Sort</b></em>' attribute.
@@ -393,7 +393,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__SORT = ENAMED_ELEMENT_CONFIGURATION__SORT;
+	int ETYPED_ELEMENT_CONFIGURATION__SORT = ENAMED_ELEMENT_CONFIGURATION__SORT;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -402,7 +402,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 0;
+	int ETYPED_ELEMENT_CONFIGURATION__VISIBLE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Editable</b></em>' attribute.
@@ -411,7 +411,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 1;
+	int ETYPED_ELEMENT_CONFIGURATION__EDITABLE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Disabled</b></em>' attribute.
@@ -420,7 +420,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 2;
+	int ETYPED_ELEMENT_CONFIGURATION__DISABLED = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
@@ -429,7 +429,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 3;
+	int ETYPED_ELEMENT_CONFIGURATION__LOCATION = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' attribute.
@@ -438,7 +438,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 4;
+	int ETYPED_ELEMENT_CONFIGURATION__CATEGORY = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -447,7 +447,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 5;
+	int ETYPED_ELEMENT_CONFIGURATION__CONTROL = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Control Configuration</b></em>' attribute.
@@ -456,7 +456,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 6;
+	int ETYPED_ELEMENT_CONFIGURATION__CONTROL_CONFIGURATION = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Input Type</b></em>' attribute.
@@ -465,7 +465,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 7;
+	int ETYPED_ELEMENT_CONFIGURATION__INPUT_TYPE = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Form Input Group</b></em>' attribute.
@@ -474,7 +474,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 8;
+	int ETYPED_ELEMENT_CONFIGURATION__FORM_INPUT_GROUP = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
@@ -483,16 +483,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 9;
+	int ETYPED_ELEMENT_CONFIGURATION__PLACEHOLDER = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 9;
 
 	/**
-	 * The number of structural features of the '<em>EStructural Feature Configuration</em>' class.
+	 * The number of structural features of the '<em>ETyped Element Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION_FEATURE_COUNT = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 10;
+	int ETYPED_ELEMENT_CONFIGURATION_FEATURE_COUNT = ENAMED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>To Properties</em>' operation.
@@ -501,7 +501,179 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ENAMED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
+	int ETYPED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ENAMED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
+
+	/**
+	 * The number of operations of the '<em>ETyped Element Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETYPED_ELEMENT_CONFIGURATION_OPERATION_COUNT = ENAMED_ELEMENT_CONFIGURATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl <em>EStructural Feature Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEStructuralFeatureConfiguration()
+	 * @generated
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__ICON = ETYPED_ELEMENT_CONFIGURATION__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Generate Resource Strings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__GENERATE_RESOURCE_STRINGS = ETYPED_ELEMENT_CONFIGURATION__GENERATE_RESOURCE_STRINGS;
+
+	/**
+	 * The feature id for the '<em><b>Model Element Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__MODEL_ELEMENT_LABEL = ETYPED_ELEMENT_CONFIGURATION__MODEL_ELEMENT_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__CONSTRAINTS = ETYPED_ELEMENT_CONFIGURATION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Sort</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__SORT = ETYPED_ELEMENT_CONFIGURATION__SORT;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE = ETYPED_ELEMENT_CONFIGURATION__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE = ETYPED_ELEMENT_CONFIGURATION__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Disabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED = ETYPED_ELEMENT_CONFIGURATION__DISABLED;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION = ETYPED_ELEMENT_CONFIGURATION__LOCATION;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY = ETYPED_ELEMENT_CONFIGURATION__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL = ETYPED_ELEMENT_CONFIGURATION__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Control Configuration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION = ETYPED_ELEMENT_CONFIGURATION__CONTROL_CONFIGURATION;
+
+	/**
+	 * The feature id for the '<em><b>Input Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE = ETYPED_ELEMENT_CONFIGURATION__INPUT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Form Input Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP = ETYPED_ELEMENT_CONFIGURATION__FORM_INPUT_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER = ETYPED_ELEMENT_CONFIGURATION__PLACEHOLDER;
+
+	/**
+	 * The number of structural features of the '<em>EStructural Feature Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION_FEATURE_COUNT = ETYPED_ELEMENT_CONFIGURATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>To Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTRUCTURAL_FEATURE_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES = ETYPED_ELEMENT_CONFIGURATION___TO_PROPERTIES__EMODELELEMENT_STRING_PROPERTIES;
 
 	/**
 	 * The number of operations of the '<em>EStructural Feature Configuration</em>' class.
@@ -510,7 +682,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTRUCTURAL_FEATURE_CONFIGURATION_OPERATION_COUNT = ENAMED_ELEMENT_CONFIGURATION_OPERATION_COUNT + 0;
+	int ESTRUCTURAL_FEATURE_CONFIGURATION_OPERATION_COUNT = ETYPED_ELEMENT_CONFIGURATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EAttributeConfigurationImpl <em>EAttribute Configuration</em>}' class.
@@ -520,7 +692,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEAttributeConfiguration()
 	 * @generated
 	 */
-	int EATTRIBUTE_CONFIGURATION = 4;
+	int EATTRIBUTE_CONFIGURATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -719,7 +891,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEReferenceConfiguration()
 	 * @generated
 	 */
-	int EREFERENCE_CONFIGURATION = 5;
+	int EREFERENCE_CONFIGURATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -937,7 +1109,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getEPackageConfiguration()
 	 * @generated
 	 */
-	int EPACKAGE_CONFIGURATION = 6;
+	int EPACKAGE_CONFIGURATION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Render Annotation Source</b></em>' attribute.
@@ -985,15 +1157,14 @@ public interface ModelPackage extends EPackage {
 	int EPACKAGE_CONFIGURATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation <em>Feature Location</em>}' enum.
+	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation <em>Typed Element Location</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getFeatureLocation()
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getTypedElementLocation()
 	 * @generated
 	 */
-	int FEATURE_LOCATION = 7;
-
+	int TYPED_ELEMENT_LOCATION = 8;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.ReferenceView <em>Reference View</em>}' enum.
@@ -1003,7 +1174,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getReferenceView()
 	 * @generated
 	 */
-	int REFERENCE_VIEW = 8;
+	int REFERENCE_VIEW = 9;
 
 
 	/**
@@ -1014,7 +1185,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getControlType()
 	 * @generated
 	 */
-	int CONTROL_TYPE = 9;
+	int CONTROL_TYPE = 10;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.codegen.ecore.web.ui.model.InputType <em>Input Type</em>}' enum.
@@ -1024,7 +1195,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getInputType()
 	 * @generated
 	 */
-	int INPUT_TYPE = 10;
+	int INPUT_TYPE = 11;
 
 
 	/**
@@ -1035,7 +1206,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getFeatureItemsContainer()
 	 * @generated
 	 */
-	int FEATURE_ITEMS_CONTAINER = 11;
+	int FEATURE_ITEMS_CONTAINER = 12;
 
 
 	/**
@@ -1046,7 +1217,7 @@ public interface ModelPackage extends EPackage {
 	 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getProperties()
 	 * @generated
 	 */
-	int PROPERTIES = 12;
+	int PROPERTIES = 13;
 
 
 	/**
@@ -1222,6 +1393,126 @@ public interface ModelPackage extends EPackage {
 	EAttribute getEClassConfiguration_FeatureItemsContainerConfiguration();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration <em>ETyped Element Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ETyped Element Configuration</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration
+	 * @generated
+	 */
+	EClass getETypedElementConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visible</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getVisible()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Visible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getEditable <em>Editable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Editable</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getEditable()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Editable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getDisabled <em>Disabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Disabled</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getDisabled()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Disabled();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getLocation <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getLocation()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Location();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getCategory()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Category();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getControl <em>Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Control</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getControl()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Control();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getControlConfiguration <em>Control Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Control Configuration</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getControlConfiguration()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_ControlConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getInputType <em>Input Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Type</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getInputType()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_InputType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#isFormInputGroup <em>Form Input Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Form Input Group</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#isFormInputGroup()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_FormInputGroup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getPlaceholder <em>Placeholder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Placeholder</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.ETypedElementConfiguration#getPlaceholder()
+	 * @see #getETypedElementConfiguration()
+	 * @generated
+	 */
+	EAttribute getETypedElementConfiguration_Placeholder();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration <em>EStructural Feature Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1230,116 +1521,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEStructuralFeatureConfiguration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getVisible <em>Visible</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getVisible()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Visible();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getEditable <em>Editable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Editable</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getEditable()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Editable();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getDisabled <em>Disabled</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Disabled</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getDisabled()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Disabled();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getLocation <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Location</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getLocation()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Location();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getCategory <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Category</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getCategory()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Category();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControl <em>Control</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Control</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControl()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Control();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControlConfiguration <em>Control Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Control Configuration</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getControlConfiguration()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_ControlConfiguration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getInputType <em>Input Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Type</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getInputType()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_InputType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#isFormInputGroup <em>Form Input Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Form Input Group</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#isFormInputGroup()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_FormInputGroup();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getPlaceholder <em>Placeholder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Placeholder</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.EStructuralFeatureConfiguration#getPlaceholder()
-	 * @see #getEStructuralFeatureConfiguration()
-	 * @generated
-	 */
-	EAttribute getEStructuralFeatureConfiguration_Placeholder();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.codegen.ecore.web.ui.model.EAttributeConfiguration <em>EAttribute Configuration</em>}'.
@@ -1482,6 +1663,16 @@ public interface ModelPackage extends EPackage {
 	EAttribute getEPackageConfiguration_RendererBaseExtends();
 
 	/**
+	 * Returns the meta object for enum '{@link org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation <em>Typed Element Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Typed Element Location</em>'.
+	 * @see org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation
+	 * @generated
+	 */
+	EEnum getTypedElementLocation();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.codegen.ecore.web.ui.model.EPackageConfiguration#getRouteBaseExtends <em>Route Base Extends</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1491,16 +1682,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEPackageConfiguration_RouteBaseExtends();
-
-	/**
-	 * Returns the meta object for enum '{@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation <em>Feature Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Feature Location</em>'.
-	 * @see org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation
-	 * @generated
-	 */
-	EEnum getFeatureLocation();
 
 	/**
 	 * Returns the meta object for enum '{@link org.nasdanika.codegen.ecore.web.ui.model.ReferenceView <em>Reference View</em>}'.
@@ -1711,6 +1892,96 @@ public interface ModelPackage extends EPackage {
 		EAttribute ECLASS_CONFIGURATION__FEATURE_ITEMS_CONTAINER_CONFIGURATION = eINSTANCE.getEClassConfiguration_FeatureItemsContainerConfiguration();
 
 		/**
+		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.ETypedElementConfigurationImpl <em>ETyped Element Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ETypedElementConfigurationImpl
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getETypedElementConfiguration()
+		 * @generated
+		 */
+		EClass ETYPED_ELEMENT_CONFIGURATION = eINSTANCE.getETypedElementConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__VISIBLE = eINSTANCE.getETypedElementConfiguration_Visible();
+
+		/**
+		 * The meta object literal for the '<em><b>Editable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__EDITABLE = eINSTANCE.getETypedElementConfiguration_Editable();
+
+		/**
+		 * The meta object literal for the '<em><b>Disabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__DISABLED = eINSTANCE.getETypedElementConfiguration_Disabled();
+
+		/**
+		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__LOCATION = eINSTANCE.getETypedElementConfiguration_Location();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__CATEGORY = eINSTANCE.getETypedElementConfiguration_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Control</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__CONTROL = eINSTANCE.getETypedElementConfiguration_Control();
+
+		/**
+		 * The meta object literal for the '<em><b>Control Configuration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__CONTROL_CONFIGURATION = eINSTANCE.getETypedElementConfiguration_ControlConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__INPUT_TYPE = eINSTANCE.getETypedElementConfiguration_InputType();
+
+		/**
+		 * The meta object literal for the '<em><b>Form Input Group</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__FORM_INPUT_GROUP = eINSTANCE.getETypedElementConfiguration_FormInputGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Placeholder</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETYPED_ELEMENT_CONFIGURATION__PLACEHOLDER = eINSTANCE.getETypedElementConfiguration_Placeholder();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EStructuralFeatureConfigurationImpl <em>EStructural Feature Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1719,86 +1990,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ESTRUCTURAL_FEATURE_CONFIGURATION = eINSTANCE.getEStructuralFeatureConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__VISIBLE = eINSTANCE.getEStructuralFeatureConfiguration_Visible();
-
-		/**
-		 * The meta object literal for the '<em><b>Editable</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__EDITABLE = eINSTANCE.getEStructuralFeatureConfiguration_Editable();
-
-		/**
-		 * The meta object literal for the '<em><b>Disabled</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__DISABLED = eINSTANCE.getEStructuralFeatureConfiguration_Disabled();
-
-		/**
-		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__LOCATION = eINSTANCE.getEStructuralFeatureConfiguration_Location();
-
-		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__CATEGORY = eINSTANCE.getEStructuralFeatureConfiguration_Category();
-
-		/**
-		 * The meta object literal for the '<em><b>Control</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL = eINSTANCE.getEStructuralFeatureConfiguration_Control();
-
-		/**
-		 * The meta object literal for the '<em><b>Control Configuration</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__CONTROL_CONFIGURATION = eINSTANCE.getEStructuralFeatureConfiguration_ControlConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__INPUT_TYPE = eINSTANCE.getEStructuralFeatureConfiguration_InputType();
-
-		/**
-		 * The meta object literal for the '<em><b>Form Input Group</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__FORM_INPUT_GROUP = eINSTANCE.getEStructuralFeatureConfiguration_FormInputGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Placeholder</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTRUCTURAL_FEATURE_CONFIGURATION__PLACEHOLDER = eINSTANCE.getEStructuralFeatureConfiguration_Placeholder();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.impl.EAttributeConfigurationImpl <em>EAttribute Configuration</em>}' class.
@@ -1911,22 +2102,22 @@ public interface ModelPackage extends EPackage {
 		EAttribute EPACKAGE_CONFIGURATION__RENDERER_BASE_EXTENDS = eINSTANCE.getEPackageConfiguration_RendererBaseExtends();
 
 		/**
+		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation <em>Typed Element Location</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.TypedElementLocation
+		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getTypedElementLocation()
+		 * @generated
+		 */
+		EEnum TYPED_ELEMENT_LOCATION = eINSTANCE.getTypedElementLocation();
+
+		/**
 		 * The meta object literal for the '<em><b>Route Base Extends</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute EPACKAGE_CONFIGURATION__ROUTE_BASE_EXTENDS = eINSTANCE.getEPackageConfiguration_RouteBaseExtends();
-
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation <em>Feature Location</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.codegen.ecore.web.ui.model.FeatureLocation
-		 * @see org.nasdanika.codegen.ecore.web.ui.model.impl.ModelPackageImpl#getFeatureLocation()
-		 * @generated
-		 */
-		EEnum FEATURE_LOCATION = eINSTANCE.getFeatureLocation();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.codegen.ecore.web.ui.model.ReferenceView <em>Reference View</em>}' enum.

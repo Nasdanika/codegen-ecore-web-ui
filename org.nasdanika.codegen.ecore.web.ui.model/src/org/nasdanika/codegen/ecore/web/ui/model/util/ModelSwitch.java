@@ -87,9 +87,18 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModelPackage.ETYPED_ELEMENT_CONFIGURATION: {
+				ETypedElementConfiguration eTypedElementConfiguration = (ETypedElementConfiguration)theEObject;
+				T result = caseETypedElementConfiguration(eTypedElementConfiguration);
+				if (result == null) result = caseENamedElementConfiguration(eTypedElementConfiguration);
+				if (result == null) result = caseEModelElementConfiguration(eTypedElementConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ModelPackage.ESTRUCTURAL_FEATURE_CONFIGURATION: {
 				EStructuralFeatureConfiguration eStructuralFeatureConfiguration = (EStructuralFeatureConfiguration)theEObject;
 				T result = caseEStructuralFeatureConfiguration(eStructuralFeatureConfiguration);
+				if (result == null) result = caseETypedElementConfiguration(eStructuralFeatureConfiguration);
 				if (result == null) result = caseENamedElementConfiguration(eStructuralFeatureConfiguration);
 				if (result == null) result = caseEModelElementConfiguration(eStructuralFeatureConfiguration);
 				if (result == null) result = defaultCase(theEObject);
@@ -99,6 +108,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				EAttributeConfiguration eAttributeConfiguration = (EAttributeConfiguration)theEObject;
 				T result = caseEAttributeConfiguration(eAttributeConfiguration);
 				if (result == null) result = caseEStructuralFeatureConfiguration(eAttributeConfiguration);
+				if (result == null) result = caseETypedElementConfiguration(eAttributeConfiguration);
 				if (result == null) result = caseENamedElementConfiguration(eAttributeConfiguration);
 				if (result == null) result = caseEModelElementConfiguration(eAttributeConfiguration);
 				if (result == null) result = defaultCase(theEObject);
@@ -108,6 +118,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				EReferenceConfiguration eReferenceConfiguration = (EReferenceConfiguration)theEObject;
 				T result = caseEReferenceConfiguration(eReferenceConfiguration);
 				if (result == null) result = caseEStructuralFeatureConfiguration(eReferenceConfiguration);
+				if (result == null) result = caseETypedElementConfiguration(eReferenceConfiguration);
 				if (result == null) result = caseENamedElementConfiguration(eReferenceConfiguration);
 				if (result == null) result = caseEModelElementConfiguration(eReferenceConfiguration);
 				if (result == null) result = defaultCase(theEObject);
@@ -165,6 +176,21 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEClassConfiguration(EClassConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ETyped Element Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ETyped Element Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseETypedElementConfiguration(ETypedElementConfiguration object) {
 		return null;
 	}
 

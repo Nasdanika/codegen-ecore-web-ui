@@ -14,7 +14,7 @@ import org.nasdanika.config.Context;
 import org.nasdanika.config.MutableContext;
 
 /**
- * Iterates over selected EClasses in an EPackages.
+ * Iterates over selected EClasses in an EPackage.
  * @author Pavel
  *
  */

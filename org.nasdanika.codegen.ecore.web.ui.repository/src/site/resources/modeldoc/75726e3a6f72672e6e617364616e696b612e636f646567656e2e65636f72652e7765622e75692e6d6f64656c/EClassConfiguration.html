@@ -1,0 +1,941 @@
+
+<script>document.title="EClass EClassConfiguration";</script>
+<h2>
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>EClassConfiguration</h2>
+<div style="margin-bottom:5px;font-family:monospace">org.nasdanika.codegen.ecore.web.ui.model.EClassConfiguration</div>
+<div>
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#nsd_s_tab_0" data-toggle="tab">Diagram</a>
+    </li>
+    <li>
+      <a href="#nsd_s_tab_1" data-toggle="tab">
+<img src="resources/images/EAttribute.gif" style="margin-right:5px"/> Attributes</a>
+    </li>
+    <li>
+      <a href="#nsd_s_tab_2" data-toggle="tab">
+<img src="resources/images/EOperation.gif" style="margin-right:5px"/> Operations</a>
+    </li>
+    <li>
+      <a href="#nsd_s_tab_3" data-toggle="tab">Supertypes</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="nsd_s_tab_0" class="tab-pane active">
+      <img src="75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/EClassConfiguration.png" usemap="#plantuml_map"/><map id="plantuml_map" name="plantuml_map">
+<area shape="rect" id="id1" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/ENamedElementConfiguration.html" title="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/ENamedElementConfiguration.html" alt="" coords="125,60,326,149"/>
+<area shape="rect" id="id2" href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/EClassConfiguration.html" title="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/EClassConfiguration.html" alt="" coords="111,210,340,354"/>
+</map>
+</div>
+    <div id="nsd_s_tab_1" class="tab-pane">
+      <div id="nsd_t_accordion" role="tablist" class="panel-group">
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_u_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_u_collapse_collapse" aria-expanded="false" aria-controls="nsd_u_collapse_collapse"><b>constraints</b> : EString (ENamedElementConfiguration)  - <I>Constraint shall be a YML text which defines a single constraint or a list of constraints. </I></a>
+            </h4>
+          </div>
+          <div id="nsd_u_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_u_collapse_panel_body" class="panel-body"><p>Constraint shall be a YML text which defines a single constraint or a list of constraints. Constraint can be a string or a map containing:</p>
+<ul>
+  <li><code>condition</code> - XPath expression boolean expression.</li>
+  <li><code>errorMessageKey</code> - Optional error message key. If it is present, error message is retrieved as resource string.</li>
+  <li><code>errorMessage</code> - Error message to display if the expression evaluates to false. It is used if <code>errorMessageKey</code> is not defined or if there is no resource string for the key.</li>
+</ul>
+<p>If the constraint is a String, then it is treated as <code>condition</code> XPath expression and error message is constructed as <code>Constraint violation: &lt;condition&gt;</code>. </p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/ENamedElementConfiguration.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>ENamedElementConfiguration</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_v_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_v_collapse_collapse" aria-expanded="false" aria-controls="nsd_v_collapse_collapse"><b>dispatchFeatures</b> : EBoolean - <I>If set to true, the generator generates renderfeature nameFeatureXXX(C,T,EStructuralFeature,…) and overrides renderFeatureXXX(C,T,EStructuralFeature,…) to dispatch invocations to feature-specific methods. </I></a>
+            </h4>
+          </div>
+          <div id="nsd_v_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_v_collapse_panel_body" class="panel-body"><p>If set to true, the generator generates render<code>feature name</code>FeatureXXX(C,T,EStructuralFeature,&hellip;) and overrides renderFeatureXXX(C,T,EStructuralFeature,&hellip;) to dispatch invocations to feature-specific methods. This does not alter the default renderer behavior, but makes the variability points explicit and easier to customize.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EBoolean.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EBoolean</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_w_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_w_collapse_collapse" aria-expanded="false" aria-controls="nsd_w_collapse_collapse"><b>featureItemsContainer</b> : FeatureItemsContainer - <I>Feature items container.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_w_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_w_collapse_panel_body" class="panel-body"><p>Feature items container.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/FeatureItemsContainer.html">
+<img src="resources/images/EEnum.gif" style="margin-right:5px"/>FeatureItemsContainer</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace">Tabs</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_x_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_x_collapse_collapse" aria-expanded="false" aria-controls="nsd_x_collapse_collapse"><b>featureItemsContainerConfiguration</b> : EString - <I>Feature items container configuration. </I></a>
+            </h4>
+          </div>
+          <div id="nsd_x_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_x_collapse_panel_body" class="panel-body"><p>Feature items container configuration.</p>
+<p>For accordion:</p>
+<ul>
+  <li>style: Bootstrap style, e.g. PRIMARY</li>
+</ul>
+<p>For pills:</p>
+<ul>
+  <li>stacked: true or false</li>
+  <li>justified: true or false</li>
+  <li>width: 1 - 11</li>
+</ul>
+<p>For tabs:</p>
+<ul>
+  <li>justified: true or false</li>
+</ul>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_y_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_y_collapse_collapse" aria-expanded="false" aria-controls="nsd_y_collapse_collapse"><b>generateResourceStrings</b> : EBoolean (EModelElementConfiguration)  - <I>If set to true, the generator generates resource strings in resource bundles properties files. </I></a>
+            </h4>
+          </div>
+          <div id="nsd_y_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_y_collapse_panel_body" class="panel-body"><p>If set to true, the generator generates resource strings in resource bundles properties files. Resource strings are generated from model annotations and using default values if annotations are not present. </p>
+<p>Generation of resource strings simplifies localization. It does not alter the application behavior for default locale.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/EModelElementConfiguration.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>EModelElementConfiguration</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EBoolean.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EBoolean</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_z_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_z_collapse_collapse" aria-expanded="false" aria-controls="nsd_z_collapse_collapse"><b>horizontalForm</b> : EBoolean - <I>By default EClass edit forms are rendered as horizontal forms. </I></a>
+            </h4>
+          </div>
+          <div id="nsd_z_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_z_collapse_panel_body" class="panel-body"><p>By default EClass edit forms are rendered as horizontal forms. Set this to <code>false</code> to change the default rendering.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EBoolean.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EBoolean</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace">true</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_10_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_10_collapse_collapse" aria-expanded="false" aria-controls="nsd_10_collapse_collapse"><b>icon</b> : EString (EModelElementConfiguration)  - <I>Icon for a model element such as EClass or EStructuralFeature. </I></a>
+            </h4>
+          </div>
+          <div id="nsd_10_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_10_collapse_panel_body" class="panel-body"><p>Icon for a model element such as EClass or EStructuralFeature. If icon contains <code>/</code> it is treated as URL, otherwise it is treated as css class, e.g. Bootstrap&rsquo;s <code>glyphicon glyphicon-close</code>.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/EModelElementConfiguration.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>EModelElementConfiguration</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_11_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_11_collapse_collapse" aria-expanded="false" aria-controls="nsd_11_collapse_collapse"><b>label</b> : EString - <I>A pattern which is interpolated to generate object label.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_11_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_11_collapse_panel_body" class="panel-body"><p>A pattern which is interpolated to generate object label.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_12_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_12_collapse_collapse" aria-expanded="false" aria-controls="nsd_12_collapse_collapse"><b>modelElementLabel</b> : EString (ENamedElementConfiguration)  - <I>EClass or EStructuralFeature label.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_12_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_12_collapse_panel_body" class="panel-body"><p>EClass or EStructuralFeature label.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/ENamedElementConfiguration.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>ENamedElementConfiguration</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_13_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_13_collapse_collapse" aria-expanded="false" aria-controls="nsd_13_collapse_collapse"><b>novalidate</b> : EBoolean - <I>Set to true to disable HTML 5 form validation, e.g. if you have a required text area with TinyMCE editor in Chrome.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_13_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_13_collapse_panel_body" class="panel-body"><p>Set to true to disable HTML 5 form validation, e.g. if you have a required text area with TinyMCE editor in Chrome.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EBoolean.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EBoolean</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace">false</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_14_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_14_collapse_collapse" aria-expanded="false" aria-controls="nsd_14_collapse_collapse"><b>sort</b> : EString (ENamedElementConfiguration)  - <I>XPath expression to use for sorting of items in tables and lists.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_14_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_14_collapse_panel_body" class="panel-body"><p>XPath expression to use for sorting of items in tables and lists.</p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/ENamedElementConfiguration.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>ENamedElementConfiguration</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_15_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_t_accordion" href="#nsd_15_collapse_collapse" aria-expanded="false" aria-controls="nsd_15_collapse_collapse"><b>viewItem</b> : null - <I>Set this to true to have the class view rendered in the item container.</I></a>
+            </h4>
+          </div>
+          <div id="nsd_15_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_15_collapse_panel_body" class="panel-body"><p>Set this to <code>true</code> to have the class view rendered in the item container. </p>
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td>
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/> null</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Default value</th>
+                  <td>
+                    <div style="white-space:pre;font-family:monospace"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Changeable</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Derived</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">ID</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Ordered</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Transient</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unsettable</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Volatile</th>
+                  <td></td>
+                </tr>
+              </table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="nsd_s_tab_2" class="tab-pane">
+      <div id="nsd_16_accordion" role="tablist" class="panel-group">
+        <div class="panel panel-default">
+          <div role="tab" id="nsd_17_collapse_heading" class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#nsd_16_accordion" href="#nsd_17_collapse_collapse" aria-expanded="false" aria-controls="nsd_17_collapse_collapse"><b>toProperties</b> : void (EModelElementConfiguration) </a>
+            </h4>
+          </div>
+          <div id="nsd_17_collapse_collapse" class="panel-collapse collapse">
+            <div id="nsd_17_collapse_panel_body" class="panel-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th style="align:left">Declaring Type</th>
+                  <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/EModelElementConfiguration.html">
+<img src="resources/images/EClass.gif" style="margin-right:5px"/>EModelElementConfiguration</a></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Type</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th style="align:left">Cardinality</th>
+                  <td>0..1</td>
+                </tr>
+                <tr>
+                  <th style="align:left">Exceptions</th>
+                  <td>
+                    <ul></ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="align:left">Unique</th>
+                  <td>
+                    <span class="glyphicon glyphicon-ok"></span>
+                  </td>
+                </tr>
+              </table>
+              <h3>Parameters</h3>
+              <h4>modelElement : 
+<img src="resources/images/EClass.gif" style="margin-right:5px"/> null 0..1</h4>
+              <h4>renderAnnotationSource : 
+<a href="https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/687474703a2f2f7777772e65636c697073652e6f72672f656d662f323030322f45636f7265/EString.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>EString</a> 0..1</h4>
+              <h4>properties : 
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/Properties.html">
+<img src="resources/images/EDataType.gif" style="margin-right:5px"/>Properties</a> 0..1</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="nsd_s_tab_3" class="tab-pane">
+      <table class="table table-bordered">
+        <tr class="info">
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>
+<a href="#router/doc-content/75726e3a6f72672e6e617364616e696b612e636f646567656e2e65636f72652e7765622e75692e6d6f64656c/ENamedElementConfiguration.html">ENamedElementConfiguration</a></td>
+          <td></td>
+        </tr>
+      </table>
+    </div></div>
+</div>

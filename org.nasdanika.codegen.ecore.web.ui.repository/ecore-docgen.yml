@@ -1,0 +1,14 @@
+models:
+  - ../org.nasdanika.codegen.ecore.web.ui.model/model/web-ui-target-configuration-model.genmodel
+  
+output:
+  site: /org.nasdanika.codegen.ecore.web.ui.repository/src/site/resources/modeldoc
+
+apidocs:
+  - https://docs.oracle.com/javase/8/docs/api/
+  
+modeldocs:
+  site:
+    "http://www.eclipse.org/emf/2002/Ecore": "https://www.nasdanika.org/products/config/modeldoc/index.html#router/doc-content/{{encoded-epackage-ns-uri}}/"
+  
+  

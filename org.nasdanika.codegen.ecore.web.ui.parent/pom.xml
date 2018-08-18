@@ -20,14 +20,14 @@
 	<repositories>
 		
 		<repository>
-			<id>oxygen</id>
-			<url>http://download.eclipse.org/releases/oxygen</url>
+			<id>photon</id>
+			<url>http://download.eclipse.org/releases/photon</url>
 			<layout>p2</layout>
-		</repository>		
-		
+		</repository>
+
 		<repository>
 			<id>orbit</id>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20170516192513/repository</url>
+				<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20180606145124/repository</url>
 			<layout>p2</layout>
 		</repository>
 					
@@ -46,7 +46,7 @@
 		
 		<repository>
 			<id>maven-osgi</id>
-			<url>http://www.nasdanika.org/maven-osgi</url>
+			<url>http://www.nasdanika.org/products/maven-osgi/repository</url>
 			<layout>p2</layout>
 		</repository>
 		
@@ -66,6 +66,7 @@
  	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -100,6 +101,25 @@
 					<detectLinks>true</detectLinks>					
 				</configuration>
 			</plugin>
+
+
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-site-plugin</artifactId>
+			    <version>3.7.1</version>
+			    <configuration>
+			        <skip>true</skip>
+			        <skipDeploy>true</skipDeploy>
+			    </configuration>
+			</plugin>		
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+				    <skipAssembly>true</skipAssembly>
+				</configuration>
+			</plugin>			
 			<plugin>
 				<!-- enable tycho build extension -->
 				<groupId>org.eclipse.tycho</groupId>
@@ -160,11 +180,11 @@
 	
 		<module>../org.nasdanika.codegen.ecore.web.ui.repository</module>
 	
-		<module>../org.nasdanika.codegen.ecoreweb.ui</module>
+		<module>../org.nasdanika.codegen.ecore.web.ui</module>
 
-		<module>../org.nasdanika.codegen.ecoreweb.ui.model</module>	
+		<module>../org.nasdanika.codegen.ecore.web.ui.model</module>	
 
-		<module>../org.nasdanika.codegen.ecoreweb.ui.model.edit</module>	
+		<module>../org.nasdanika.codegen.ecore.web.ui.model.edit</module>	
 
 	</modules>
 </project>

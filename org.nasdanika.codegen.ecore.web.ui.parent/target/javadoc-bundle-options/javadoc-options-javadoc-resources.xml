@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javadocOptions>
+  <docletArtifacts>
+    <docletArtifact>
+      <groupId>ch.raffael.pegdown-doclet</groupId>
+      <artifactId>pegdown-doclet</artifactId>
+      <version>1.3</version>
+    </docletArtifact>
+  </docletArtifacts>
+  <tagletArtifacts>
+    <tagletArtifact />
+  </tagletArtifacts>
+  <links>
+    <link>http://download.eclipse.org/modeling/emf/emf/javadoc/2.11</link>
+    <link>http://help.eclipse.org/neon/topic/org.eclipse.emf.cdo.doc/javadoc</link>
+    <link>http://stleary.github.io/JSON-java</link>
+    <link>https://osgi.org/javadoc/r4v42/</link>
+    <link>http://seleniumhq.github.io/selenium/docs/api/java/</link>
+    <link>http://www.nasdanika.org/products/codegen/apidocs/org.nasdanika.codegen/apidocs/</link>
+    <link>http://www.nasdanika.org/products/codegen/apidocs/org.nasdanika.codegen.edit/apidocs/</link>
+    <link>http://www.nasdanika.org/products/codegen/apidocs/org.nasdanika.codegen.editor/apidocs/</link>
+  </links>
+  <javadocResourcesDirectory>src/main/javadoc</javadocResourcesDirectory>
+</javadocOptions>

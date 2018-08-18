@@ -1,0 +1,5 @@
+org.nasdanika.codegen.ecore.web.ui
+org.nasdanika.codegen.ecore.web.ui.model
+org.nasdanika.codegen.ecore.web.ui.model.impl
+org.nasdanika.codegen.ecore.web.ui.model.provider
+org.nasdanika.codegen.ecore.web.ui.model.util

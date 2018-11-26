@@ -3,6 +3,10 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="urn:org.nasdanika.codegen.ecore.web.ui.model"
     nsPrefix="org.nasdanika.codegen.ecore.web.ui.model">
   <eClassifiers xsi:type="ecore:EClass" name="EModelElementConfiguration" abstract="true">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Some documentation..."/>
+  </eAnnotations>
+  
     <eOperations name="toProperties">
       <eParameters name="modelElement" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EModelElement"/>
       <eParameters name="renderAnnotationSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
